@@ -1,0 +1,79 @@
+/* stylelint-disable max-nesting-depth */
+
+@if variable-exists('$breakpoints') == null or mixin-exists('media') == false {
+  @warn 'Make sure you have imported and setup Include Media first.';
+}
+
+$im-flexgrid-settings: (
+  'support-check': false,
+  'support-type': '@supports', // otherwise 'modernizr'
+  'total-columns': 12, // Total columns
+  'container-class': 'container',
+  'grid-class': 'grid',
+  'cell-class': 'grid__cell',
+  'grid-separator': '--',
+  'number-separator': '-',
+  'breakpoint-separator': \@,
+  'include-offset': true,
+  'offset-class': 'offset',
+  'include-push': true,
+  'push-class': 'push',
+  'include-pull': true,
+  'pull-class': 'pull',
+  'include-squish': true,
+  'squish-class': 'squish',
+  'include-order': true,
+  'order-class': 'order',
+  'gutter-size': 1rem,
+  'default-gutters': true,
+  'use-flex-longhand': false,
+  'include-max-width': true,
+  'include-trailer': true,
+  'trailer-size': 1rem,
+  'include-visibility-helpers': true,
+  'visible-class': 'visible',
+  'hidden-class': 'hidden',
+  'include-width-helpers': true,
+  'width-class': 'width',
+) !default;
+
+$im-flexgrid-wrap-settings: (
+  'wrap': 'wrap',
+  'no-wrap': 'no-wrap',
+  'wrap-reverse': 'wrap-reverse',
+) !default;
+
+$im-flexgrid-justify-align-settings: (
+  'justify-start': flex-start,
+  'justify-end': flex-end,
+  'justify-center': center,
+  'justify-between': space-between,
+  'justify-around': space-around,
+) !default;
+
+$im-flexgrid-item-align-settings: (
+  'item-start': flex-start,
+  'item-end': flex-end,
+  'item-center': center,
+  'item-between': baseline,
+  'item-around': stretch,
+) !default;
+
+$im-flexgrid-content-align-settings: (
+  'content-start': flex-start,
+  'content-end': flex-end,
+  'content-center': center,
+  'content-between': space-between,
+  'content-around': space-around,
+  'content-stretch': stretch,
+) !default;
+
+$im-flexgrid-self-align-settings: (
+  'self-start': flex-start,
+  'self-end': flex-end,
+  'self-center': center,
+  'self-between': baseline,
+  'self-around': stretch,
+) !default;
+
+$im-flexgrid-breakpoints: length($breakpoints);

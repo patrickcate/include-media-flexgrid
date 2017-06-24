@@ -1,0 +1,39 @@
+/* stylelint-disable max-nesting-depth */
+
+@mixin im-flexgrid-row-classes {
+
+  .#{im-setting('grid-class')} {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @if im-setting('default-gutters') {
+      margin-left: #{(im-setting('gutter-size')) * -1};
+      margin-right: #{(im-setting('gutter-size')) * -1};
+    }
+  }
+}
+
+@mixin im-flexgrid-responsive-row-classes($breakpoint-name) {
+
+  %grid-row-#{$breakpoint-name} {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @if im-setting('default-gutters') {
+      margin-left: #{(im-setting('gutter-size')) * -1};
+      margin-right: #{(im-setting('gutter-size')) * -1};
+    }
+  }
+
+  .#{im-setting('grid-class')}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+    @extend %grid-row-#{$breakpoint-name};
+  }
+}
