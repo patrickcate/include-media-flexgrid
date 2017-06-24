@@ -1,0 +1,129 @@
+// =============================================================================
+// @name Facade Styles
+// @description Main import stylesheet for Facade theme.
+// @group import
+// @file src/sass/facade.styles.scss
+//
+// TABLE OF CONTENTS:
+// [1] Tools ---------- Vendor libraries and custom Sass functions, mixins, and
+//     variables. Nothing in the core import generates CSS by default.
+// ↑ ---------------- ↑ NO CSS GENERATED ABOVE THIS POINT.
+// [2] Vendor --------- Third party Sass and CSS libraries that generate CSS
+//     by default.
+// [3] Generic -------- Reset and/or normalize styles, global style
+//     definitions.
+// [4] Elements ------- Unclassed HTML elements (e.g. `h2`, `ul`) styling.
+// ↓ ---------------- ↓ ONLY CSS CLASSES BEYOND THIS POINT.
+// [5] Objects -------- Abstract object and main site object sections.
+//     Should primarily be used for object/positioning. Minimal to no styling.
+// [6] Components ----- Reuseable styled UI components.
+// [7] Utilities ------ Helper/utility classes. Use sparingly as many are hard
+//     overrides using !important.
+// [8] Hotfix --------- Emergency styling fixes. This file should be regularly
+//     refactored into new components/objects, or replaced with existing ones.
+// =============================================================================
+
+
+// [1] Tools
+// =====================================
+@import '_partials/1-tools/_tools.import';
+
+
+// [2] Vendor
+// =====================================
+// @import '_partials/2-vendor/_include-media-columns/include-media-columns';
+// @import '_partials/2-vendor/_include-media-columns/init-include-media-columns';
+
+
+// [3] Generic
+// ======================================
+@import '_partials/2-vendor/_normalize.generic';
+@import '_partials/3-generic/_globals.generic';
+@import '_partials/3-generic/_shared.generic';
+
+
+// [4] Elements
+// =====================================
+@import '_partials/4-elements/_form.element';
+@import '_partials/4-elements/_header.element';
+@import '_partials/4-elements/_image.element';
+@import '_partials/4-elements/_link.element';
+@import '_partials/4-elements/_list.element';
+@import '_partials/4-elements/_page.element';
+@import '_partials/4-elements/_table.element';
+@import '_partials/4-elements/_typography.element';
+
+
+// [5] Objects
+// =====================================
+@import '_partials/5-objects/_form-item-group.object';
+@import '_partials/5-objects/_grid.object';
+@import '_partials/5-objects/_media.object';
+@import '_partials/5-objects/_nav.object';
+@import '_partials/5-objects/_page.object';
+
+
+// [6] Components
+// =====================================
+@import '_partials/6-components/_accordion.component';
+@import '_partials/6-components/_alert.component';
+@import '_partials/6-components/_avatar.component';
+@import '_partials/6-components/_badge.component';
+@import '_partials/6-components/_box.component';
+@import '_partials/6-components/_branding.component';
+@import '_partials/6-components/_breadcrumb.component';
+@import '_partials/6-components/_button.component';
+@import '_partials/6-components/_calendar.component';
+@import '_partials/6-components/_card.component';
+@import '_partials/6-components/_carousel.component';
+@import '_partials/6-components/_checkbox.component';
+@import '_partials/6-components/_comment.component';
+@import '_partials/6-components/_dropdown.component';
+@import '_partials/6-components/_footer.component';
+@import '_partials/6-components/_form-control.component';
+@import '_partials/6-components/_form-item.component';
+@import '_partials/6-components/_forum.component';
+@import '_partials/6-components/_grid-example.component';
+@import '_partials/6-components/_header.component';
+@import '_partials/6-components/_hero.component';
+@import '_partials/6-components/_icon.component';
+@import '_partials/6-components/_lightbox.component';
+@import '_partials/6-components/_link.component';
+@import '_partials/6-components/_list.component';
+@import '_partials/6-components/_menu.component';
+@import '_partials/6-components/_modal.component';
+@import '_partials/6-components/_overlay.component';
+@import '_partials/6-components/_page-title.component';
+@import '_partials/6-components/_pager.component';
+@import '_partials/6-components/_popup.component';
+@import '_partials/6-components/_progress-bar.component';
+@import '_partials/6-components/_radio.component';
+@import '_partials/6-components/_range.component';
+@import '_partials/6-components/_search.component';
+@import '_partials/6-components/_select.component';
+@import '_partials/6-components/_share.component';
+@import '_partials/6-components/_steps.component';
+@import '_partials/6-components/_table.component';
+@import '_partials/6-components/_tabs.component';
+@import '_partials/6-components/_tag.component';
+@import '_partials/6-components/_thumbnail.component';
+@import '_partials/6-components/_toggle.component';
+@import '_partials/6-components/_toolbar.component';
+@import '_partials/6-components/_tooltip.component';
+@import '_partials/6-components/_tree.component';
+
+
+// [7] Utilities
+// =====================================
+@import '_partials/7-utilities/_color.utilities';
+@import '_partials/7-utilities/_grid.utilities';
+@import '_partials/7-utilities/_list.utilities';
+@import '_partials/7-utilities/_image.utilities';
+@import '_partials/7-utilities/_position.utilities';
+@import '_partials/7-utilities/_typography.utilities';
+@import '_partials/7-utilities/_visibility.utilities';
+
+
+// [8] Hotfix
+// =====================================
+@import '_partials/8-hotfix';

@@ -1,0 +1,31 @@
+// =============================================================================
+// @name Image Utilities
+// @description Utility classes for styling images.
+// @group utilities
+// @file src/sass/_partials/7-utilities/_image.utilities.scss
+// =============================================================================
+
+/* stylelint-disable selector-no-type */
+// Turn off type selector linting since we need to use the data-align
+// property selector used by CKEditor to align images.
+
+.u-img {
+  display: block;
+}
+
+.u-img-left, img[data-align='left'] {
+  float: left;
+  margin-right: $half-spacing;
+  margin-bottom: $quarter-spacing;
+}
+
+.u-img-right, img[data-align='right'] {
+  float: right;
+  margin-bottom: $quarter-spacing;
+  margin-left: $half-spacing;
+}
+
+.u-img-center, img[data-align='center'] {
+  display: block;
+  margin: 0 auto;
+}

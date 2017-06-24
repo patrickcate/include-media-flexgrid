@@ -1,0 +1,105 @@
+// =============================================================================
+// @name Color Settings
+// @description Global project color settings are set here for a consistent
+//              color scheme. More specific component or element settings may
+//              contain their own color settings, but usually these will in
+//              some what be based on the global ones.
+// @group settings
+// @file src/sass/_partials/1-tools/1-4-settings/_color.settings.scss
+// =============================================================================
+
+// Base
+$white: #fff;
+$black: #000;
+$text-color: #222;
+
+$blue: $oc-blue-8;
+$cyan: $oc-cyan-7;
+$grape: $oc-grape-8;
+$gray: $oc-gray-5;
+$green: $oc-green-8;
+$indigo: $oc-indigo-8;
+$lime: $oc-lime-8;
+$orange: $oc-orange-8;
+$pink: $oc-pink-7;
+$red: $oc-red-9;
+$teal: $oc-teal-8;
+$violet: $oc-violet-8;
+$yellow: $oc-yellow-8;
+
+// Silver is a gray with a slight color tint.
+$silver: mix($gray, $blue, 95%);
+
+$primary-color: $blue;
+$secondary-color: complement($primary-color);
+$tertiary-color: desaturate($silver, 95%);
+$success-color: $green;
+$warning-color: $orange;
+$error-color: $red;
+
+// Add color variables to $colors map.
+$color-scheme: (
+  primary: (
+    base: $primary-color,
+    light: tint($primary-color, 25%),
+    lighter: tint($primary-color, 50%),
+    lightest: tint($primary-color, 75%),
+    dark: shade($primary-color, 25%),
+    darker: shade($primary-color, 50%),
+    darkest: shade($primary-color, 75%)
+  ),
+  secondary: (
+    base: $secondary-color,
+    light: tint($secondary-color, 25%),
+    lighter: tint($secondary-color, 50%),
+    lightest: tint($secondary-color, 75%),
+    dark: shade($secondary-color, 25%),
+    darker: shade($secondary-color, 50%),
+    darkest: shade($secondary-color, 75%)
+  ),
+  tertiary: (
+    base: $tertiary-color,
+    light: tint($tertiary-color, 25%),
+    lighter: tint($tertiary-color, 50%),
+    lightest: tint($tertiary-color, 85%),
+    dark: shade($tertiary-color, 25%),
+    darker: shade($tertiary-color, 50%),
+    darkest: shade($tertiary-color, 75%)
+  ),
+  success: (
+    base: $success-color,
+    light: tint($success-color, 25%),
+    lighter: tint($success-color, 50%),
+    lightest: tint($success-color, 85%),
+    dark: shade($success-color, 25%),
+    darker: shade($success-color, 50%),
+    darkest: shade($success-color, 75%)
+  ),
+  warning: (
+    base: $warning-color,
+    light: tint($warning-color, 25%),
+    lighter: tint($warning-color, 50%),
+    lightest: tint($warning-color, 85%),
+    dark: shade($warning-color, 25%),
+    darker: shade($warning-color, 50%),
+    darkest: shade($warning-color, 75%)
+  ),
+  error: (
+    base: $error-color,
+    light: tint($error-color, 25%),
+    lighter: tint($error-color, 50%),
+    lightest: tint($error-color, 85%),
+    dark: shade($error-color, 25%),
+    darker: shade($error-color, 50%),
+    darkest: shade($error-color, 75%)
+  )
+);
+
+// Set the background color of modal overlays.
+$overlay-bg: rgba($black, 0.85);
+
+// YIQ Color Settings
+// @see https://github.com/timhettler/sass-yiq
+$yiq-contrasted-threshold: 135;
+$yiq-contrasted-light-default: $white;
+$yiq-contrasted-dark-default: $black;

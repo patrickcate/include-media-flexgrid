@@ -1,0 +1,28 @@
+// =============================================================================
+// @name Visibility Settings
+// @description Sass settings for showing and hiding elements.
+// @group settings
+// @file src/sass/_partials/1-tools/4-settings/_visibility.settings.scss
+// =============================================================================
+
+$z-index: (
+  hidden: -1,
+  base: 0,
+  nudge: 1,
+  step: 10,
+  jump: 1000,
+  fixed: 2000,
+  sticky: 3000,
+  popup: 4000,
+  overlay: 5000,
+  modal: 6000
+);
+
+$im-hidden-class: 'u-hidden';
+$im-hidden-important: true;
+
+$im-visible-class: 'u-visible';
+$im-visible-important: true;
+$im-include-exact: true;
+$im-include-down: true;
+$im-include-up: true;

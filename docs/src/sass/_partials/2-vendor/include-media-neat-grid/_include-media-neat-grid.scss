@@ -1,0 +1,105 @@
+$im-neat-grid-row-class: 'row' !default;
+$im-neat-grid-col-class: 'col' !default;
+$im-neat-grid-breakpoint-separator: '-' !default;
+$im-neat-grid-include-offset: true !default;
+$im-neat-grid-include-push: true !default;
+$im-neat-grid-include-pull: true !default;
+$im-neat-grid-total: map-get($neat-grid, 'columns');
+$im-neat-grid-gutter: map-get($neat-grid, 'gutter');
+$im-neat-grid-breakpoints: length($breakpoints);
+
+@if variable-exists('$breakpoints') == null {
+  @warn 'Make sure you have imported and setup Include Media first.';
+}
+
+@if variable-exists('$neat-grid') == null {
+  @warn 'Make sure you have imported and setup Bourbon Neat 2.0';
+}
+
+// Main grid class mixin.
+@mixin im-neat-grid() {
+
+  .#{$im-neat-grid-row-class} {
+    @include grid-container;
+  }
+
+  .#{$im-neat-grid-row-class}--nested {
+    @include grid-collapse;
+  }
+
+  @for $i from 1 through ($im-neat-grid-total) {
+
+    .#{$im-neat-grid-col-class}--#{$i} {
+      @include grid-column($i);
+    }
+  }
+
+  @if $im-neat-grid-include-offset == true {
+    @for $i from 1 through ($im-neat-grid-total) {
+
+      .#{$im-neat-grid-col-class}--offset-#{$i} {
+        @include grid-push($i);
+      }
+    }
+  }
+
+  @if $im-neat-grid-include-push == true {
+    @for $i from 1 through ($im-neat-grid-total) {
+
+      .#{$im-neat-grid-col-class}--push-#{$i} {
+        @include grid-shift($i);
+      }
+    }
+  }
+
+  @if $im-neat-grid-include-pull == true {
+    @for $i from 1 through ($im-neat-grid-total) {
+
+      .#{$im-neat-grid-col-class}--pull-#{$i} {
+        @include grid-shift($i * -1);
+      }
+    }
+  }
+
+  @for $i from 1 through $im-neat-grid-breakpoints {
+    $im-breakpoint: nth($breakpoints, $i);
+    $im-breakpoint-name: nth($im-breakpoint, 1);
+
+    @include media('>=#{$im-breakpoint-name}') {
+
+      @for $i from 1 through ($im-neat-grid-total) {
+
+        .#{$im-neat-grid-col-class}--#{$i}#{$im-neat-grid-breakpoint-separator}#{$im-breakpoint-name} {
+          @include grid-column($i);
+        }
+      }
+
+      @if $im-neat-grid-include-offset == true {
+        @for $i from 1 through ($im-neat-grid-total) {
+
+          .#{$im-neat-grid-col-class}--offset-#{$i}#{$im-neat-grid-breakpoint-separator}#{$im-breakpoint-name} {
+            @include grid-push($i);
+          }
+        }
+      }
+
+      @if $im-neat-grid-include-push == true {
+        @for $i from 1 through ($im-neat-grid-total) {
+
+          .#{$im-neat-grid-col-class}--push-#{$i}#{$im-neat-grid-breakpoint-separator}#{$im-breakpoint-name} {
+            @include grid-shift($i);
+          }
+        }
+      }
+
+      @if $im-neat-grid-include-pull == true {
+        @for $i from 1 through ($im-neat-grid-total) {
+
+          .#{$im-neat-grid-col-class}--pull-#{$i}#{$im-neat-grid-breakpoint-separator}#{$im-breakpoint-name} {
+            @include grid-shift($i * -1);
+          }
+        }
+      }
+    }
+  }
+}

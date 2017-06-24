@@ -1,0 +1,67 @@
+/* Order */
+
+@mixin im-flexgrid-order-classes {
+
+  @if im-setting('include-order') {
+    @for $n from 1 through im-setting('total-columns') {
+
+      @if $n == 1 {
+
+        .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-first, .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-#{$n} {
+          order: -1;
+        }
+      }
+      @else if $n == im-setting('total-columns') / 2 {
+
+        .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-middle, .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-#{$n} {
+          order: $n;
+        }
+      }
+      @else if $n == im-setting('total-columns') {
+
+        .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-last, .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-#{$n} {
+          order: $n;
+        }
+      }
+      @else {
+
+        .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-#{$n} {
+          order: $n;
+        }
+      }
+    }
+  }
+}
+
+@mixin im-flexgrid-responsive-order-classes($breakpoint-name) {
+
+  @if im-setting('include-order') {
+    @for $n from 1 through im-setting('total-columns') {
+
+      @if $n == 1 {
+
+        .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-first#{im-setting('breakpoint-separator')}#{$breakpoint-name}, .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+          order: -1;
+        }
+      }
+      @else if $n == im-setting('total-columns') / 2 {
+
+        .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-middle#{im-setting('breakpoint-separator')}#{$breakpoint-name}, .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+          order: $n;
+        }
+      }
+      @else if $n == im-setting('total-columns') {
+
+        .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-last#{im-setting('breakpoint-separator')}#{$breakpoint-name}, .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+          order: $n;
+        }
+      }
+      @else {
+
+        .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('order-class')}-#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+          order: $n;
+        }
+      }
+    }
+  }
+}

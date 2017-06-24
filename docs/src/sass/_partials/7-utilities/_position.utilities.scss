@@ -1,0 +1,20 @@
+// =============================================================================
+// @name Position Utilities
+// @description Utility position classes.
+// @group utilities
+// @file src/sass/_partials/7-utilities/_position.utilities.scss
+// =============================================================================
+
+.u-align-left {
+  float: left!important;
+}
+
+.u-align-right {
+  float: right!important;
+}
+
+.u-align-center {
+  display: block!important;
+  margin-right: auto!important;
+  margin-left: auto!important;
+}

@@ -1,0 +1,55 @@
+// =============================================================================
+// @name Visiblity Utilities
+// @description Utility visiblity classes.
+// @group utilities
+// @file src/sass/_partials/7-utilities/_visibility.utilities.scss
+// =============================================================================
+
+// Only show elements to screen readers.
+.u-sr-only {
+  position: absolute!important;
+  overflow: hidden!important;
+  clip: rect(0 0 0 0) !important;
+  width: 1px!important;
+  height: 1px!important;
+  margin: -1px!important;
+  padding: 0!important;
+  border: 0!important;
+}
+
+// We have to import the include media hidden classes library here because
+// it needs the $breakpoints variables set before it can be used.
+@import '../2-vendor/include-media-hidden-classes/_include-media-hidden-classes';
+
+// Generate @media hidden classes.
+@include im-hidden-classes();
+
+.u-inline {
+  display: inline!important;
+}
+
+.u-inline-block {
+  display: inline-block!important;
+}
+
+.u-block {
+  display: block!important;
+}
+
+.u-inline-flex {
+  display: inline-flex!important;
+}
+
+.u-flex {
+  display: flex!important;
+}
+
+// We have to import the include media visiblity classes library here because
+// it needs the $breakpoints variables set before it can be used.
+@import '../2-vendor/include-media-visible-classes/_include-media-visible-classes';
+
+// Generate @media screen visibility classes.
+@include im-visible-classes();
+
+// Generate @media print visibility classes.
+@include im-print-visible-classes;

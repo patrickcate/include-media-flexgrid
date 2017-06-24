@@ -1,0 +1,11 @@
+@function im-setting($setting) {
+
+    // If it exists, return the setting.
+    @if map-has-key($im-flexgrid-settings, $setting) {
+      @return map-get($im-flexgrid-settings, $setting);
+    }
+
+    @warn 'There doesn\'t appear to be a setting named: `#{$setting}`';
+
+    @return null;
+}

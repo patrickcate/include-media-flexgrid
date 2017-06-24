@@ -1,0 +1,10 @@
+// =============================================================================
+// @name Select Component
+// @description Styling a select option form element.
+// @group components
+// @file src/sass/_partials/5-components/_select.component.scss
+// =============================================================================
+
+.c-select {
+  @include select-box();
+}

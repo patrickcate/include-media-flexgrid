@@ -1,0 +1,210 @@
+// =============================================================================
+// @name Grid Settings
+// @description General project grid and spacing settings, as well as settings
+//              for grid libraries such as Susy.
+// @group settings
+// @file src/sass/_partials/1-tools/4-settings/_grid.settings.scss
+// =============================================================================
+
+// Setup a base measurement system based on the body font size.
+$spacing: rem($base-font-size);
+// $spacing: rem($base-font-size) * $base-line-height;
+$three-quarter-spacing: $spacing * 0.75;
+$half-spacing: $spacing / 2;
+$quarter-spacing: $spacing / 4;
+$eighth-spacing: $spacing / 8;
+$double-spacing: $spacing * 2;
+
+// Set grid parameters to use with Susy.
+$total-columns: 12;
+$column-width: $spacing * 2;
+
+// Set Susy map settings.
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: inside-static,
+  container: $max-width,
+  container-position: center,
+  columns: $total-columns,
+  gutters: 0.5,
+  column-width: $column-width,
+  global-box-sizing: border-box,
+  last-flow: to,
+);
+
+$neat-grid: (
+  columns: $total-columns,
+  gutter: $spacing,
+);
+
+// Set default border-width.
+$base-border-width: 1px;
+
+// include-media-grid-settings.
+// Grid class name
+$im-grid-class: 'o-grid';
+
+// Cell class name.
+$im-grid-cell-class: 'o-grid__cell';
+
+// Use gutters by default.
+$im-gutters-default: true;
+
+// Gutter size.
+$im-grid-gutter-size: $spacing;
+
+// Optionally include max-width to fix IE issues.
+$im-grid-include-max-width: true;
+
+// Set include media columns class.
+$im-columns-class: '.u-width';
+
+$im-susy-grid-grid-class: 'o-grid';
+$im-susy-grid-cell-class: 'o-grid__cell';
+$im-susy-grid-row-class: 'o-row';
+$im-susy-grid-col-class: 'o-row__col';
+$im-susy-grid-fraction-separator: \/;
+// $im-susy-grid-include-pre: true;
+// $im-susy-grid-include-post: true;
+// $im-susy-grid-include-pull: true;
+// $im-susy-grid-include-squish: true;
+
+
+// @include gridle_setup((
+//   context: 12,
+//   gutter-width: $spacing,
+//   direction: ltr,
+//   dir-attribute: false,
+//   name-multiplicator: 1,
+//   states-classes: false,
+//   classes-prefix: ''
+// ));
+//
+// $gridle-generate-json-settings: false;
+// $gridle-default-states: true; // register or not the states tv, print, retina, etc...
+//
+// @each $break-name, $break-value in $breakpoints {
+//   @include gridle_register_state($break-name, (min-width: $break-value));
+// }
+//
+// $_gridle-packages: (
+//   container: (
+//     classname: ('o-container', '--', '%state'),
+//     package: default container
+//   ),
+//   row: (
+//     classname: ('o-grid-row', '--', '%reverse', '-', '%state'),
+//     package: default row
+//   ),
+//   row-align: (
+//     classname: ('o-grid', '--', 'align', '-', '%align', '-', '%state'),
+//     package: default row-align
+//   ),
+//   row-full: (
+//     classname: ('o-grid', '--', 'full', '-', '%state'),
+//     package: default row-full
+//   ),
+//   row-debug: (
+//     classname: ('o-grid', '--', 'debug', '-', '%state'),
+//     package: debug row-debug
+//   ),
+//   nowrap: (
+//     classname: ('o-grid--nowrap', '-', '%state'),
+//     package: default nowrap
+//   ),
+//   wrap: (
+//     classname: ('o-grid--wrap', '-', '%state'),
+//     package: default wrap
+//   ),
+//   col: (
+//     classname: ('o-grid__cell-col', '--', '%reverse', '-', '%state'),
+//     package: default col
+//   ),
+//   grid: (
+//     classname: ('o-grid__cell', '--', '%column', '-', '%state'),
+//     package: default grid
+//   ),
+//   grid-table: (
+//     classname: ('o-grid', '--', 'table', '-', '%state'),
+//     package: default grid-table
+//   ),
+//   grid-adapt: (
+//     classname: ('o-grid__cell', '--', 'adapt', '-', '%state'),
+//     package: default grid-adapt
+//   ),
+//   grid-grow: (
+//     classname: ('o-grid__cell', '--', 'grow', '-', '%state'),
+//     package: default grid-grow
+//   ),
+//   grid-centered: (
+//     classname: ('o-grid__cell', '--', 'centered', '-', '%state'),
+//     package: default grid-centered
+//   ),
+//   push: (
+//     classname: ('o-grid__cell--push', '-', '%column', '-', '%state'),
+//     package: default push
+//   ),
+//   pull: (
+//     classname: ('o-grid__cell--pull', '-', '%column', '-', '%state'),
+//     package: default pull
+//   ),
+//   prefix: (
+//     classname: ('o-grid__cell--prefix', '-', '%column', '-', '%state'),
+//     package: default prefix
+//   ),
+//   suffix: (
+//     classname: ('o-grid__cell--suffix', '-', '%column', '-', '%state'),
+//     package: default suffix
+//   ),
+//   // hide: (
+//   //   classname: ('u-hide', '-', '%state'),
+//   //   package: helpers hide
+//   // ),
+//   // show: (
+//   //   classname: ('u-show', '-', '%state'),
+//   //   package: helpers show
+//   // ),
+//   // show-inline: (
+//   //   classname: ('u-show', '--', 'inline', '-', '%state'),
+//   //   package: helpers show-inline
+//   // ),
+//   // not-visible: (
+//   //   classname: ('u-not', '-', 'visible', '-', '%state'),
+//   //   package: helpers not-visible
+//   // ),
+//   // visible: (
+//   //   classname: ('u-visible', '-', '%state'),
+//   //   package: helpers visible
+//   // ),
+//   // float: (
+//   //   classname: ('u-align', '--', '%float', '-', '%state'),
+//   //   package: helpers float
+//   // ),
+//   // clear: (
+//   //   classname: ('u-clear', '--', '%float', '-', '%state'),
+//   //   package: helpers clear
+//   // ),
+//   // clear-each: (
+//   //   classname: ('u-clear', '--', 'every' , '-', '%count', '-', '%state'),
+//   //   package: helpers clear-each
+//   // ),
+//   gutter: (
+//     classname: ('o-grid--gutter', '-', '%side', '-', '%state'),
+//     package: helpers gutter
+//   ),
+//   no-gutter: (
+//     classname: ('o-grid--no', '-', 'gutter', '-', '%side', '-', '%state'),
+//     generic-selector: '[class*="o-grid--no-gutter"]',
+//     package: helpers no-gutter
+//   ),
+//   auto-height: (
+//     classname: ('o-grid--auto', '-', '%state'),
+//     package: helpers auto-height
+//   ),
+//   order: (
+//     classname: ('o-grid__cell--order', '-', '%column-count', '-', '%state'),
+//     package: helpers order
+//   )
+// );

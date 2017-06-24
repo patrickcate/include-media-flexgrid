@@ -1,0 +1,44 @@
+// =============================================================================
+// @name List Elements
+// @description Base CSS for list tags.
+// @group elements
+// @file src/sass/_partials/3-elements/_list.elements.scss
+// =============================================================================
+
+/* stylelint-disable selector-no-type */
+
+ul, ol {
+  padding-left: $spacing;
+  list-style-position: outside;
+}
+
+li {
+  margin: 0;
+
+  > ul, ol {
+    margin-bottom: 0;
+  }
+}
+
+// Don't add margin and padding to nav lists.
+nav {
+
+  ul, ol,
+  li {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+}
+
+dl {
+  margin: 0 0 $spacing 0;
+}
+
+// dt {
+//
+// }
+
+// dd {
+//
+// }

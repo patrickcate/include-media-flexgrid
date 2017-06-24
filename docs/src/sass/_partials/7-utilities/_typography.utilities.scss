@@ -1,0 +1,109 @@
+// =============================================================================
+// @name Typography Utilities
+// @description Utility typography classes.
+// @group utilities
+// @file src/sass/_partials/7-utilities/_typography.utilities.scss
+// =============================================================================
+
+
+// Text alignment helper classes.
+// =====================================
+.u-text-left {
+  text-align: left!important;
+}
+
+.u-text-center {
+  text-align: center!important;
+}
+
+.u-text-right {
+  text-align: right!important;
+}
+
+.u-text-justify {
+  text-align: justify!important;
+}
+
+
+// Text weight helper classes.
+// =====================================
+.u-text-light {
+  font-weight: $font-light!important;
+}
+
+.u-text-normal {
+  font-weight: $font-normal!important;
+}
+
+.u-text-medium {
+  font-weight: $font-medium!important;
+}
+
+.u-text-bold {
+  font-weight: $font-bold!important;
+}
+
+
+// Text style helper classes.
+// =====================================
+.u-text-italic {
+  font-style: italic!important;
+}
+
+.u-text-uppercase {
+  text-transform: uppercase!important;
+}
+
+.u-text-lowercase {
+  text-transform: lowercase!important;
+}
+
+.u-text-capitalize {
+  text-transform: capitalize!important;
+}
+
+
+// Leader helper classes.
+// =====================================
+.u-leader {
+  margin-top: $spacing!important;
+}
+
+.u-half-leader {
+  margin-top: $half-spacing!important;
+}
+
+.u-quarter-leader {
+  margin-top: $quarter-spacing!important;
+}
+
+.u-eighth-leader {
+  margin-top: $eighth-spacing!important;
+}
+
+.u-leader-none {
+  margin-top: 0!important;
+}
+
+
+// Trailer helper classes.
+// =====================================
+.u-trailer {
+  margin-bottom: $spacing!important;
+}
+
+.u-half-trailer {
+  margin-bottom: $half-spacing!important;
+}
+
+.u-quarter-trailer {
+  margin-bottom: $quarter-spacing!important;
+}
+
+.u-eighth-trailer {
+  margin-bottom: $eighth-spacing!important;
+}
+
+.u-trailer-none {
+  margin-bottom: 0!important;
+}

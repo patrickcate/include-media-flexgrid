@@ -1,0 +1,267 @@
+/* stylelint-disable max-nesting-depth */
+
+$im-susy-grid-auto-class: 'gallery' !default;
+// $im-susy-grid-col-class: 'col' !default;
+$im-susy-grid-row-class: 'row' !default;
+$im-susy-grid-col-class: 'row__col' !default;
+$im-susy-grid-fraction-separator: '-' !default;
+$im-susy-grid-include-pre: false !default;
+$im-susy-grid-include-post: false !default;
+$im-susy-grid-include-pull: false !default;
+$im-susy-grid-include-squish: false !default;
+
+$im-susy-grid-total-cols: map-get($susy, 'columns');
+$im-susy-grid-breakpoints: length($breakpoints);
+$im-susy-grid-position: map-get($susy, 'gutter-position');
+
+@mixin im-susy-grid() {
+
+  .#{$im-susy-grid-row-class} {
+    @include clearfix;
+  }
+
+  // .#{$im-susy-grid-row-class}--container {
+  //   max-width: $max-width;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
+
+  // .#{$im-susy-grid-row-class}.#{$im-susy-grid-row-class}--auto {
+  //   > *  {
+  //     @include span($im-susy-grid-total-cols of $im-susy-grid-total-cols);
+  //   }
+  // }
+
+  @for $i from 1 through ($im-susy-grid-total-cols) {
+
+    .#{$im-susy-grid-col-class}--#{$i} {
+
+      $span-width: ($im-susy-grid-total-cols / $i);
+
+      > * {
+        @include span($span-width of $im-susy-grid-total-cols);
+      }
+
+      > *:nth-child(#{$i}n) {
+
+        @if $im-susy-grid-position == 'before' {
+          @include first;
+        }
+        @elseif $im-susy-grid-position == 'after' {
+          @include last;
+        }
+      }
+    }
+  }
+
+
+  @for $i from 1 through $im-susy-grid-breakpoints {
+    $im-breakpoint: nth($breakpoints, $i);
+    $im-breakpoint-name: nth($im-breakpoint, 1);
+
+    @include media('>=#{$im-breakpoint-name}') {
+
+      @for $i from 1 through ($im-susy-grid-total-cols) {
+
+        $span-width: ($im-susy-grid-total-cols / $i);
+
+        .#{$im-susy-grid-col-class}--#{$i}-#{$im-breakpoint-name} {
+
+          > *:nth-child(1n),
+          > * {
+            @include span($span-width of $im-susy-grid-total-cols);
+          }
+
+          > *:nth-child(#{$i}n) {
+            @if $im-susy-grid-position == before {
+              @include first;
+            }
+            @elseif $im-susy-grid-position == after {
+              @include last;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@mixin im-susy-row() {
+
+  .#{$im-susy-grid-row-class} {
+    @include clearfix;
+  }
+
+  .#{$im-susy-grid-row-class}--container {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @for $i from 1 to $im-susy-grid-total-cols {
+
+    // .#{$im-susy-grid-row-class}--#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols} {
+    //
+    //   > .#{$im-susy-grid-col-class},
+    //   > .#{$im-susy-grid-col-class}:nth-child(1n) {
+    //     @include span($i of $im-susy-grid-total-cols);
+    //   }
+    //
+    //   > .#{$im-susy-grid-col-class}:nth-child(#{$im-susy-grid-total-cols / $i}n)  {
+    //     // @include span($i of $im-susy-grid-total-cols);
+    //
+    //     // &:nth-child(#{$im-susy-grid-total-cols / $i}n) {
+    //       @include last;
+    //     // }
+    //   }
+    // }
+
+    :not([class*='#{$im-susy-grid-row-class}--']) {
+
+      .#{$im-susy-grid-col-class}--#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols} {
+        @include span($i of $im-susy-grid-total-cols);
+
+        &:last-child {
+          @include last;
+        }
+      }
+
+      @if $im-susy-grid-include-pre == true {
+
+        .#{$im-susy-grid-col-class}--pre-#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols} {
+          @include pre($i of $im-susy-grid-total-cols);
+        }
+      }
+
+      @if $im-susy-grid-include-post == true {
+
+        .#{$im-susy-grid-col-class}--post-#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols} {
+          @include post($i of $im-susy-grid-total-cols);
+        }
+      }
+
+      @if $im-susy-grid-include-pull == true {
+
+        .#{$im-susy-grid-col-class}--pull-#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols} {
+          @include pull($i of $im-susy-grid-total-cols);
+        }
+      }
+
+      @if $im-susy-grid-include-squish == true {
+
+        .#{$im-susy-grid-col-class}--squish-#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols} {
+          @include squish($i of $im-susy-grid-total-cols);
+        }
+      }
+    }
+
+    .#{$im-susy-grid-col-class}--first {
+      @include first;
+    }
+
+    .#{$im-susy-grid-col-class}--last {
+      @include last;
+    }
+
+    .#{$im-susy-grid-col-class}--full {
+      @include full;
+    }
+
+    .#{$im-susy-grid-col-class}--break {
+      @include break;
+    }
+
+    .#{$im-susy-grid-col-class}--no-break {
+      @include nobreak;
+    }
+  }
+
+  @for $i from 1 through $im-susy-grid-breakpoints {
+    $im-breakpoint: nth($breakpoints, $i);
+    $im-breakpoint-name: nth($im-breakpoint, 1);
+
+    @include media('>=#{$im-breakpoint-name}') {
+
+      @for $i from 1 to $im-susy-grid-total-cols {
+
+        // .#{$im-susy-grid-row-class}--#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols}-#{$im-breakpoint-name} {
+        //
+        //   > .#{$im-susy-grid-col-class}:nth-child(1n) {
+        //     @include span($i of $im-susy-grid-total-cols);
+        //   }
+        //
+        //   > .#{$im-susy-grid-col-class} {
+        //     @include span($i of $im-susy-grid-total-cols);
+        //
+        //     &:nth-child(#{$im-susy-grid-total-cols / $i}n) {
+        //       @include last;
+        //     }
+        //   }
+        // }
+        :not([class*='#{$im-susy-grid-row-class}--']) {
+
+          .#{$im-susy-grid-col-class}--#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols}-#{$im-breakpoint-name},
+          .#{$im-susy-grid-col-class}--#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols}-#{$im-breakpoint-name}:nth-child(1n) {
+
+            $span-width: ($im-susy-grid-total-cols / $i);
+
+            @include span($span-width of $im-susy-grid-total-cols);
+
+            &:last-child {
+              @include last;
+            }
+          }
+
+          @if $im-susy-grid-include-pre == true {
+
+            .#{$im-susy-grid-col-class}--#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols}-pre-#{$im-breakpoint-name} {
+              @include pre($i of $im-susy-grid-total-cols);
+            }
+          }
+
+          @if $im-susy-grid-include-post == true {
+
+            .#{$im-susy-grid-col-class}--#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols}-post-#{$im-breakpoint-name} {
+              @include post($i of $im-susy-grid-total-cols);
+            }
+          }
+
+          @if $im-susy-grid-include-pull == true {
+
+            .#{$im-susy-grid-col-class}--#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols}-pull-#{$im-breakpoint-name} {
+              @include pull($i of $im-susy-grid-total-cols);
+            }
+          }
+
+          @if $im-susy-grid-include-squish == true {
+
+            .#{$im-susy-grid-col-class}--#{$i}#{$im-susy-grid-fraction-separator}#{$im-susy-grid-total-cols}-squish-#{$im-breakpoint-name} {
+              @include squish($i of $im-susy-grid-total-cols);
+            }
+          }
+        }
+
+        .#{$im-susy-grid-col-class}--first-#{$im-breakpoint-name} {
+          @include first;
+        }
+
+        .#{$im-susy-grid-col-class}--last-#{$im-breakpoint-name} {
+          @include last;
+        }
+
+        .#{$im-susy-grid-col-class}--full-#{$im-breakpoint-name} {
+          @include full;
+        }
+
+        .#{$im-susy-grid-col-class}--break-#{$im-breakpoint-name} {
+          @include break;
+        }
+
+        .#{$im-susy-grid-col-class}--no-break-#{$im-breakpoint-name} {
+          @include nobreak;
+        }
+      }
+    }
+  }
+}

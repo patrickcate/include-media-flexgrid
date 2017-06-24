@@ -1,0 +1,35 @@
+// =============================================================================
+// @name Breakpoint Settings
+// @description Project breakpoints for media queries.
+// @group settings
+// @file src/sass/_partials/1-tools/4-settings/_breakpoint.settings.scss
+// =============================================================================
+
+// Set breakpoint variables, and convert all px breakpoints to em's
+// @see https://zellwk.com/blog/media-query-units why this is good.
+$break-min: em(0);
+$break-xxs: em(360px);
+$break-xs: em(400px);
+$break-sm: em(600px);
+$break-md: em(760px);
+$break-lg: em(900px);
+$break-xl: em(1020px);
+$break-xxl: em(1280px);
+$break-max: em(1360px);
+
+// Set more expressive/semantic breakpoint variables.
+$break-one-sidebar: $break-md;
+$break-two-sidebars: $break-lg;
+$max-width: $break-max;
+
+// Set breakpoints and tweakpoint map.
+$breakpoints: (
+  xxs: $break-xxs,
+  xs: $break-xs,
+  sm: $break-sm,
+  md: $break-md,
+  lg: $break-lg,
+  xl: $break-xl,
+  xxl: $break-xxl,
+  max: $break-max,
+);

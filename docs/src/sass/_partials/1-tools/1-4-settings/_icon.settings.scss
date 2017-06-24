@@ -1,0 +1,19 @@
+// =============================================================================
+// @name Icon Settings
+// @description Project icon settings are set here so they can be used by
+//              the icon function to easily added them via pseudo-elements.
+// @group settings
+// @file src/sass/_partials/1-tools/4-settings/_icon.settings.scss
+// @see _functions/_icon.scss
+// =============================================================================
+
+// Map of icon name and HTML entity.
+$icons: (
+  icon--pdf: \e603,
+  icon--send: \e604,
+  icon--download: \e605,
+  icon--required: \e609,
+  icon--checkmark: \e607,
+  icon--refresh: \e608,
+  icon--delete: \e606
+);

@@ -1,0 +1,25 @@
+// =============================================================================
+// @name Table Elements
+// @description Base CSS for table related tags.
+// @group elements
+// @file src/sass/_partials/3-elements/_table.elements.scss
+// =============================================================================
+
+/* stylelint-disable selector-no-type */
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: $quarter-spacing;
+}
+
+// th {
+//
+// }
+
+// td {
+//
+// }

@@ -1,0 +1,4 @@
+$im-columns-class: '.u-width';
+
+@import '_include-media-columns';
+@include im-columns(12);

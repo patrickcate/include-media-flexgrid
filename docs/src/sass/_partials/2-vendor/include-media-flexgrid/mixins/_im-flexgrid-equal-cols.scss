@@ -1,0 +1,47 @@
+/* stylelint-disable max-nesting-depth */
+
+/* Equal Cols */
+
+@mixin im-flexgrid-equal-col-classes($i) {
+
+  @for $n from 1 through $i {
+
+    %grid-equal-class-#{$n} {
+      flex-basis: im-setting('total-columns') / $n / $i * 100%;
+
+      @if im-setting('include-max-width') {
+        max-width: im-setting('total-columns') / $n / $i * 100%;
+      }
+    }
+
+    .#{im-setting('grid-class')}#{im-setting('grid-separator')}equal-#{$n} {
+
+      > [class*=#{im-setting('cell-class')}] {
+        @extend %base-col;
+        @extend %grid-equal-class-#{$n};
+      }
+    }
+  }
+}
+
+@mixin im-flexgrid-responsive-equal-col-classes($i, $breakpoint-name) {
+
+  @for $n from 1 through $i {
+
+    %grid-equal-class-#{$n}-#{$breakpoint-name} {
+      flex-basis: im-setting('total-columns') / $n / $i * 100%;
+
+      @if im-setting('include-max-width') {
+        max-width: im-setting('total-columns') / $n / $i * 100%;
+      }
+    }
+
+    .#{im-setting('grid-class')}#{im-setting('grid-separator')}equal-#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+
+      > [class*=#{im-setting('cell-class')}] {
+        @extend %base-col-#{$breakpoint-name};
+        @extend %grid-equal-class-#{$n}-#{$breakpoint-name};
+      }
+    }
+  }
+}

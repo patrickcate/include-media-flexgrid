@@ -1,0 +1,75 @@
+@mixin im-flexgrid-alignment-classes {
+
+  @each $align-class, $justify-alignment in $im-flexgrid-justify-align-settings {
+
+    .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class} {
+      justify-content: $justify-alignment;
+    }
+  }
+
+  @each $align-class, $item-alignment in $im-flexgrid-item-align-settings {
+
+    .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class} {
+      align-items: $item-alignment;
+    }
+  }
+
+  @each $align-class, $content-alignment in $im-flexgrid-content-align-settings {
+
+    .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class} {
+      align-content: $content-alignment;
+    }
+  }
+
+  @each $align-class, $self-alignment in $im-flexgrid-self-align-settings {
+
+    .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{$align-class} {
+      align-self: $self-alignment;
+    }
+  }
+
+  @each $wrap-class, $wrap-direction in $im-flexgrid-wrap-settings {
+
+    .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$wrap-class} {
+      flex-wrap: $wrap-direction;
+    }
+  }
+}
+
+@mixin im-flexgrid-responsive-alignment-classes($breakpoint-name) {
+
+  @each $align-class, $justify-alignment in $im-flexgrid-justify-align-settings {
+
+    .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+      justify-content: $justify-alignment;
+    }
+  }
+
+  @each $align-class, $item-alignment in $im-flexgrid-item-align-settings {
+
+    .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+      align-items: $item-alignment;
+    }
+  }
+
+  @each $align-class, $content-alignment in $im-flexgrid-content-align-settings {
+
+    .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+      align-content: $content-alignment;
+    }
+  }
+
+  @each $align-class, $self-alignment in $im-flexgrid-self-align-settings {
+
+    .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{$align-class}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+      align-self: $self-alignment;
+    }
+  }
+
+  @each $wrap-class, $wrap-direction in $im-flexgrid-wrap-settings {
+
+    .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$wrap-class}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+      flex-wrap: $wrap-direction;
+    }
+  }
+}

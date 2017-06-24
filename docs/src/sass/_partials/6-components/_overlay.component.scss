@@ -1,0 +1,17 @@
+// =============================================================================
+// @name Overlay Component
+// @description Component to style a screen overlay commonly used with
+//              lightboxes and modal components.
+// @group components
+// @file src/sass/_partials/5-components/_overlay.component.scss
+// =============================================================================
+
+.c-overlay {
+  position: fixed;
+  z-index: z-index(overlay);
+  background-color: $overlay-bg;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

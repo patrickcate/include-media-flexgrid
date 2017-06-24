@@ -1,0 +1,17 @@
+// If you're using include-media to manage your breakpoints, you might want to
+// have it generate media queries in em units but still declare the breakpoints
+// in px for convenience.
+//
+// We decided not to add this to the library core, as it's outside the scope of
+// the project, but you can achieve that with a tiny function:
+
+@function im-to-em($breakpoints, $base-value: 16px) {
+  $new-breakpoints: ();
+
+  @each $name, $value in $breakpoints {
+    $em-value: ($value / $base-value) * 1em;
+    $new-breakpoints: map-merge($new-breakpoints, ($name: $em-value));
+  }
+
+  @return $new-breakpoints;
+}

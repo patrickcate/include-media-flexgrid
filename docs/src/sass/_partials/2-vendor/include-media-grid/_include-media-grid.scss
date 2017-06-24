@@ -1,0 +1,367 @@
+@charset 'UTF-8';
+
+/* stylelint-disable max-nesting-depth */
+
+/*
+  Grid class name
+*/
+$im-grid-class: 'grid' !default;
+
+/*
+  Cell class name
+*/
+$im-grid-cell-class: 'grid-cell' !default;
+
+/*
+  Use gutters by default
+*/
+$im-gutters-default: true !default;
+
+/*
+  Gutter size
+*/
+$im-grid-gutter-size: 0 !default;
+
+/*
+  Optionally include max-width to fix IE issues
+*/
+$im-grid-include-max-width: false !default;
+
+/*
+  Use flexbox longhand to fix some flexbox browser bugs
+  @see https://github.com/philipwalton/flexbugs
+*/
+$im-grid-flex-longhand: false !default;
+
+/*
+  Grid
+*/
+.#{$im-grid-class} {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @if $im-gutters-default {
+    margin: (-$im-grid-gutter-size) 0 0 (-$im-grid-gutter-size);
+  }
+}
+
+/*
+  Grid cell
+*/
+.#{$im-grid-cell-class}, .#{$im-grid-class}--auto > * {
+
+  @if $im-grid-flex-longhand {
+    flex-grow: 4;
+    flex-shrink: 0;
+    flex-basis: 0%;
+  }
+  @else {
+    flex: 1;
+    flex-grow: 4;
+  }
+
+  @if $im-gutters-default {
+    box-sizing: border-box;
+    padding: $im-grid-gutter-size 0 0 $im-grid-gutter-size;
+  }
+}
+
+/*
+  Grid cell modifiers
+*/
+.#{$im-grid-cell-class}--auto-size {
+  @if $im-grid-flex-longhand {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+  @else {
+    flex: none;
+  }
+}
+
+.#{$im-grid-cell-class}--light {
+  flex-grow: 2;
+}
+
+.#{$im-grid-cell-class}--heavy {
+  flex-grow: 8;
+}
+
+/*
+  Grid gutters
+*/
+.#{$im-grid-class}--gutters {
+  margin: (-$im-grid-gutter-size) 0 0 (-$im-grid-gutter-size);
+}
+
+.#{$im-grid-class}--gutters > .#{$im-grid-cell-class}, .#{$im-grid-class}--auto.#{$im-grid-class}--gutters > * {
+  box-sizing: border-box;
+  padding: $im-grid-gutter-size 0 0 $im-grid-gutter-size;
+}
+
+/*
+  No grid gutters
+*/
+.#{$im-grid-class}--no-gutters {
+  margin: 0;
+}
+
+.#{$im-grid-class}--no-gutters > .#{$im-grid-cell-class}, .#{$im-grid-class}--auto.#{$im-grid-class}--no-gutters > * {
+  padding: 0;
+}
+
+.#{$im-grid-class}--col {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/*
+  Alignment per row
+*/
+.#{$im-grid-class}--top {
+  align-items: flex-start;
+}
+
+.#{$im-grid-class}--bottom {
+  align-items: flex-end;
+}
+
+.#{$im-grid-class}--middle {
+  align-items: center;
+}
+
+.#{$im-grid-class}--baseline {
+  align-items: baseline;
+}
+
+.#{$im-grid-class}--stretch {
+  align-items: stretch;
+}
+
+.#{$im-grid-class}--reverse {
+  direction: rtl;
+}
+
+/*
+  Flexible cells
+*/
+.#{$im-grid-class}--flex-grid-cell > .#{$im-grid-cell-class}, .#{$im-grid-class}--flex > .#{$im-grid-cell-class} {
+  display: flex;
+}
+
+/*
+  Justify
+*/
+.#{$im-grid-class}--start {
+  justify-content: flex-start;
+}
+
+.#{$im-grid-class}--end {
+  justify-content: flex-end;
+}
+
+.#{$im-grid-class}--center {
+  justify-content: center;
+}
+
+.#{$im-grid-class}--between {
+  justify-content: space-between;
+}
+
+.#{$im-grid-class}--around {
+  justify-content: space-around;
+}
+
+/*
+  Order
+*/
+
+.#{$im-grid-class}--first {
+  order: -1;
+}
+
+.#{$im-grid-class}--last {
+  order: 1;
+}
+
+/*
+  Alignment per cell
+*/
+.#{$im-grid-cell-class}--top {
+  align-self: flex-start;
+}
+
+.#{$im-grid-cell-class}--middle {
+  align-self: center;
+}
+
+.#{$im-grid-cell-class}--bottom {
+  align-self: flex-end;
+}
+
+.#{$im-grid-cell-class}--baseline {
+  align-self: baseline;
+}
+
+.#{$im-grid-cell-class}--stretch {
+  align-self: center;
+}
+
+/*
+  Generate grid classes
+*/
+@mixin im-grid-columns($columns...) {
+  @each $i in $columns {
+    @for $n from 1 through $i {
+
+      .#{$im-grid-class}--fit > .#{$im-grid-cell-class} {
+        @if $im-grid-flex-longhand {
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: 0%;
+        }
+        @else {
+          flex: 1;
+        }
+      }
+
+      .#{$im-grid-class}--full > .#{$im-grid-cell-class} {
+        @if $im-grid-flex-longhand {
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 100%;
+        }
+        @else {
+          flex: 0 0 100%;
+        }
+      }
+
+      .#{$im-grid-class}--#{$n} > .#{$im-grid-cell-class} {
+        @if $im-grid-flex-longhand {
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: ($n / $i * 100%);
+        }
+        @else {
+          flex: 0 0 ($n / $i * 100%);
+        }
+
+        @if $im-grid-include-max-width {
+          max-width: $n / $i * 100%;
+        }
+      }
+
+      .#{$im-grid-class} > .#{$im-grid-cell-class}--#{$n} {
+        @if $im-grid-flex-longhand {
+          flex-grow: 0 !important;
+          flex-shrink: 0 !important;
+          flex-basis: ($n / $i * 100%) !important;
+        }
+        @else {
+          flex: 0 0 ($n / $i * 100%) !important;
+        }
+
+        @if $im-grid-include-max-width {
+          max-width: ($n / $i * 100%) !important;
+        }
+      }
+    }
+
+    .#{$im-grid-class}--auto-#{$i} > * {
+      @if $im-grid-flex-longhand {
+        flex-grow: 0 !important;
+        flex-shrink: 0 !important;
+        flex-basis: (1 / $i * 100%) !important;
+      }
+      @else {
+        flex: 0 0 (1 / $i * 100%) !important;
+      }
+
+      @if $im-grid-include-max-width {
+        max-width: (1 / $i * 100%) !important;
+      }
+    }
+  }
+
+  @each $breakpoint in $breakpoints {
+    $breakpoint-name: nth($breakpoint, 1);
+
+    @include media(#{'>=' + $breakpoint-name}) {
+      @each $i in $columns {
+        @for $n from 1 through $i {
+
+          .#{$im-grid-class}--fit-#{$breakpoint-name} > .#{$im-grid-cell-class} {
+            @if $im-grid-flex-longhand {
+              flex-grow: 1;
+              flex-shrink: 0;
+              flex-basis: 0%;
+            }
+            @else {
+              flex: 1;
+            }
+          }
+
+          .#{$im-grid-class}--full-#{$breakpoint-name} > .#{$im-grid-cell-class} {
+            @if $im-grid-flex-longhand {
+              flex-grow: 0;
+              flex-shrink: 0;
+              flex-basis: 100%;
+            }
+            @else {
+              flex: 0 0 100%;
+            }
+          }
+
+          .#{$im-grid-class}--#{$n}-#{$breakpoint-name} > .#{$im-grid-cell-class} {
+            @if $im-grid-flex-longhand {
+              flex-grow: 0;
+              flex-shrink: 0;
+              flex-basis: ($n / $i * 100%);
+            }
+            @else {
+              flex: 0 0 ($n / $i * 100%);
+            }
+
+            @if $im-grid-include-max-width {
+              max-width: $n / $i * 100%;
+            }
+          }
+
+          .#{$im-grid-class} > .#{$im-grid-cell-class}--#{$n}-#{$breakpoint-name} {
+            @if $im-grid-flex-longhand {
+              flex-grow: 0 !important;
+              flex-shrink: 0 !important;
+              flex-basis: ($n / $i * 100%) !important;
+            }
+            @else {
+              flex: 0 0 ($n / $i * 100%) !important;
+            }
+
+            @if $im-grid-include-max-width {
+              max-width: ($n / $i * 100%) !important;
+            }
+          }
+        }
+
+        .#{$im-grid-class}--auto-#{$i}-#{$breakpoint-name} > * {
+          @if $im-grid-flex-longhand {
+            flex-grow: 0 !important;
+            flex-shrink: 0 !important;
+            flex-basis: (1 / $i * 100%) !important;
+          }
+          @else {
+            flex: 0 0 (1 / $i * 100%) !important;
+          }
+
+          @if $im-grid-include-max-width {
+            max-width: (1 / $i * 100%) !important;
+          }
+        }
+      }
+    }
+  }
+}

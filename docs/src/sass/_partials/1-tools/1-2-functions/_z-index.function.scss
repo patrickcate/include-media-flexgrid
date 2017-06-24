@@ -1,0 +1,18 @@
+// =============================================================================
+// @name z-index Function
+// @description Helper Sass function to pull a z-index stacking order from the
+//              $z-index map variable.
+// @group function
+// @file src/sass/_partials/1-tools/2-functions/_z-index.function.scss
+// =============================================================================
+
+@function z-index($index, $index-map: $z-index) {
+
+  @if map-has-key($index-map, $index) {
+    @return map-get($index-map, $index);
+  }
+  @else {
+    @warn 'There doesn\'t appear to be a z-index layer named: `#{$index}`';
+    @return null;
+  }
+}

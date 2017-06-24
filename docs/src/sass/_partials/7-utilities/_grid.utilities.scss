@@ -1,0 +1,10 @@
+// =============================================================================
+// @name Grid Utilities
+// @description Utility grid classes.
+// @group utilities
+// @file src/sass/_partials/7-utilities/_grid.utilities.scss
+// =============================================================================
+
+.u-clearfix, .clearfix {
+  @include clearfix;
+}

@@ -1,0 +1,24 @@
+/*
+    Grid class name
+*/
+$im-grid-class: 'o-grid';
+
+/*
+    Cell class name
+*/
+$im-grid-cell-class: 'o-grid__cell';
+
+/*
+    Gutter size
+*/
+$im-grid-gutter-size: $spacing;
+
+/*
+    Optionally include max-width to fix IE issues
+*/
+$im-grid-include-max-width: true;
+
+$im-grid-flex-longhand: true;
+
+@import '_include-media-grid';
+@include im-grid-columns(12);

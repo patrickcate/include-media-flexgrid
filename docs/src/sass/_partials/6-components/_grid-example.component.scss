@@ -1,0 +1,25 @@
+// =============================================================================
+// @name Grid Example Component
+// @description Styling to visually show different include media flexgrid sizes
+//              and layouts.
+// @group components
+// @file src/sass/_partials/5-components/_grid-example.component.scss
+// =============================================================================
+
+.grid-example {
+  background-color: lightgray;
+  padding: $spacing;
+  font-size: 14px;
+  text-align: center;
+  height: 100%;
+}
+
+.grid-example--highlight {
+  position: relative;
+  z-index: 1;
+  background-color: lightgreen;
+}
+
+.grid-example--outline {
+  border: 1px solid black;
+}

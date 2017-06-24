@@ -1,0 +1,24 @@
+// =============================================================================
+// @name Typography Elements
+// @description Base CSS for header and other typography tags.
+// @group elements
+// @file src/sass/_partials/3-elements/_typography.elements.scss
+// =============================================================================
+
+/* stylelint-disable selector-no-type */
+
+code {
+  @include word-wrap;
+  padding: $half-spacing;
+  color: $text-color;
+  background-color: set-color(tertiary, lightest);
+  font-family: $monospace;
+}
+
+figure {
+  margin: 0;
+}
+
+// figcaption {
+//
+// }

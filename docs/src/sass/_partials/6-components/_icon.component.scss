@@ -1,0 +1,21 @@
+// =============================================================================
+// @name Icon Component
+// @description Styling for any icons.
+// @group components
+// @file src/sass/_partials/5-components/_icon.component.scss
+// @see _core/_functions/icon.scss
+// =============================================================================
+
+.c-icon {
+  display: inline-block;
+  font-family: $icon-font;
+  speak: none;
+}
+
+.c-icon--left {
+  margin-right: $quarter-spacing;
+}
+
+.c-icon--right {
+  margin-left: $quarter-spacing;
+}

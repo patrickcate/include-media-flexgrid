@@ -1,0 +1,26 @@
+// =============================================================================
+// @name Color Utilities
+// @description Utility colors classes.
+// @group utilities
+// @file src/sass/_partials/7-utilities/_color.utilities.scss
+// =============================================================================
+
+.u-text-black {
+  color: $black!important;
+}
+
+.u-text-white {
+  color: $white!important;
+}
+
+.u-text-primary {
+  color: set-color(primary) !important;
+}
+
+.u-text-secondary {
+  color: set-color(secondary) !important;
+}
+
+.u-text-tertiary {
+  color: set-color(tertiary) !important;
+}

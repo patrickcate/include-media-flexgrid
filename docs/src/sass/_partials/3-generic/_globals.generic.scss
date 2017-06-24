@@ -1,0 +1,33 @@
+// =============================================================================
+// @name Globals
+// @description Set global attributes used site-white by default.
+// @group generic
+// @file src/sass/_partials/2-generic/_globals.generic.scss
+// =============================================================================
+
+/* stylelint-disable selector-no-type */
+
+// Set the default box-sizing to the more useful 'border-box'.
+// @see https://css-tricks.com/?p=175473
+html {
+  box-sizing: border-box;
+
+  // Set the anti-alias settings. Alternative: subpixel-antialiased
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+  // Set the default background repeat to the more common 'no-repeat' so we
+  // don't have to constantly override it.
+  background-repeat: no-repeat;
+}
+
+::selection {
+  background-color: $primary-color;
+  color: yiq($primary-color);
+}

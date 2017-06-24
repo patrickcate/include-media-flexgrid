@@ -1,0 +1,38 @@
+// =============================================================================
+// @name Page Elements
+// @description Base CSS for root html and body tags.
+// @group elements
+// @file src/sass/_partials/3-elements/_page.elements.scss
+// =============================================================================
+
+/* stylelint-disable selector-no-type */
+
+@at-root {
+  @-ms-viewport {
+    width: device-width;
+  }
+}
+
+html {
+  // Don't allow elements to break out of browser boundries.
+  overflow-x: hidden;
+
+  // Always show the vertical scroll bar so it doesn't cause body element
+  // shifts with different lengths of content.
+  overflow-y: scroll;
+  min-height: 100%;
+
+  // Enable momentum scrolling.
+  -webkit-overflow-scrolling: touch;
+
+  // Set base typography.
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+
+}
+
+body {
+  color: $text-color;
+  font-size: $font-size-xs;
+}

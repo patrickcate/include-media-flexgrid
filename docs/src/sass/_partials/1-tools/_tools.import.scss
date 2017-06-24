@@ -1,0 +1,119 @@
+// =============================================================================
+// @name Tools Imports
+// @description Imports all mixins, fuctions, and libraries.
+//              Nothing should every be imported into tools which generates any
+//              CSS by default. This makes it easy to import all tool imports
+//              into other Sass files without generating duplicate CSS.
+// @group import
+// @file src/sass/_partials/1-tools/_tools.import.scss
+//
+// TABLE OF CONTENTS:
+// [1.1] Libraries ----- Third part Sass libraries. Many of the library paths
+//       are to npm node modules to make updating them easier.
+// [1.2] Functions ----- Any custom Sass functions.
+// [1.3] Mixins -------- Any custom Sass mixins.
+// [1.4] Settings ------ Custom Sass variables. Includes both global settings as
+//     well as component and object variables.
+// =============================================================================
+
+// npm install family.scss bourbon breakpoint-sass susy modularscale-sass typi
+// include-media include-media-or sass-yiq open-color stylelint-scss
+// input-range-scss --save-dev
+
+// Don't show Bourbon deprecation warning.
+$output-bourbon-deprecation-warnings: false;
+
+// [1.1] Libraries
+// =====================================
+
+// Include mathsass library for other plugins.
+// @see https://github.com/terkel/mathsass
+@import './node_modules/mathsass/dist/math';
+
+// @see http://bourbon.io
+// @see http://bourbon.io/docs
+@import './node_modules/bourbon/app/assets/stylesheets/bourbon';
+
+// Family Sass library must be imported before Susy because of first() and
+// last() mixin name conflicts.
+// @see https://lukyvj.github.io/family.scss
+@import './node_modules/family.scss/source/src/_family';
+
+// @see http://breakpoint-sass.com
+// @import './node_modules/breakpoint-sass/stylesheets/breakpoint';
+
+// @see https://neat.bourbon.io
+@import './node_modules/bourbon-neat/core/neat';
+
+// @see http://susy.oddbird.net
+@import './node_modules/susy/sass/_susy';
+
+// @see http://www.modularscale.com
+// @see https://github.com/modularscale/modularscale-sass
+@import './node_modules/modularscale-sass/stylesheets/_modularscale';
+
+// @see https://github.com/zellwk/typi
+@import './node_modules/typi/scss/_typi';
+
+// @see http://include-media.com
+// @import './node_modules/include-media/dist/_include-media';
+
+// @see https://github.com/Nirazul/include-media-or
+@import './node_modules/include-media-or/dist/_include-media-or';
+
+// @see https://github.com/timhettler/sass-yiq
+@import './node_modules/sass-yiq/src/sass/yiq';
+
+// @see https://yeun.github.io/open-color
+// @see https://github.com/yeun/open-color
+@import './node_modules/open-color/open-color.scss';
+
+// https://www.npmjs.com/package/font-face-generator
+@import './node_modules/font-face-generator/generator';
+
+// @see https://github.com/dbox/select-box
+@import '1-1-libraries/select-box/select-box';
+
+// @see https://gist.github.com/thejase/d2107285b6e10315dd6bc055115647fe
+@import '1-1-libraries/eq-helper/eq-helper.mixin';
+
+
+// [1.2] Functions
+// =====================================
+@import '1-2-functions/color-scheme.function';
+@import '1-2-functions/entity.function';
+@import '1-2-functions/icon-height.function';
+@import '1-2-functions/icon-width.function';
+@import '1-2-functions/icon.function';
+@import '1-2-functions/im-to-em.function';
+@import '1-2-functions/px-to-em.function';
+@import '1-2-functions/px-to-rem.function';
+@import '1-2-functions/unicode.function';
+@import '1-2-functions/yiq.function';
+@import '1-2-functions/z-index.function';
+
+
+// [1.3] Mixins
+// =====================================
+@import '1-3-mixins/clearfix.mixin';
+@import '1-3-mixins/fluid-type.mixin';
+@import '1-3-mixins/range.mixin';
+@import '1-3-mixins/print-visible-classes.mixin';
+
+
+// [1.4] Settings
+// =====================================
+@import '1-4-settings/_typography.settings';
+@import '1-4-settings/_breakpoint.settings';
+@import '1-4-settings/_grid.settings';
+@import '1-4-settings/_color.settings';
+// ↑ ---------------- ↑ IMPORT THESE FIRST.
+// Often later settings will use these as a base.
+
+@import '1-4-settings/_form.settings';
+@import '1-4-settings/_motion.settings';
+@import '1-4-settings/_visibility.settings';
+@import '1-4-settings/_image.settings';
+@import '1-4-settings/_table.settings';
+@import '1-4-settings/_icon.settings';
+@import '1-4-settings/_link.settings';

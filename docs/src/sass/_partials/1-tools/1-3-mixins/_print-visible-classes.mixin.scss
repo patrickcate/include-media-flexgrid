@@ -1,0 +1,42 @@
+// =============================================================================
+// @name Print Visibility Utilities
+// @description Utility visibility classes for print media queries.
+// @group utilities
+// @file src/sass/_partials/1-tools/1-3-mixins/_print-visible-classes.scss
+// =============================================================================
+
+@mixin im-print-visible-classes {
+  @include media('print') {
+
+    .u-visible-print--block {
+      display: block!important;
+    }
+
+    .u-visible-print--inline {
+      display: inline!important;
+    }
+
+    .u-visible-print--inline-block {
+      display: inline-block!important;
+    }
+
+    .u-visible-print--table {
+      display: table!important;
+    }
+
+    .u-visible-print--flex {
+      display: flex!important;
+    }
+
+    .u-visible-print--inline-flex {
+      display: inline-flex!important;
+    }
+  }
+
+  @include media('screen') {
+
+    .u-hidden--print {
+      display: none!important;
+    }
+  }
+}

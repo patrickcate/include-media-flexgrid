@@ -1,0 +1,37 @@
+// =============================================================================
+// @name Header Elements
+// @description Base CSS for header tags.
+// @group elements
+// @file src/sass/_partials/3-elements/_header.elements.scss
+// =============================================================================
+
+/* stylelint-disable selector-no-type */
+
+h1, h2, h3, h4, h5, h6 {
+  // margin-top: 0;
+  // margin-bottom: 0;
+}
+
+h1 {
+  font-size: $font-size-xl;
+}
+
+h2 {
+  font-size: $font-size-lg;
+}
+
+h3 {
+  font-size: $font-size-md;
+}
+
+h4 {
+  font-size: $font-size-sm;
+}
+
+h5 {
+  font-size: $font-size-xs;
+}
+
+h6 {
+  font-size: $font-size-min;
+}

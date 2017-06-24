@@ -1,0 +1,38 @@
+// =============================================================================
+// @name Tabs Component
+// @description Drupal tab styling.
+// @group components
+// @file src/sass/_partials/5-components/_tabs.component.scss
+// =============================================================================
+
+.c-tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-tabs__item {
+
+  &:not(:last-of-type) {
+    margin-right: $spacing;
+  }
+}
+
+// .c-tabs__item--active {
+//
+// }
+
+// .c-tabs__text {
+//
+// }
+
+// .c-tabs__text--active {
+//
+// }
+
+// .c-tabs--primary {
+//
+// }
+
+// .c-tabs--secondary {
+//
+// }

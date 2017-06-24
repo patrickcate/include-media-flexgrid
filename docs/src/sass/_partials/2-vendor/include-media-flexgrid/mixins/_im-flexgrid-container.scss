@@ -1,0 +1,16 @@
+@mixin im-flexgrid-container-classes {
+
+  .#{im-setting('container-class')} {
+    padding-left: #{im-setting('gutter-size') / 2};
+    padding-right: #{im-setting('gutter-size') / 2};
+  }
+}
+
+
+@mixin im-flexgrid-responsive-container-classes($breakpoint-name) {
+
+  .#{im-setting('container-class')}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+    padding-left: #{im-setting('gutter-size') / 2};
+    padding-right: #{im-setting('gutter-size') / 2};
+  }
+}

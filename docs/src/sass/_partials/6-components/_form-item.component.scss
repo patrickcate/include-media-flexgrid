@@ -1,0 +1,48 @@
+// =============================================================================
+// @name Form Item Component
+// @description Form item container component for form elements.
+// @group components
+// @file src/sass/_partials/5-components/_form-item.component.scss
+// =============================================================================
+
+.c-form-item {
+  margin-bottom: $spacing;
+}
+
+.c-form-item--checkbox,
+.c-form-item--radio {
+  margin-bottom: $half-spacing;
+}
+
+// .c-form-item--required {
+//
+// }
+
+// .c-form-item__label {
+//
+// }
+
+.c-form-item__label {
+  display: block;
+
+}
+
+.c-form-item__label--before {
+  font-weight: bold;
+}
+
+// .c-form--item__controls {
+//
+// }
+
+.c-form-item__description {
+  font-size: $font-size-min;
+}
+
+.c-form-item--inline {
+  display: inline-block;
+}
+
+.c-form-item--stacked {
+  display: block;
+}

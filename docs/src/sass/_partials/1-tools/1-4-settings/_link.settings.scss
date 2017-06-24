@@ -1,0 +1,13 @@
+// =============================================================================
+// @name Link Settings
+// @description Settings for a[href] link elements.
+// @group settings
+// @file src/sass/_partials/1-tools/4-settings/_link.settings.scss
+// =============================================================================
+
+// Link Colors
+$link-color: set-color(primary);
+$link-color-hover: set-color(secondary);
+$link-color-visited: set-color(primary, dark);
+$link-color-active: set-color(primary, dark);
+$link-color-focus: set-color(secondary);

@@ -1,0 +1,63 @@
+/* Gutters */
+
+@mixin im-flexgrid-gutter-classes {
+
+  .#{im-setting('grid-class')}--no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .#{im-setting('grid-class')}--half-gutters {
+    margin-left: #{im-setting('gutter-size') / 4 * -1};
+    margin-right: #{im-setting('gutter-size') / 4 * -1};
+  }
+
+  .#{im-setting('grid-class')}--gutters {
+    margin-left: #{im-setting('gutter-size') / 2 * -1};
+    margin-right: #{im-setting('gutter-size') / 2 * -1};
+  }
+
+  .#{im-setting('grid-class')}--double-gutters {
+    margin-left: #{im-setting('gutter-size') * -1};
+    margin-right: #{im-setting('gutter-size') * -1};
+  }
+}
+
+@mixin im-flexgrid-responsive-gutter-classes($breakpoint-name) {
+
+  %grid--no-gutters#{$breakpoint-name} {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  %grid--half-gutters#{$breakpoint-name} {
+    margin-left: #{im-setting('gutter-size') / 4 * -1};
+    margin-right: #{im-setting('gutter-size') / 4 * -1};
+  }
+
+  %grid--gutters#{$breakpoint-name} {
+    margin-left: #{im-setting('gutter-size') / 2 * -1};
+    margin-right: #{im-setting('gutter-size') / 2 * -1};
+  }
+
+  %grid--double-gutters#{$breakpoint-name} {
+    margin-left: #{im-setting('gutter-size') * -1};
+    margin-right: #{im-setting('gutter-size') * -1};
+  }
+
+  .#{im-setting('grid-class')}#{im-setting('grid-separator')}no-gutters#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+    @extend %grid--no-gutters#{$breakpoint-name};
+  }
+
+  .#{im-setting('grid-class')}#{im-setting('grid-separator')}half-gutters#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+    @extend %grid--half-gutters#{$breakpoint-name};
+  }
+
+  .#{im-setting('grid-class')}#{im-setting('grid-separator')}gutters#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+    @extend %grid--gutters#{$breakpoint-name};
+  }
+
+  .#{im-setting('grid-class')}#{im-setting('grid-separator')}double-gutters#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+    @extend %grid--double-gutters#{$breakpoint-name};
+  }
+}

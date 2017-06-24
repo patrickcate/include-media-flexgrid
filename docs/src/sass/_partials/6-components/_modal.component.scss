@@ -1,0 +1,10 @@
+// =============================================================================
+// @name Modal Component
+// @description Modal styling using the Drupal Colorbox module.
+// @group components
+// @file src/sass/_partials/5-components/_modal.component.scss
+// =============================================================================
+
+.c-modal {
+  z-index: z-index(modal);
+}

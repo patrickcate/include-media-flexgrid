@@ -1,0 +1,92 @@
+/* stylelint-disable max-nesting-depth */
+
+/* Cols */
+
+@mixin im-flexgrid-col-classes($i) {
+
+  %base-col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    flex-shrink: 0;
+    flex-grow: 1;
+
+    @if im-setting('default-gutters') {
+      padding-left: #{im-setting('gutter-size') / 2};
+      padding-right: #{im-setting('gutter-size') / 2};
+    }
+  }
+
+  @for $n from 1 through $i {
+
+    %grid-col-#{$n} {
+      flex-basis: $n / $i * 100%;
+
+      @if im-setting('include-max-width') {
+        max-width: $n / $i * 100%;
+      }
+    }
+
+    .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{$n} {
+      @extend %base-col;
+      @extend %grid-col-#{$n};
+    }
+  }
+
+  .#{im-setting('cell-class')}#{im-setting('grid-separator')}none {
+    flex: none;
+  }
+
+  .#{im-setting('cell-class')}#{im-setting('grid-separator')}auto {
+    @extend %base-col;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: auto;
+    width: auto;
+  }
+}
+
+@mixin im-flexgrid-responsive-col-classes($i, $breakpoint-name) {
+
+  %base-col-#{$breakpoint-name} {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    @if im-setting('default-gutters') {
+      padding-left: #{im-setting('gutter-size') / 2};
+      padding-right: #{im-setting('gutter-size') / 2};
+    }
+  }
+
+  @for $n from 1 through $i {
+
+    %grid-col-#{$n}-#{$breakpoint-name} {
+      flex-basis: $n / $i * 100%;
+
+      @if im-setting('include-max-width') {
+        max-width: $n / $i * 100%;
+      }
+    }
+
+    .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+      @extend %base-col-#{$breakpoint-name};
+      @extend %grid-col-#{$n}-#{$breakpoint-name};
+    }
+  }
+
+  .#{im-setting('cell-class')}#{im-setting('grid-separator')}none#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+    @extend %base-col-#{$breakpoint-name};
+    flex: none;
+  }
+
+  .#{im-setting('cell-class')}#{im-setting('grid-separator')}auto#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+    @extend %base-col-#{$breakpoint-name};
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: auto;
+    width: auto;
+  }
+}

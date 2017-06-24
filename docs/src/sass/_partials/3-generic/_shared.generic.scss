@@ -1,0 +1,21 @@
+// =============================================================================
+// @name Shared
+// @description Set attributes which are shared among different elements.
+// @group generic
+// @file src/sass/_partials/2-generic/_shared.generic.scss
+// =============================================================================
+
+/* stylelint-disable selector-no-type */
+
+// Always have default margins going in the same direction:
+// @see http://csswizardry.com/2012/06/single-direction-margin-declarations
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+hr,
+table,
+fieldset, figure,
+pre {
+  margin-top: 0;
+  margin-bottom: $spacing;
+}

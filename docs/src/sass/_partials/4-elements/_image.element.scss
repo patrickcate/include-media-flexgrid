@@ -1,0 +1,23 @@
+// =============================================================================
+// @name Image Elements
+// @description Base CSS for images and image related elements.
+// @group elements
+// @file src/sass/_partials/3-elements/_image.elements.scss
+// =============================================================================
+
+/* stylelint-disable selector-no-type */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// img[width], img[height] {
+//   max-width: none;
+// }
+
+// Fix IE issues with using SVG as images.
+// img[src$='.svg'] {
+//   width: 100%;
+// }

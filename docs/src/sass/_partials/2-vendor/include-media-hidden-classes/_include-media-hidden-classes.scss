@@ -1,0 +1,66 @@
+$im-hidden-class: 'hidden' !default;
+$im-hidden-important: false !default;
+
+$im-visible-include-exact: true !default;
+$im-visible-include-down: true !default;
+$im-visible-include-up: true !default;
+
+$im-visible-exact-selector: '' !default;
+$im-visible-up-selector: '-up' !default;
+$im-visible-down-selector: '-down' !default;
+
+$im-num-breakpoints: length($breakpoints);
+
+@mixin im-hidden($type, $breakpoint) {
+
+  .#{$im-hidden-class}--#{$breakpoint}#{$type} {
+
+    @if $im-hidden-important == false {
+      display: none;
+    }
+    @else {
+      display: none!important;
+    }
+  }
+}
+
+@mixin im-hidden-classes {
+
+  .#{$im-hidden-class} {
+    @if $im-hidden-important == false {
+      display: none;
+    }
+    @else {
+      display: none!important;
+    }
+  }
+
+  @for $i from 1 through $im-num-breakpoints {
+    $breakpoint: nth($breakpoints, $i);
+    $breakpoint-name: nth($breakpoint, 1);
+
+    @if $i == $im-num-breakpoints {
+      @include media('>=#{$breakpoint-name}') {
+        @include im-hidden($im-visible-up-selector, $breakpoint-name);
+      }
+    }
+    @else {
+      $next-breakpoint: nth($breakpoints, $i + 1);
+      $next-breakpoint-name: nth($next-breakpoint, 1);
+
+      @include media('>=#{$breakpoint-name}', '<#{$next-breakpoint-name}') {
+        @include im-hidden($im-visible-exact-selector, $breakpoint-name);
+      }
+    }
+
+    @if $i != $im-num-breakpoints {
+      @include media('>=#{$breakpoint-name}') {
+        @include im-hidden($im-visible-up-selector, $breakpoint-name);
+      }
+    }
+
+    @include media('<#{$breakpoint-name}') {
+      @include im-hidden($im-visible-down-selector, $breakpoint-name);
+    }
+  }
+}

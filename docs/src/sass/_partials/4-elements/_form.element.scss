@@ -1,0 +1,53 @@
+// =============================================================================
+// @name Form Elements
+// @description Base CSS for form related tags.
+// @group elements
+// @file src/sass/_partials/3-elements/_form.elements.scss
+// =============================================================================
+
+/* stylelint-disable selector-no-type */
+
+#{$all-text-inputs} {
+  display: block;
+  width: 100%;
+}
+
+// #{$all-text-inputs-focus},
+// #{$all-text-inputs-hover} {
+//
+// }
+
+// #{$all-text-inputs-active} {
+//
+// }
+
+#{$all-buttons} {
+  display: inline-block;
+}
+
+// #{$all-buttons-focus},
+// #{$all-buttons-hover} {
+//
+// }
+
+// #{$all-buttons-active} {
+//
+// }
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+// select {
+//
+// }
+
+// select[multiple] {
+//
+// }
+
+label {
+  cursor: pointer;
+}

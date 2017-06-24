@@ -1,0 +1,77 @@
+// Set default settings.
+$im-visible-class: 'visible' !default;
+$im-visible-use-important: false !default;
+
+$im-visible-include-exact: true !default;
+$im-visible-include-down: true !default;
+$im-visible-include-up: true !default;
+
+$im-visible-exact-selector: '' !default;
+$im-visible-up-selector: '-up' !default;
+$im-visible-down-selector: '-down' !default;
+
+// Set which display mode classes will be generated.
+// The map is used for {classname}: {display value}.
+$im-display-modes: (
+  inline: inline,
+  inline-block: inline-block,
+  block: block,
+  table: table,
+  flex: flex,
+  inline-flex: inline-flex
+) !default;
+
+// Get total number of breakpoints.
+$im-num-breakpoints: length($breakpoints);
+
+@mixin im-visible($type, $breakpoint) {
+  @each $name, $display in $im-display-modes {
+
+    .#{$im-visible-class}--#{$name}-#{$breakpoint}#{$type} {
+
+      @if $im-visible-important == false {
+        display: #{$display};
+      }
+      @else {
+        display: #{$display}!important;
+      }
+    }
+  }
+}
+
+@mixin im-visible-classes {
+  @for $i from 1 through $im-num-breakpoints {
+    $breakpoint: nth($breakpoints, $i);
+    $breakpoint-name: nth($breakpoint, 1);
+
+    @if $im-visible-include-down == true {
+      @include media('<#{$breakpoint-name}') {
+        @include im-visible($im-visible-down-selector, $breakpoint-name);
+      }
+    }
+
+    @if $im-visible-include-exact == true {
+      @if $i == $im-num-breakpoints {
+        @include media('>=#{$breakpoint-name}') {
+          @include im-visible($im-visible-up-selector, $breakpoint-name);
+        }
+      }
+      @else {
+        $next-breakpoint: nth($breakpoints, $i + 1);
+        $next-breakpoint-name: nth($next-breakpoint, 1);
+
+        @include media('>=#{$breakpoint-name}', '<#{$next-breakpoint-name}') {
+          @include im-visible($im-visible-exact-selector, $breakpoint-name);
+        }
+      }
+    }
+
+    @if $im-visible-include-up == true {
+      @if $i != $im-num-breakpoints {
+        @include media('>=#{$breakpoint-name}') {
+          @include im-visible($im-visible-up-selector, $breakpoint-name);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// =============================================================================
+// @name Grid Object
+// @description Object classes for a 12 columns grid.
+// @group objects
+// @file src/sass/objects/facade.grid.scss
+// =============================================================================
+
+@import '../../_partials/1-tools/_tools.import.scss';
+// $im-grid-flex-longhand: true;
+// @import '../../_partials/2-vendor/include-media-grid/_include-media-grid';
+// @include im-grid-columns(12);
+//
+// @import '../../_partials/2-vendor/include-media-neat-grid/include-media-neat-grid';
+// @include im-neat-grid;
+// @import '../../_partials/2-vendor/_include-media-susy-grid/_include-media-susy-grid';
+// @include im-susy-grid;
+// @include im-susy-row;
+// $flexbox-compatibility-enabled: true;
+// $column-gutter: $spacing;
+// $auto-column-gutters: true;
+// $grid-padding-name: 'padding';
+// $independant-grid-name: 'o-grid__cell--align-';
+
+// // Use to namespace the whole grid-system. eg 'wtf-' or 'cool-'
+// $global-name-space: '';
+// $container-name: 'o-container'; // Could be wrapper
+// $grid-name: 'o-grid__cell--'; // Could be col or column
+// $base-grid-name: '--' !default; // Does your base grid have a suffix.
+// $row-name: 'o-grid'; // Could be flex
+// $right-name: 'push'; // Could be push
+// $left-name: 'pull'; // Could be push
+// @import '../../../../node_modules/flex_e_ble/dist/flex_e_ble';
+@import '../../_partials/2-vendor/include-media-flexgrid/include-media-flexgrid';
+// @include im-flexgrid-row;
+// @include im-flexgrid-equal-cols;
+// @include im-flexgrid-cols;
+// @include im-gutter-classes;
+// @include im-offset-classes;
+// @include im-push-classes;
+// @include im-pull-classes;
+// @include im-order-classes;
