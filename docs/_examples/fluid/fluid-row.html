@@ -1,0 +1,12 @@
+---
+layout: example
+title: "Row Classes"
+permalink: /examples/fluid/rows/
+---
+<p>All columns must be wrapped in a row element.</p>
+
+{% for g in (1..12) %}
+<div class="grid grid-{{g}}">
+  <div class="grid__cell grid__cell--12"><div class="grid-example grid-example--outline grid-example--highlight">pull {{g}}</div></div>
+</div>
+{% endfor %}

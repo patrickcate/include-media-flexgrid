@@ -1,0 +1,16 @@
+---
+layout: example
+title: "Auto Column Classes"
+permalink: /examples/fluid/auto-columns/
+---
+<p>If you add the <code>auto</code> class to an equal row, you can omit the cell class.</p>
+
+{% for g in (1..12) %}
+
+  <h3>Auto Equal {{g}} Grid</h3>  
+  <div class="grid grid--auto grid--equal-{{g}}">
+    {% for i in (1..12) %}
+      <div><div class="grid-example">Equal {{i}}</div></div>
+    {% endfor %}
+  </div>
+{% endfor %}

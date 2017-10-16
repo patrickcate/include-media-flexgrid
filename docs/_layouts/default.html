@@ -1,0 +1,23 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+  <div class="o-page">
+    <div class="o-page__container">
+      {% include header.html %}
+      
+      <main class="container">
+        {{ content }}
+      </main>
+      
+      {% include footer.html %}
+    </div>
+  </div>
+</body>
+
+</html>

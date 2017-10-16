@@ -1,0 +1,8 @@
+breakpoints: [xs, sm, md, lg, xl]
+total-breakpoints: 5
+wraps: [wrap, no-wrap, wrap-reverse]
+justify-align: [justify-start, justify-end, justify-center, justify-between, justify-around]
+item-align: [item-start, item-end, item-center, item-between, item-around]
+content-align: [content-start, content-end, content-center, content-between, content-around, content-stretch]
+self-align: [self-start, self-end, self-center, self-between, self-around, self-stretch]
+total-columns: 12

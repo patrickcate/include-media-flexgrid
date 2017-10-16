@@ -1,0 +1,65 @@
+{
+  "browserSync": {
+    "dev": {
+      "url": "http://imfg.dev",
+      "open": "ui",
+      "notify": true
+    },
+    "enable": true
+  },
+  "postcss": {
+    "autoprefixer": [
+      "last 6 Chrome versions",
+      "last 6 Firefox versions",
+      "last 4 iOS versions",
+      "last 4 Safari versions",
+      "Explorer >= 11",
+      "last 5 Opera versions",
+      "Android >= 4"
+    ],
+    "assets": {
+      "loadPaths": [
+        "src/images/",
+        "assets/images/"
+      ]
+    },
+    "easysprite": {
+      "imagePath": "src/images",
+      "spritePath": "assets/images/sprites",
+      "stylesheetPath": "assets/css"
+    }
+  },
+  "sass": {
+    "settings": {
+      "outputStyle": "expanded",
+      "precision": 10,
+      "sourceMap": true
+    },
+    "src": "src/sass/",
+    "dest": "assets/css/",
+    "sourcemaps": "_sourcemaps"
+  },
+  "js": {
+    "src": "src/js/",
+    "dest": "assets/js/",
+    "sourcemaps": "_sourcemaps"
+  },
+  "fonts": {
+    "src": "src/fonts/",
+    "dest": "assets/fonts/"
+  },
+  "images": {
+    "src": "src/images/",
+    "dest": "assets/images/"
+  },
+  "drupal": {
+    "src": "../**/*.{twig,theme,yml}"
+  },
+  "modernizr": {
+    "src": "assets/css/",
+    "dest": "src/js/modernizr/"
+  },
+  "sourcemaps": {
+    "enable": true
+  }
+}

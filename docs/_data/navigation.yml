@@ -1,0 +1,71 @@
+  - id: about
+    url: /about
+
+  - id: settings
+    url: /settings/
+
+  - id: container
+    url: /examples/fluid/container/
+    
+  - id: rows
+    url: /examples/fluid/rows/
+
+  - id: auto-cols
+    url: /examples/fluid/auto-columns/
+
+  - id: cols
+    url: /examples/fluid/columns/
+        
+  - id: equal-cols
+    url: /examples/fluid/equal-columns/
+    
+  - id: gutters
+    url: /examples/fluid/gutters/
+
+  - id: push
+    url: /examples/fluid/push/
+    
+  - id: pull
+    url: /examples/fluid/pull/
+
+  - id: offset
+    url: /examples/fluid/offset/
+
+  - id: order
+    url: /examples/fluid/order/
+
+  - id: alignment
+    url: /examples/fluid/alignment/
+
+  - id: responsive-container
+    url: /examples/responsive/container/
+    
+  - id: responsive-rows
+    url: /examples/responsive/rows/
+
+  - id: responsive-auto-cols
+    url: /examples/responsive/auto-columns/
+      
+  - id: responsive-cols
+    url: /examples/responsive/columns/
+        
+  - id: responsive-equal-cols
+    url: /examples/responsive/equal-columns/
+    
+  - id: responsive-gutters
+    url: /examples/responsive/gutters/
+
+  - id: responsive-push
+    url: /examples/responsive/push/
+    
+  - id: responsive-pull
+    url: /examples/responsive/pull/
+
+  - id: responsive-offset
+    url: /examples/responsive/offset/
+
+  - id: responsive-order
+    url: /examples/responsive/order/
+
+  - id: responsive-alignment
+    url: /examples/responsive/alignment/

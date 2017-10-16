@@ -1,0 +1,19 @@
+---
+layout: example
+title: "Responsive Equal Column Classes"
+permalink: /examples/responsive/equal-columns/
+---
+<h2>12-column Responsive Equal Columns</h2>
+
+{% for b in site.data.settings.breakpoints %}
+  <h3><code>Equal Grid @{{b}}</code> Grid Class</h3>
+  {% for g in (1..12) %}
+    <h4><code>Equal Grid {{g}} @{{b}}</code> Grid Class</h4>
+    <div class="grid grid--equal-{{g}}@{{b}}">
+      {% for i in (1..12) %}
+      <div class="grid__cell"><div class="grid-example">Equal {{g}} @ {{b}}</div></div>
+      {% endfor %}
+    </div>
+
+  {% endfor %}
+{% endfor %}

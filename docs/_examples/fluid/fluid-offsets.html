@@ -1,0 +1,14 @@
+---
+layout: example
+title: "Offset Classes"
+permalink: /examples/fluid/offset/
+---
+<h3>Offset Classes</h3>
+
+{% for g in (1..12) %}
+
+<div class="grid">
+  <div class="grid__cell grid__cell--1 grid__cell--offset-{{g}}"><div class="grid-example grid-example--outline grid-example--highlight">Offset {{g}}</div></div>
+</div>
+
+{% endfor %}

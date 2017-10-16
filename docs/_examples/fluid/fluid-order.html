@@ -1,0 +1,19 @@
+---
+layout: example
+title: "Order Classes"
+permalink: /examples/fluid/order/
+---
+<h3>Order Classes</h3>
+
+{% for g in (1..12) %}
+<div class="grid">
+  <!-- {% if g != 12 and g > 5 %}
+  <div class="grid__cell grid__cell--{{12 | minus: g | minus: 2}}"><div class="grid-example">Grid Cell {{12 | minus: g}}</div></div>
+  {% endif %} -->
+  <div class="grid__cell grid__cell--1 grid__cell--order-{{g}}"><div class="grid-example grid-example--outline grid-example--highlight">Offset {{g}}</div></div>
+  <!-- {% if g != 12 and g < 6 %}
+  <div class="grid__cell grid__cell--{{12 | minus: g | minus: 2}}"><div class="grid-example">Grid Cell {{12 | minus: g}}</div></div>
+  {% endif %} -->
+</div>
+
+{% endfor %}

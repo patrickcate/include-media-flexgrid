@@ -1,0 +1,36 @@
+---
+layout: example
+title: "Gutters"
+permalink: /examples/fluid/gutters/
+---
+<p>Default gutters are set in config map, but can be adjusted as needs with modifer classes.</p>
+
+{% for g in (1..12) %}
+
+  <h3>Auto Equal {{g}} Grid</h3>
+  <div class="grid grid--auto grid--equal-{{g}} grid--no-gutters">
+    {% for i in (1..12) %}
+      <div><div class="grid-example">Equal {{i}}</div></div>
+    {% endfor %}
+  </div>
+{% endfor %}
+
+{% for g in (1..12) %}
+
+  <h3>Auto Equal {{g}} Grid</h3>
+  <div class="grid grid--auto grid--equal-{{g}} grid--half-gutters">
+    {% for i in (1..12) %}
+      <div><div class="grid-example">Equal {{i}}</div></div>
+    {% endfor %}
+  </div>
+{% endfor %}
+
+{% for g in (1..12) %}
+
+  <h3>Auto Equal {{g}} Grid</h3>
+  <div class="grid grid--auto grid--equal-{{g}} grid--double-gutters">
+    {% for i in (1..12) %}
+      <div><div class="grid-example">Equal {{i}}</div></div>
+    {% endfor %}
+  </div>
+{% endfor %}

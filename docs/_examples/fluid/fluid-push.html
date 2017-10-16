@@ -1,0 +1,13 @@
+---
+layout: example
+title: "Push Classes"
+permalink: /examples/fluid/push/
+---
+<h3>Push Classes</h3>
+
+{% for g in (1..12) %}
+<div class="grid">
+  <div class="grid__cell grid__cell--1 grid__cell--push-{{g}}"><div class="grid-example grid-example--outline grid-example--highlight">Push {{g}}</div></div>
+</div>
+
+{% endfor %}

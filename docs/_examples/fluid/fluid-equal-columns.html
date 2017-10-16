@@ -1,0 +1,17 @@
+---
+layout: example
+title: "Equal Column Classes"
+permalink: /examples/fluid/equal-columns/
+---
+<p>Equal width column class can be generated.</p>
+
+{% for g in (1..12) %}
+
+<h3>Equal {{g}} Grid</h3>
+<div class="grid grid--equal-{{g}}">
+  {% for i in (1..12) %}
+  <div class="grid__cell"><div class="grid-example">Equal {{i}}</div></div>
+  {% endfor %}
+</div>
+
+{% endfor %}

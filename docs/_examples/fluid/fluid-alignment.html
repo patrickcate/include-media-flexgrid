@@ -1,0 +1,46 @@
+---
+layout: example
+title: "Alignment Classes"
+permalink: /examples/fluid/alignment/
+---
+<h2>Alignment Classes</h2>
+{% for a in site.data.settings.justify-align %}
+<h3>Alignment: {{a}}</h3>
+{% for g in (2..6) %}
+  <div class="grid grid--{{a}} grid--equal-{{g}}">
+    {% for c in (2..4) %}
+      <div class="grid__cell"><div class="grid-example grid-example--outline grid-example--highlight">Alignment {{a}}</div></div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+{% endfor %}
+
+{% for a in site.data.settings.item-align %}
+<h3>Alignment: {{a}}</h3>
+{% for g in (2..6) %}
+  <div class="grid grid--{{a}} grid--equal-{{g}}">
+    {% for c in (2..5) %}
+      {% if c == 3 || c == 5 %}
+        <div class="grid__cell"><div class="grid-example grid-example--outline"><div class="grid-example grid-example--outline grid-example--highlight">Alignment {{a}}</div></div></div>
+      {% else %}
+        <div class="grid__cell"><div class="grid-example grid-example--outline"><div class="grid-example grid-example--outline grid-example--highlight">Alignment {{a}}<br /> on <br />multiple<br /> rows.</div></div></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endfor %}
+{% endfor %}
+
+{% for a in site.data.settings.content-align %}
+<h3>Alignment: {{a}}</h3>
+{% for g in (2..6) %}
+  <div class="grid grid--{{a}} grid--equal-{{g}}">
+    {% for c in (2..8) %}
+    {% if c == 3 || c == 5 %}
+      <div class="grid__cell"><div class="grid-example grid-example--outline"><div class="grid-example grid-example--outline grid-example--highlight">Alignment {{a}}</div></div></div>
+    {% else %}
+      <div class="grid__cell"><div class="grid-example grid-example--outline"><div class="grid-example grid-example--outline grid-example--highlight">Alignment {{a}}<br /> on <br />multiple<br /> rows.</div></div></div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% endfor %}
+{% endfor %}

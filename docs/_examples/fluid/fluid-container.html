@@ -1,0 +1,17 @@
+---
+layout: example
+title: "Container Class"
+permalink: /examples/fluid/container/
+---
+<h3>Container Class</h3>
+
+{% for g in (1..12) %}
+
+<div class="grid">
+  <div class="grid__cell grid__cell--{{g}}"><div class="grid-example">{{g}}</div></div>
+  {% if g != 12 %}
+    <div class="grid__cell grid__cell--{{12 | minus: g}}"><div class="grid-example">{{12 | minus: g}}</div></div>
+  {% endif %}
+</div>
+
+{% endfor %}

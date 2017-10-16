@@ -1,0 +1,15 @@
+<header class="o-page__header">
+  <div class="o-page__container">
+    <nav class="l-navigation" role="navigation">
+      <ul id="js-nav" class="nav">
+        {% for link in site.data.navigation %}
+        {% if page.id == link.id %}
+        <li class="nav__item nav__item--{{link.id}}"><a href="{{link.url}}" class="nav__link nav__link--{{link.id}} nav__link--is-active-first"><span class="nav__text">{{link.id | capitalize}}</span></a></li>
+        {% else %}
+        <li class="nav__item nav__item--{{link.id}}"><a href="{{link.url}}" class="nav__link nav__link--{{link.id}}"><span class="nav__text">{{link.id | capitalize}}</span></a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

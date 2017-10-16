@@ -1,0 +1,13 @@
+---
+layout: example
+title: "Pull Classes"
+permalink: /examples/fluid/pull/
+---
+<h3>Pull Classes</h3>
+
+{% for g in (1..12) %}
+<div class="grid">
+  <div class="grid__cell grid__cell--1 grid__cell--pull-{{g}}"><div class="grid-example grid-example--outline grid-example--highlight">Pull {{g}}</div></div>
+</div>
+
+{% endfor %}

@@ -1,0 +1,20 @@
+---
+layout: example
+title: "Responsive Offset Classes"
+permalink: /examples/responsive/offset/
+---
+<h2>12-column Responsive Offset</h2>
+
+{% for b in site.data.settings.breakpoints %}
+  <h3><code>.grid__cell@{{b}}</code> Grid Class</h3>
+  {% for g in (1..12) %}
+  
+    <div class="grid">
+      <div class="grid__cell grid__cell--{{g}}@{{b}}"><div class="grid-example">{{g}}</div></div>
+      {% if g != 12 %}
+        <div class="grid__cell grid__cell--{{12 | minus: g}}@{{b}}"><div class="grid-example">{{12 | minus: g}}</div></div>
+      {% endif %}
+    </div>
+
+  {% endfor %}
+{% endfor %}

@@ -1,0 +1,49 @@
+# Site settings
+title: Include Media Flexgrid
+description: Flexbox based grid class system using Include Media
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: /
+
+# Build settings
+markdown: kramdown
+incremental: true
+
+# Compress layout settings
+compress_html:
+  clippings: []
+  comments: []
+  endings: []
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
+
+
+# Custom collections
+collections:
+  examples:
+    output: true
+    
+
+# Include these files
+include: [
+  '.htaccess',
+  'js/*.js',
+  '_pages'
+]
+
+
+# Exclude these files
+exclude: [
+  '*.json',
+  '*.log',
+  '*.map',
+  '*.zip',
+  'js/**/*.*',
+  'gulpfile.js',
+  'node_modules',
+  'src',
+  'Gemfile',
+  'Gemfile.lock'
+]
