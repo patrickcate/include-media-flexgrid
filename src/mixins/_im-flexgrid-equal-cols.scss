@@ -34,7 +34,7 @@
 
 @mixin im-flexgrid-responsive-equal-col-classes($i, $breakpoint-name) {
 
-  /* @#{$breakpoint-name} Reponsive Equal Column Classes*/
+  /* @#{$breakpoint-name} Responsive Equal Column Classes*/
 
   @for $n from 1 through $i {
 

@@ -14,7 +14,7 @@
 @import 'mixins/im-flexgrid-alignment';
 
 @include im-flexgrid-support-check {
-  
+
   @include im-flexgrid-container-classes;
   @include im-flexgrid-row-classes;
 

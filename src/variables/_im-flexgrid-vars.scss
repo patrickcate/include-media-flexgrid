@@ -5,12 +5,10 @@
 }
 
 $im-flexgrid-settings: (
-  'support-check': true,
-  'support-type': '@supports',
-  // otherwise support-type: 'modernizr'
-    'total-columns': 12,
-  // Total columns
-    'container-class': 'container',
+  'support-check': false,
+  'support-type': '@supports', // otherwise support-type: 'modernizr'
+  'total-columns': 12, // Total columns
+  'container-class': 'container',
   'grid-class': 'grid',
   'cell-class': 'grid__cell',
   'grid-separator': '--',
@@ -36,17 +34,14 @@ $im-flexgrid-settings: (
   'default-gutters': true,
   'include-gutterless': true,
   // 'use-flex-longhand': false, // @todo
-    'include-max-width': true,
+  'include-max-width': true,
   'include-trailer': true,
   'trailer-size': 1rem,
-  // 'include-visibility-helpers': true, // @todo
-    // 'visible-class': 'visible', // @todo
-    // 'hidden-class': 'hidden', // @todo
 ) !default;
 
 $im-flexgrid-wrap-align-settings: (
   'wrap': wrap,
-  'no-wrap': no-wrap,
+  'nowrap': nowrap,
   'wrap-reverse': wrap-reverse
 ) !default;
 
