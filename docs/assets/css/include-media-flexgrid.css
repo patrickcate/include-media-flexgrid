@@ -35,56 +35,56 @@
     position: relative;
   }
   /* Basic Equal Column Classes */
-  .grid--equal-1 > [class*=grid__cell], .grid--equal-1.grid--auto > * {
+  .grid--equal-1 > * {
     flex-basis: calc(100% - 1rem);
     max-width: calc(100% - 1rem);
   }
-  .grid--equal-2 > [class*=grid__cell], .grid--equal-2.grid--auto > * {
+  .grid--equal-2 > * {
     flex-basis: calc(50% - 1rem);
     max-width: calc(50% - 1rem);
   }
-  .grid--equal-3 > [class*=grid__cell], .grid--equal-3.grid--auto > * {
+  .grid--equal-3 > * {
     flex-basis: calc(33.3333333333% - 1rem);
     max-width: calc(33.3333333333% - 1rem);
   }
-  .grid--equal-4 > [class*=grid__cell], .grid--equal-4.grid--auto > * {
+  .grid--equal-4 > * {
     flex-basis: calc(25% - 1rem);
     max-width: calc(25% - 1rem);
   }
-  .grid--equal-5 > [class*=grid__cell], .grid--equal-5.grid--auto > * {
+  .grid--equal-5 > * {
     flex-basis: calc(20% - 1rem);
     max-width: calc(20% - 1rem);
   }
-  .grid--equal-6 > [class*=grid__cell], .grid--equal-6.grid--auto > * {
+  .grid--equal-6 > * {
     flex-basis: calc(16.6666666667% - 1rem);
     max-width: calc(16.6666666667% - 1rem);
   }
-  .grid--equal-7 > [class*=grid__cell], .grid--equal-7.grid--auto > * {
+  .grid--equal-7 > * {
     flex-basis: calc(14.2857142857% - 1rem);
     max-width: calc(14.2857142857% - 1rem);
   }
-  .grid--equal-8 > [class*=grid__cell], .grid--equal-8.grid--auto > * {
+  .grid--equal-8 > * {
     flex-basis: calc(12.5% - 1rem);
     max-width: calc(12.5% - 1rem);
   }
-  .grid--equal-9 > [class*=grid__cell], .grid--equal-9.grid--auto > * {
+  .grid--equal-9 > * {
     flex-basis: calc(11.1111111111% - 1rem);
     max-width: calc(11.1111111111% - 1rem);
   }
-  .grid--equal-10 > [class*=grid__cell], .grid--equal-10.grid--auto > * {
+  .grid--equal-10 > * {
     flex-basis: calc(10% - 1rem);
     max-width: calc(10% - 1rem);
   }
-  .grid--equal-11 > [class*=grid__cell], .grid--equal-11.grid--auto > * {
+  .grid--equal-11 > * {
     flex-basis: calc(9.0909090909% - 1rem);
     max-width: calc(9.0909090909% - 1rem);
   }
-  .grid--equal-12 > [class*=grid__cell], .grid--equal-12.grid--auto > * {
+  .grid--equal-12 > * {
     flex-basis: calc(8.3333333333% - 1rem);
     max-width: calc(8.3333333333% - 1rem);
   }
   /* Basic Column Classes */
-  .grid--equal-1 > [class*=grid__cell], .grid--equal-1.grid--auto > *, .grid--equal-2 > [class*=grid__cell], .grid--equal-2.grid--auto > *, .grid--equal-3 > [class*=grid__cell], .grid--equal-3.grid--auto > *, .grid--equal-4 > [class*=grid__cell], .grid--equal-4.grid--auto > *, .grid--equal-5 > [class*=grid__cell], .grid--equal-5.grid--auto > *, .grid--equal-6 > [class*=grid__cell], .grid--equal-6.grid--auto > *, .grid--equal-7 > [class*=grid__cell], .grid--equal-7.grid--auto > *, .grid--equal-8 > [class*=grid__cell], .grid--equal-8.grid--auto > *, .grid--equal-9 > [class*=grid__cell], .grid--equal-9.grid--auto > *, .grid--equal-10 > [class*=grid__cell], .grid--equal-10.grid--auto > *, .grid--equal-11 > [class*=grid__cell], .grid--equal-11.grid--auto > *, .grid--equal-12 > [class*=grid__cell], .grid--equal-12.grid--auto > *, .grid__cell, .grid__cell--1, .grid__cell--2, .grid__cell--3, .grid__cell--4, .grid__cell--5, .grid__cell--6, .grid__cell--7, .grid__cell--8, .grid__cell--9, .grid__cell--10, .grid__cell--11, .grid__cell--12,
+  .grid--equal-1 > *, .grid--equal-2 > *, .grid--equal-3 > *, .grid--equal-4 > *, .grid--equal-5 > *, .grid--equal-6 > *, .grid--equal-7 > *, .grid--equal-8 > *, .grid--equal-9 > *, .grid--equal-10 > *, .grid--equal-11 > *, .grid--equal-12 > *, .grid__cell, .grid__cell--1, .grid__cell--2, .grid__cell--3, .grid__cell--4, .grid__cell--5, .grid__cell--6, .grid__cell--7, .grid__cell--8, .grid__cell--9, .grid__cell--10, .grid__cell--11, .grid__cell--12,
   .grid__cell--full, .grid__cell--auto {
     min-height: 1px;
     flex-shrink: 0;
@@ -94,11 +94,11 @@
     margin-right: 0.5rem;
     margin-bottom: 1rem;
   }
-  .grid--equal-1 > .grid__cell--no-trailer[class*=grid__cell], .grid--equal-1.grid--auto > .grid__cell--no-trailer, .grid--equal-2 > .grid__cell--no-trailer[class*=grid__cell], .grid--equal-2.grid--auto > .grid__cell--no-trailer, .grid--equal-3 > .grid__cell--no-trailer[class*=grid__cell], .grid--equal-3.grid--auto > .grid__cell--no-trailer, .grid--equal-4 > .grid__cell--no-trailer[class*=grid__cell], .grid--equal-4.grid--auto > .grid__cell--no-trailer, .grid--equal-5 > .grid__cell--no-trailer[class*=grid__cell], .grid--equal-5.grid--auto > .grid__cell--no-trailer, .grid--equal-6 > .grid__cell--no-trailer[class*=grid__cell], .grid--equal-6.grid--auto > .grid__cell--no-trailer, .grid--equal-7 > .grid__cell--no-trailer[class*=grid__cell], .grid--equal-7.grid--auto > .grid__cell--no-trailer, .grid--equal-8 > .grid__cell--no-trailer[class*=grid__cell], .grid--equal-8.grid--auto > .grid__cell--no-trailer, .grid--equal-9 > .grid__cell--no-trailer[class*=grid__cell], .grid--equal-9.grid--auto > .grid__cell--no-trailer, .grid--equal-10 > .grid__cell--no-trailer[class*=grid__cell], .grid--equal-10.grid--auto > .grid__cell--no-trailer, .grid--equal-11 > .grid__cell--no-trailer[class*=grid__cell], .grid--equal-11.grid--auto > .grid__cell--no-trailer, .grid--equal-12 > .grid__cell--no-trailer[class*=grid__cell], .grid--equal-12.grid--auto > .grid__cell--no-trailer, .grid__cell--no-trailer.grid__cell, .grid__cell--no-trailer.grid__cell--1, .grid__cell--no-trailer.grid__cell--2, .grid__cell--no-trailer.grid__cell--3, .grid__cell--no-trailer.grid__cell--4, .grid__cell--no-trailer.grid__cell--5, .grid__cell--no-trailer.grid__cell--6, .grid__cell--no-trailer.grid__cell--7, .grid__cell--no-trailer.grid__cell--8, .grid__cell--no-trailer.grid__cell--9, .grid__cell--no-trailer.grid__cell--10, .grid__cell--no-trailer.grid__cell--11, .grid__cell--no-trailer.grid__cell--12,
+  .grid--equal-1 > .grid__cell--no-trailer, .grid--equal-2 > .grid__cell--no-trailer, .grid--equal-3 > .grid__cell--no-trailer, .grid--equal-4 > .grid__cell--no-trailer, .grid--equal-5 > .grid__cell--no-trailer, .grid--equal-6 > .grid__cell--no-trailer, .grid--equal-7 > .grid__cell--no-trailer, .grid--equal-8 > .grid__cell--no-trailer, .grid--equal-9 > .grid__cell--no-trailer, .grid--equal-10 > .grid__cell--no-trailer, .grid--equal-11 > .grid__cell--no-trailer, .grid--equal-12 > .grid__cell--no-trailer, .grid__cell--no-trailer.grid__cell, .grid__cell--no-trailer.grid__cell--1, .grid__cell--no-trailer.grid__cell--2, .grid__cell--no-trailer.grid__cell--3, .grid__cell--no-trailer.grid__cell--4, .grid__cell--no-trailer.grid__cell--5, .grid__cell--no-trailer.grid__cell--6, .grid__cell--no-trailer.grid__cell--7, .grid__cell--no-trailer.grid__cell--8, .grid__cell--no-trailer.grid__cell--9, .grid__cell--no-trailer.grid__cell--10, .grid__cell--no-trailer.grid__cell--11, .grid__cell--no-trailer.grid__cell--12,
   .grid__cell--no-trailer.grid__cell--full, .grid__cell--no-trailer.grid__cell--auto {
     margin-bottom: 0;
   }
-  .grid--equal-1 > .grid__cell--no-gutters[class*=grid__cell], .grid--equal-1.grid--auto > .grid__cell--no-gutters, .grid--equal-2 > .grid__cell--no-gutters[class*=grid__cell], .grid--equal-2.grid--auto > .grid__cell--no-gutters, .grid--equal-3 > .grid__cell--no-gutters[class*=grid__cell], .grid--equal-3.grid--auto > .grid__cell--no-gutters, .grid--equal-4 > .grid__cell--no-gutters[class*=grid__cell], .grid--equal-4.grid--auto > .grid__cell--no-gutters, .grid--equal-5 > .grid__cell--no-gutters[class*=grid__cell], .grid--equal-5.grid--auto > .grid__cell--no-gutters, .grid--equal-6 > .grid__cell--no-gutters[class*=grid__cell], .grid--equal-6.grid--auto > .grid__cell--no-gutters, .grid--equal-7 > .grid__cell--no-gutters[class*=grid__cell], .grid--equal-7.grid--auto > .grid__cell--no-gutters, .grid--equal-8 > .grid__cell--no-gutters[class*=grid__cell], .grid--equal-8.grid--auto > .grid__cell--no-gutters, .grid--equal-9 > .grid__cell--no-gutters[class*=grid__cell], .grid--equal-9.grid--auto > .grid__cell--no-gutters, .grid--equal-10 > .grid__cell--no-gutters[class*=grid__cell], .grid--equal-10.grid--auto > .grid__cell--no-gutters, .grid--equal-11 > .grid__cell--no-gutters[class*=grid__cell], .grid--equal-11.grid--auto > .grid__cell--no-gutters, .grid--equal-12 > .grid__cell--no-gutters[class*=grid__cell], .grid--equal-12.grid--auto > .grid__cell--no-gutters, .grid__cell--no-gutters.grid__cell, .grid__cell--no-gutters.grid__cell--1, .grid__cell--no-gutters.grid__cell--2, .grid__cell--no-gutters.grid__cell--3, .grid__cell--no-gutters.grid__cell--4, .grid__cell--no-gutters.grid__cell--5, .grid__cell--no-gutters.grid__cell--6, .grid__cell--no-gutters.grid__cell--7, .grid__cell--no-gutters.grid__cell--8, .grid__cell--no-gutters.grid__cell--9, .grid__cell--no-gutters.grid__cell--10, .grid__cell--no-gutters.grid__cell--11, .grid__cell--no-gutters.grid__cell--12,
+  .grid--equal-1 > .grid__cell--no-gutters, .grid--equal-2 > .grid__cell--no-gutters, .grid--equal-3 > .grid__cell--no-gutters, .grid--equal-4 > .grid__cell--no-gutters, .grid--equal-5 > .grid__cell--no-gutters, .grid--equal-6 > .grid__cell--no-gutters, .grid--equal-7 > .grid__cell--no-gutters, .grid--equal-8 > .grid__cell--no-gutters, .grid--equal-9 > .grid__cell--no-gutters, .grid--equal-10 > .grid__cell--no-gutters, .grid--equal-11 > .grid__cell--no-gutters, .grid--equal-12 > .grid__cell--no-gutters, .grid__cell--no-gutters.grid__cell, .grid__cell--no-gutters.grid__cell--1, .grid__cell--no-gutters.grid__cell--2, .grid__cell--no-gutters.grid__cell--3, .grid__cell--no-gutters.grid__cell--4, .grid__cell--no-gutters.grid__cell--5, .grid__cell--no-gutters.grid__cell--6, .grid__cell--no-gutters.grid__cell--7, .grid__cell--no-gutters.grid__cell--8, .grid__cell--no-gutters.grid__cell--9, .grid__cell--no-gutters.grid__cell--10, .grid__cell--no-gutters.grid__cell--11, .grid__cell--no-gutters.grid__cell--12,
   .grid__cell--no-gutters.grid__cell--full, .grid__cell--no-gutters.grid__cell--auto {
     margin-left: 0;
     margin-right: 0;
@@ -346,8 +346,8 @@
     margin-right: -0.5rem;
   }
   .grid--double-gutters {
-    margin-left: -1rem;
-    margin-right: -1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   /* Basic flex direction classes */
   .grid--column {
@@ -482,56 +482,56 @@
       margin-right: -0.5rem;
     }
     /* @xxs Reponsive Equal Column Classes*/
-    .grid--equal-1\@xxs > [class*=grid__cell], .grid--equal-1\@xxs.grid--auto\@xxs > * {
+    .grid--equal-1\@xxs > * {
       flex-basis: calc(100% - 1rem);
       max-width: calc(100% - 1rem);
     }
-    .grid--equal-2\@xxs > [class*=grid__cell], .grid--equal-2\@xxs.grid--auto\@xxs > * {
+    .grid--equal-2\@xxs > * {
       flex-basis: calc(50% - 1rem);
       max-width: calc(50% - 1rem);
     }
-    .grid--equal-3\@xxs > [class*=grid__cell], .grid--equal-3\@xxs.grid--auto\@xxs > * {
+    .grid--equal-3\@xxs > * {
       flex-basis: calc(33.3333333333% - 1rem);
       max-width: calc(33.3333333333% - 1rem);
     }
-    .grid--equal-4\@xxs > [class*=grid__cell], .grid--equal-4\@xxs.grid--auto\@xxs > * {
+    .grid--equal-4\@xxs > * {
       flex-basis: calc(25% - 1rem);
       max-width: calc(25% - 1rem);
     }
-    .grid--equal-5\@xxs > [class*=grid__cell], .grid--equal-5\@xxs.grid--auto\@xxs > * {
+    .grid--equal-5\@xxs > * {
       flex-basis: calc(20% - 1rem);
       max-width: calc(20% - 1rem);
     }
-    .grid--equal-6\@xxs > [class*=grid__cell], .grid--equal-6\@xxs.grid--auto\@xxs > * {
+    .grid--equal-6\@xxs > * {
       flex-basis: calc(16.6666666667% - 1rem);
       max-width: calc(16.6666666667% - 1rem);
     }
-    .grid--equal-7\@xxs > [class*=grid__cell], .grid--equal-7\@xxs.grid--auto\@xxs > * {
+    .grid--equal-7\@xxs > * {
       flex-basis: calc(14.2857142857% - 1rem);
       max-width: calc(14.2857142857% - 1rem);
     }
-    .grid--equal-8\@xxs > [class*=grid__cell], .grid--equal-8\@xxs.grid--auto\@xxs > * {
+    .grid--equal-8\@xxs > * {
       flex-basis: calc(12.5% - 1rem);
       max-width: calc(12.5% - 1rem);
     }
-    .grid--equal-9\@xxs > [class*=grid__cell], .grid--equal-9\@xxs.grid--auto\@xxs > * {
+    .grid--equal-9\@xxs > * {
       flex-basis: calc(11.1111111111% - 1rem);
       max-width: calc(11.1111111111% - 1rem);
     }
-    .grid--equal-10\@xxs > [class*=grid__cell], .grid--equal-10\@xxs.grid--auto\@xxs > * {
+    .grid--equal-10\@xxs > * {
       flex-basis: calc(10% - 1rem);
       max-width: calc(10% - 1rem);
     }
-    .grid--equal-11\@xxs > [class*=grid__cell], .grid--equal-11\@xxs.grid--auto\@xxs > * {
+    .grid--equal-11\@xxs > * {
       flex-basis: calc(9.0909090909% - 1rem);
       max-width: calc(9.0909090909% - 1rem);
     }
-    .grid--equal-12\@xxs > [class*=grid__cell], .grid--equal-12\@xxs.grid--auto\@xxs > * {
+    .grid--equal-12\@xxs > * {
       flex-basis: calc(8.3333333333% - 1rem);
       max-width: calc(8.3333333333% - 1rem);
     }
     /* @xxs Responsive Columns Classes */
-    .grid--equal-1\@xxs > [class*=grid__cell], .grid--equal-1\@xxs.grid--auto\@xxs > *, .grid--equal-2\@xxs > [class*=grid__cell], .grid--equal-2\@xxs.grid--auto\@xxs > *, .grid--equal-3\@xxs > [class*=grid__cell], .grid--equal-3\@xxs.grid--auto\@xxs > *, .grid--equal-4\@xxs > [class*=grid__cell], .grid--equal-4\@xxs.grid--auto\@xxs > *, .grid--equal-5\@xxs > [class*=grid__cell], .grid--equal-5\@xxs.grid--auto\@xxs > *, .grid--equal-6\@xxs > [class*=grid__cell], .grid--equal-6\@xxs.grid--auto\@xxs > *, .grid--equal-7\@xxs > [class*=grid__cell], .grid--equal-7\@xxs.grid--auto\@xxs > *, .grid--equal-8\@xxs > [class*=grid__cell], .grid--equal-8\@xxs.grid--auto\@xxs > *, .grid--equal-9\@xxs > [class*=grid__cell], .grid--equal-9\@xxs.grid--auto\@xxs > *, .grid--equal-10\@xxs > [class*=grid__cell], .grid--equal-10\@xxs.grid--auto\@xxs > *, .grid--equal-11\@xxs > [class*=grid__cell], .grid--equal-11\@xxs.grid--auto\@xxs > *, .grid--equal-12\@xxs > [class*=grid__cell], .grid--equal-12\@xxs.grid--auto\@xxs > *, .grid__cell--1\@xxs, .grid__cell--2\@xxs, .grid__cell--3\@xxs, .grid__cell--4\@xxs, .grid__cell--5\@xxs, .grid__cell--6\@xxs, .grid__cell--7\@xxs, .grid__cell--8\@xxs, .grid__cell--9\@xxs, .grid__cell--10\@xxs, .grid__cell--11\@xxs, .grid__cell--12\@xxs, .grid__cell--none\@xxs, .grid__cell--auto\@xxs {
+    .grid--equal-1\@xxs > *, .grid--equal-2\@xxs > *, .grid--equal-3\@xxs > *, .grid--equal-4\@xxs > *, .grid--equal-5\@xxs > *, .grid--equal-6\@xxs > *, .grid--equal-7\@xxs > *, .grid--equal-8\@xxs > *, .grid--equal-9\@xxs > *, .grid--equal-10\@xxs > *, .grid--equal-11\@xxs > *, .grid--equal-12\@xxs > *, .grid__cell--1\@xxs, .grid__cell--2\@xxs, .grid__cell--3\@xxs, .grid__cell--4\@xxs, .grid__cell--5\@xxs, .grid__cell--6\@xxs, .grid__cell--7\@xxs, .grid__cell--8\@xxs, .grid__cell--9\@xxs, .grid__cell--10\@xxs, .grid__cell--11\@xxs, .grid__cell--12\@xxs, .grid__cell--none\@xxs, .grid__cell--auto\@xxs {
       min-height: 1px;
       flex-shrink: 0;
       -webkit-box-flex: 0;
@@ -782,8 +782,8 @@
       margin-right: -0.5rem;
     }
     .grid--double-gutters\@xxs {
-      margin-left: -1rem;
-      margin-right: -1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     /* @xxs Responsive flex direction classes */
     .grid--column\@xxs {
@@ -919,56 +919,56 @@
       margin-right: -0.5rem;
     }
     /* @xs Reponsive Equal Column Classes*/
-    .grid--equal-1\@xs > [class*=grid__cell], .grid--equal-1\@xs.grid--auto\@xs > * {
+    .grid--equal-1\@xs > * {
       flex-basis: calc(100% - 1rem);
       max-width: calc(100% - 1rem);
     }
-    .grid--equal-2\@xs > [class*=grid__cell], .grid--equal-2\@xs.grid--auto\@xs > * {
+    .grid--equal-2\@xs > * {
       flex-basis: calc(50% - 1rem);
       max-width: calc(50% - 1rem);
     }
-    .grid--equal-3\@xs > [class*=grid__cell], .grid--equal-3\@xs.grid--auto\@xs > * {
+    .grid--equal-3\@xs > * {
       flex-basis: calc(33.3333333333% - 1rem);
       max-width: calc(33.3333333333% - 1rem);
     }
-    .grid--equal-4\@xs > [class*=grid__cell], .grid--equal-4\@xs.grid--auto\@xs > * {
+    .grid--equal-4\@xs > * {
       flex-basis: calc(25% - 1rem);
       max-width: calc(25% - 1rem);
     }
-    .grid--equal-5\@xs > [class*=grid__cell], .grid--equal-5\@xs.grid--auto\@xs > * {
+    .grid--equal-5\@xs > * {
       flex-basis: calc(20% - 1rem);
       max-width: calc(20% - 1rem);
     }
-    .grid--equal-6\@xs > [class*=grid__cell], .grid--equal-6\@xs.grid--auto\@xs > * {
+    .grid--equal-6\@xs > * {
       flex-basis: calc(16.6666666667% - 1rem);
       max-width: calc(16.6666666667% - 1rem);
     }
-    .grid--equal-7\@xs > [class*=grid__cell], .grid--equal-7\@xs.grid--auto\@xs > * {
+    .grid--equal-7\@xs > * {
       flex-basis: calc(14.2857142857% - 1rem);
       max-width: calc(14.2857142857% - 1rem);
     }
-    .grid--equal-8\@xs > [class*=grid__cell], .grid--equal-8\@xs.grid--auto\@xs > * {
+    .grid--equal-8\@xs > * {
       flex-basis: calc(12.5% - 1rem);
       max-width: calc(12.5% - 1rem);
     }
-    .grid--equal-9\@xs > [class*=grid__cell], .grid--equal-9\@xs.grid--auto\@xs > * {
+    .grid--equal-9\@xs > * {
       flex-basis: calc(11.1111111111% - 1rem);
       max-width: calc(11.1111111111% - 1rem);
     }
-    .grid--equal-10\@xs > [class*=grid__cell], .grid--equal-10\@xs.grid--auto\@xs > * {
+    .grid--equal-10\@xs > * {
       flex-basis: calc(10% - 1rem);
       max-width: calc(10% - 1rem);
     }
-    .grid--equal-11\@xs > [class*=grid__cell], .grid--equal-11\@xs.grid--auto\@xs > * {
+    .grid--equal-11\@xs > * {
       flex-basis: calc(9.0909090909% - 1rem);
       max-width: calc(9.0909090909% - 1rem);
     }
-    .grid--equal-12\@xs > [class*=grid__cell], .grid--equal-12\@xs.grid--auto\@xs > * {
+    .grid--equal-12\@xs > * {
       flex-basis: calc(8.3333333333% - 1rem);
       max-width: calc(8.3333333333% - 1rem);
     }
     /* @xs Responsive Columns Classes */
-    .grid--equal-1\@xs > [class*=grid__cell], .grid--equal-1\@xs.grid--auto\@xs > *, .grid--equal-2\@xs > [class*=grid__cell], .grid--equal-2\@xs.grid--auto\@xs > *, .grid--equal-3\@xs > [class*=grid__cell], .grid--equal-3\@xs.grid--auto\@xs > *, .grid--equal-4\@xs > [class*=grid__cell], .grid--equal-4\@xs.grid--auto\@xs > *, .grid--equal-5\@xs > [class*=grid__cell], .grid--equal-5\@xs.grid--auto\@xs > *, .grid--equal-6\@xs > [class*=grid__cell], .grid--equal-6\@xs.grid--auto\@xs > *, .grid--equal-7\@xs > [class*=grid__cell], .grid--equal-7\@xs.grid--auto\@xs > *, .grid--equal-8\@xs > [class*=grid__cell], .grid--equal-8\@xs.grid--auto\@xs > *, .grid--equal-9\@xs > [class*=grid__cell], .grid--equal-9\@xs.grid--auto\@xs > *, .grid--equal-10\@xs > [class*=grid__cell], .grid--equal-10\@xs.grid--auto\@xs > *, .grid--equal-11\@xs > [class*=grid__cell], .grid--equal-11\@xs.grid--auto\@xs > *, .grid--equal-12\@xs > [class*=grid__cell], .grid--equal-12\@xs.grid--auto\@xs > *, .grid__cell--1\@xs, .grid__cell--2\@xs, .grid__cell--3\@xs, .grid__cell--4\@xs, .grid__cell--5\@xs, .grid__cell--6\@xs, .grid__cell--7\@xs, .grid__cell--8\@xs, .grid__cell--9\@xs, .grid__cell--10\@xs, .grid__cell--11\@xs, .grid__cell--12\@xs, .grid__cell--none\@xs, .grid__cell--auto\@xs {
+    .grid--equal-1\@xs > *, .grid--equal-2\@xs > *, .grid--equal-3\@xs > *, .grid--equal-4\@xs > *, .grid--equal-5\@xs > *, .grid--equal-6\@xs > *, .grid--equal-7\@xs > *, .grid--equal-8\@xs > *, .grid--equal-9\@xs > *, .grid--equal-10\@xs > *, .grid--equal-11\@xs > *, .grid--equal-12\@xs > *, .grid__cell--1\@xs, .grid__cell--2\@xs, .grid__cell--3\@xs, .grid__cell--4\@xs, .grid__cell--5\@xs, .grid__cell--6\@xs, .grid__cell--7\@xs, .grid__cell--8\@xs, .grid__cell--9\@xs, .grid__cell--10\@xs, .grid__cell--11\@xs, .grid__cell--12\@xs, .grid__cell--none\@xs, .grid__cell--auto\@xs {
       min-height: 1px;
       flex-shrink: 0;
       -webkit-box-flex: 0;
@@ -1219,8 +1219,8 @@
       margin-right: -0.5rem;
     }
     .grid--double-gutters\@xs {
-      margin-left: -1rem;
-      margin-right: -1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     /* @xs Responsive flex direction classes */
     .grid--column\@xs {
@@ -1356,56 +1356,56 @@
       margin-right: -0.5rem;
     }
     /* @sm Reponsive Equal Column Classes*/
-    .grid--equal-1\@sm > [class*=grid__cell], .grid--equal-1\@sm.grid--auto\@sm > * {
+    .grid--equal-1\@sm > * {
       flex-basis: calc(100% - 1rem);
       max-width: calc(100% - 1rem);
     }
-    .grid--equal-2\@sm > [class*=grid__cell], .grid--equal-2\@sm.grid--auto\@sm > * {
+    .grid--equal-2\@sm > * {
       flex-basis: calc(50% - 1rem);
       max-width: calc(50% - 1rem);
     }
-    .grid--equal-3\@sm > [class*=grid__cell], .grid--equal-3\@sm.grid--auto\@sm > * {
+    .grid--equal-3\@sm > * {
       flex-basis: calc(33.3333333333% - 1rem);
       max-width: calc(33.3333333333% - 1rem);
     }
-    .grid--equal-4\@sm > [class*=grid__cell], .grid--equal-4\@sm.grid--auto\@sm > * {
+    .grid--equal-4\@sm > * {
       flex-basis: calc(25% - 1rem);
       max-width: calc(25% - 1rem);
     }
-    .grid--equal-5\@sm > [class*=grid__cell], .grid--equal-5\@sm.grid--auto\@sm > * {
+    .grid--equal-5\@sm > * {
       flex-basis: calc(20% - 1rem);
       max-width: calc(20% - 1rem);
     }
-    .grid--equal-6\@sm > [class*=grid__cell], .grid--equal-6\@sm.grid--auto\@sm > * {
+    .grid--equal-6\@sm > * {
       flex-basis: calc(16.6666666667% - 1rem);
       max-width: calc(16.6666666667% - 1rem);
     }
-    .grid--equal-7\@sm > [class*=grid__cell], .grid--equal-7\@sm.grid--auto\@sm > * {
+    .grid--equal-7\@sm > * {
       flex-basis: calc(14.2857142857% - 1rem);
       max-width: calc(14.2857142857% - 1rem);
     }
-    .grid--equal-8\@sm > [class*=grid__cell], .grid--equal-8\@sm.grid--auto\@sm > * {
+    .grid--equal-8\@sm > * {
       flex-basis: calc(12.5% - 1rem);
       max-width: calc(12.5% - 1rem);
     }
-    .grid--equal-9\@sm > [class*=grid__cell], .grid--equal-9\@sm.grid--auto\@sm > * {
+    .grid--equal-9\@sm > * {
       flex-basis: calc(11.1111111111% - 1rem);
       max-width: calc(11.1111111111% - 1rem);
     }
-    .grid--equal-10\@sm > [class*=grid__cell], .grid--equal-10\@sm.grid--auto\@sm > * {
+    .grid--equal-10\@sm > * {
       flex-basis: calc(10% - 1rem);
       max-width: calc(10% - 1rem);
     }
-    .grid--equal-11\@sm > [class*=grid__cell], .grid--equal-11\@sm.grid--auto\@sm > * {
+    .grid--equal-11\@sm > * {
       flex-basis: calc(9.0909090909% - 1rem);
       max-width: calc(9.0909090909% - 1rem);
     }
-    .grid--equal-12\@sm > [class*=grid__cell], .grid--equal-12\@sm.grid--auto\@sm > * {
+    .grid--equal-12\@sm > * {
       flex-basis: calc(8.3333333333% - 1rem);
       max-width: calc(8.3333333333% - 1rem);
     }
     /* @sm Responsive Columns Classes */
-    .grid--equal-1\@sm > [class*=grid__cell], .grid--equal-1\@sm.grid--auto\@sm > *, .grid--equal-2\@sm > [class*=grid__cell], .grid--equal-2\@sm.grid--auto\@sm > *, .grid--equal-3\@sm > [class*=grid__cell], .grid--equal-3\@sm.grid--auto\@sm > *, .grid--equal-4\@sm > [class*=grid__cell], .grid--equal-4\@sm.grid--auto\@sm > *, .grid--equal-5\@sm > [class*=grid__cell], .grid--equal-5\@sm.grid--auto\@sm > *, .grid--equal-6\@sm > [class*=grid__cell], .grid--equal-6\@sm.grid--auto\@sm > *, .grid--equal-7\@sm > [class*=grid__cell], .grid--equal-7\@sm.grid--auto\@sm > *, .grid--equal-8\@sm > [class*=grid__cell], .grid--equal-8\@sm.grid--auto\@sm > *, .grid--equal-9\@sm > [class*=grid__cell], .grid--equal-9\@sm.grid--auto\@sm > *, .grid--equal-10\@sm > [class*=grid__cell], .grid--equal-10\@sm.grid--auto\@sm > *, .grid--equal-11\@sm > [class*=grid__cell], .grid--equal-11\@sm.grid--auto\@sm > *, .grid--equal-12\@sm > [class*=grid__cell], .grid--equal-12\@sm.grid--auto\@sm > *, .grid__cell--1\@sm, .grid__cell--2\@sm, .grid__cell--3\@sm, .grid__cell--4\@sm, .grid__cell--5\@sm, .grid__cell--6\@sm, .grid__cell--7\@sm, .grid__cell--8\@sm, .grid__cell--9\@sm, .grid__cell--10\@sm, .grid__cell--11\@sm, .grid__cell--12\@sm, .grid__cell--none\@sm, .grid__cell--auto\@sm {
+    .grid--equal-1\@sm > *, .grid--equal-2\@sm > *, .grid--equal-3\@sm > *, .grid--equal-4\@sm > *, .grid--equal-5\@sm > *, .grid--equal-6\@sm > *, .grid--equal-7\@sm > *, .grid--equal-8\@sm > *, .grid--equal-9\@sm > *, .grid--equal-10\@sm > *, .grid--equal-11\@sm > *, .grid--equal-12\@sm > *, .grid__cell--1\@sm, .grid__cell--2\@sm, .grid__cell--3\@sm, .grid__cell--4\@sm, .grid__cell--5\@sm, .grid__cell--6\@sm, .grid__cell--7\@sm, .grid__cell--8\@sm, .grid__cell--9\@sm, .grid__cell--10\@sm, .grid__cell--11\@sm, .grid__cell--12\@sm, .grid__cell--none\@sm, .grid__cell--auto\@sm {
       min-height: 1px;
       flex-shrink: 0;
       -webkit-box-flex: 0;
@@ -1656,8 +1656,8 @@
       margin-right: -0.5rem;
     }
     .grid--double-gutters\@sm {
-      margin-left: -1rem;
-      margin-right: -1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     /* @sm Responsive flex direction classes */
     .grid--column\@sm {
@@ -1793,56 +1793,56 @@
       margin-right: -0.5rem;
     }
     /* @md Reponsive Equal Column Classes*/
-    .grid--equal-1\@md > [class*=grid__cell], .grid--equal-1\@md.grid--auto\@md > * {
+    .grid--equal-1\@md > * {
       flex-basis: calc(100% - 1rem);
       max-width: calc(100% - 1rem);
     }
-    .grid--equal-2\@md > [class*=grid__cell], .grid--equal-2\@md.grid--auto\@md > * {
+    .grid--equal-2\@md > * {
       flex-basis: calc(50% - 1rem);
       max-width: calc(50% - 1rem);
     }
-    .grid--equal-3\@md > [class*=grid__cell], .grid--equal-3\@md.grid--auto\@md > * {
+    .grid--equal-3\@md > * {
       flex-basis: calc(33.3333333333% - 1rem);
       max-width: calc(33.3333333333% - 1rem);
     }
-    .grid--equal-4\@md > [class*=grid__cell], .grid--equal-4\@md.grid--auto\@md > * {
+    .grid--equal-4\@md > * {
       flex-basis: calc(25% - 1rem);
       max-width: calc(25% - 1rem);
     }
-    .grid--equal-5\@md > [class*=grid__cell], .grid--equal-5\@md.grid--auto\@md > * {
+    .grid--equal-5\@md > * {
       flex-basis: calc(20% - 1rem);
       max-width: calc(20% - 1rem);
     }
-    .grid--equal-6\@md > [class*=grid__cell], .grid--equal-6\@md.grid--auto\@md > * {
+    .grid--equal-6\@md > * {
       flex-basis: calc(16.6666666667% - 1rem);
       max-width: calc(16.6666666667% - 1rem);
     }
-    .grid--equal-7\@md > [class*=grid__cell], .grid--equal-7\@md.grid--auto\@md > * {
+    .grid--equal-7\@md > * {
       flex-basis: calc(14.2857142857% - 1rem);
       max-width: calc(14.2857142857% - 1rem);
     }
-    .grid--equal-8\@md > [class*=grid__cell], .grid--equal-8\@md.grid--auto\@md > * {
+    .grid--equal-8\@md > * {
       flex-basis: calc(12.5% - 1rem);
       max-width: calc(12.5% - 1rem);
     }
-    .grid--equal-9\@md > [class*=grid__cell], .grid--equal-9\@md.grid--auto\@md > * {
+    .grid--equal-9\@md > * {
       flex-basis: calc(11.1111111111% - 1rem);
       max-width: calc(11.1111111111% - 1rem);
     }
-    .grid--equal-10\@md > [class*=grid__cell], .grid--equal-10\@md.grid--auto\@md > * {
+    .grid--equal-10\@md > * {
       flex-basis: calc(10% - 1rem);
       max-width: calc(10% - 1rem);
     }
-    .grid--equal-11\@md > [class*=grid__cell], .grid--equal-11\@md.grid--auto\@md > * {
+    .grid--equal-11\@md > * {
       flex-basis: calc(9.0909090909% - 1rem);
       max-width: calc(9.0909090909% - 1rem);
     }
-    .grid--equal-12\@md > [class*=grid__cell], .grid--equal-12\@md.grid--auto\@md > * {
+    .grid--equal-12\@md > * {
       flex-basis: calc(8.3333333333% - 1rem);
       max-width: calc(8.3333333333% - 1rem);
     }
     /* @md Responsive Columns Classes */
-    .grid--equal-1\@md > [class*=grid__cell], .grid--equal-1\@md.grid--auto\@md > *, .grid--equal-2\@md > [class*=grid__cell], .grid--equal-2\@md.grid--auto\@md > *, .grid--equal-3\@md > [class*=grid__cell], .grid--equal-3\@md.grid--auto\@md > *, .grid--equal-4\@md > [class*=grid__cell], .grid--equal-4\@md.grid--auto\@md > *, .grid--equal-5\@md > [class*=grid__cell], .grid--equal-5\@md.grid--auto\@md > *, .grid--equal-6\@md > [class*=grid__cell], .grid--equal-6\@md.grid--auto\@md > *, .grid--equal-7\@md > [class*=grid__cell], .grid--equal-7\@md.grid--auto\@md > *, .grid--equal-8\@md > [class*=grid__cell], .grid--equal-8\@md.grid--auto\@md > *, .grid--equal-9\@md > [class*=grid__cell], .grid--equal-9\@md.grid--auto\@md > *, .grid--equal-10\@md > [class*=grid__cell], .grid--equal-10\@md.grid--auto\@md > *, .grid--equal-11\@md > [class*=grid__cell], .grid--equal-11\@md.grid--auto\@md > *, .grid--equal-12\@md > [class*=grid__cell], .grid--equal-12\@md.grid--auto\@md > *, .grid__cell--1\@md, .grid__cell--2\@md, .grid__cell--3\@md, .grid__cell--4\@md, .grid__cell--5\@md, .grid__cell--6\@md, .grid__cell--7\@md, .grid__cell--8\@md, .grid__cell--9\@md, .grid__cell--10\@md, .grid__cell--11\@md, .grid__cell--12\@md, .grid__cell--none\@md, .grid__cell--auto\@md {
+    .grid--equal-1\@md > *, .grid--equal-2\@md > *, .grid--equal-3\@md > *, .grid--equal-4\@md > *, .grid--equal-5\@md > *, .grid--equal-6\@md > *, .grid--equal-7\@md > *, .grid--equal-8\@md > *, .grid--equal-9\@md > *, .grid--equal-10\@md > *, .grid--equal-11\@md > *, .grid--equal-12\@md > *, .grid__cell--1\@md, .grid__cell--2\@md, .grid__cell--3\@md, .grid__cell--4\@md, .grid__cell--5\@md, .grid__cell--6\@md, .grid__cell--7\@md, .grid__cell--8\@md, .grid__cell--9\@md, .grid__cell--10\@md, .grid__cell--11\@md, .grid__cell--12\@md, .grid__cell--none\@md, .grid__cell--auto\@md {
       min-height: 1px;
       flex-shrink: 0;
       -webkit-box-flex: 0;
@@ -2093,8 +2093,8 @@
       margin-right: -0.5rem;
     }
     .grid--double-gutters\@md {
-      margin-left: -1rem;
-      margin-right: -1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     /* @md Responsive flex direction classes */
     .grid--column\@md {
@@ -2230,56 +2230,56 @@
       margin-right: -0.5rem;
     }
     /* @lg Reponsive Equal Column Classes*/
-    .grid--equal-1\@lg > [class*=grid__cell], .grid--equal-1\@lg.grid--auto\@lg > * {
+    .grid--equal-1\@lg > * {
       flex-basis: calc(100% - 1rem);
       max-width: calc(100% - 1rem);
     }
-    .grid--equal-2\@lg > [class*=grid__cell], .grid--equal-2\@lg.grid--auto\@lg > * {
+    .grid--equal-2\@lg > * {
       flex-basis: calc(50% - 1rem);
       max-width: calc(50% - 1rem);
     }
-    .grid--equal-3\@lg > [class*=grid__cell], .grid--equal-3\@lg.grid--auto\@lg > * {
+    .grid--equal-3\@lg > * {
       flex-basis: calc(33.3333333333% - 1rem);
       max-width: calc(33.3333333333% - 1rem);
     }
-    .grid--equal-4\@lg > [class*=grid__cell], .grid--equal-4\@lg.grid--auto\@lg > * {
+    .grid--equal-4\@lg > * {
       flex-basis: calc(25% - 1rem);
       max-width: calc(25% - 1rem);
     }
-    .grid--equal-5\@lg > [class*=grid__cell], .grid--equal-5\@lg.grid--auto\@lg > * {
+    .grid--equal-5\@lg > * {
       flex-basis: calc(20% - 1rem);
       max-width: calc(20% - 1rem);
     }
-    .grid--equal-6\@lg > [class*=grid__cell], .grid--equal-6\@lg.grid--auto\@lg > * {
+    .grid--equal-6\@lg > * {
       flex-basis: calc(16.6666666667% - 1rem);
       max-width: calc(16.6666666667% - 1rem);
     }
-    .grid--equal-7\@lg > [class*=grid__cell], .grid--equal-7\@lg.grid--auto\@lg > * {
+    .grid--equal-7\@lg > * {
       flex-basis: calc(14.2857142857% - 1rem);
       max-width: calc(14.2857142857% - 1rem);
     }
-    .grid--equal-8\@lg > [class*=grid__cell], .grid--equal-8\@lg.grid--auto\@lg > * {
+    .grid--equal-8\@lg > * {
       flex-basis: calc(12.5% - 1rem);
       max-width: calc(12.5% - 1rem);
     }
-    .grid--equal-9\@lg > [class*=grid__cell], .grid--equal-9\@lg.grid--auto\@lg > * {
+    .grid--equal-9\@lg > * {
       flex-basis: calc(11.1111111111% - 1rem);
       max-width: calc(11.1111111111% - 1rem);
     }
-    .grid--equal-10\@lg > [class*=grid__cell], .grid--equal-10\@lg.grid--auto\@lg > * {
+    .grid--equal-10\@lg > * {
       flex-basis: calc(10% - 1rem);
       max-width: calc(10% - 1rem);
     }
-    .grid--equal-11\@lg > [class*=grid__cell], .grid--equal-11\@lg.grid--auto\@lg > * {
+    .grid--equal-11\@lg > * {
       flex-basis: calc(9.0909090909% - 1rem);
       max-width: calc(9.0909090909% - 1rem);
     }
-    .grid--equal-12\@lg > [class*=grid__cell], .grid--equal-12\@lg.grid--auto\@lg > * {
+    .grid--equal-12\@lg > * {
       flex-basis: calc(8.3333333333% - 1rem);
       max-width: calc(8.3333333333% - 1rem);
     }
     /* @lg Responsive Columns Classes */
-    .grid--equal-1\@lg > [class*=grid__cell], .grid--equal-1\@lg.grid--auto\@lg > *, .grid--equal-2\@lg > [class*=grid__cell], .grid--equal-2\@lg.grid--auto\@lg > *, .grid--equal-3\@lg > [class*=grid__cell], .grid--equal-3\@lg.grid--auto\@lg > *, .grid--equal-4\@lg > [class*=grid__cell], .grid--equal-4\@lg.grid--auto\@lg > *, .grid--equal-5\@lg > [class*=grid__cell], .grid--equal-5\@lg.grid--auto\@lg > *, .grid--equal-6\@lg > [class*=grid__cell], .grid--equal-6\@lg.grid--auto\@lg > *, .grid--equal-7\@lg > [class*=grid__cell], .grid--equal-7\@lg.grid--auto\@lg > *, .grid--equal-8\@lg > [class*=grid__cell], .grid--equal-8\@lg.grid--auto\@lg > *, .grid--equal-9\@lg > [class*=grid__cell], .grid--equal-9\@lg.grid--auto\@lg > *, .grid--equal-10\@lg > [class*=grid__cell], .grid--equal-10\@lg.grid--auto\@lg > *, .grid--equal-11\@lg > [class*=grid__cell], .grid--equal-11\@lg.grid--auto\@lg > *, .grid--equal-12\@lg > [class*=grid__cell], .grid--equal-12\@lg.grid--auto\@lg > *, .grid__cell--1\@lg, .grid__cell--2\@lg, .grid__cell--3\@lg, .grid__cell--4\@lg, .grid__cell--5\@lg, .grid__cell--6\@lg, .grid__cell--7\@lg, .grid__cell--8\@lg, .grid__cell--9\@lg, .grid__cell--10\@lg, .grid__cell--11\@lg, .grid__cell--12\@lg, .grid__cell--none\@lg, .grid__cell--auto\@lg {
+    .grid--equal-1\@lg > *, .grid--equal-2\@lg > *, .grid--equal-3\@lg > *, .grid--equal-4\@lg > *, .grid--equal-5\@lg > *, .grid--equal-6\@lg > *, .grid--equal-7\@lg > *, .grid--equal-8\@lg > *, .grid--equal-9\@lg > *, .grid--equal-10\@lg > *, .grid--equal-11\@lg > *, .grid--equal-12\@lg > *, .grid__cell--1\@lg, .grid__cell--2\@lg, .grid__cell--3\@lg, .grid__cell--4\@lg, .grid__cell--5\@lg, .grid__cell--6\@lg, .grid__cell--7\@lg, .grid__cell--8\@lg, .grid__cell--9\@lg, .grid__cell--10\@lg, .grid__cell--11\@lg, .grid__cell--12\@lg, .grid__cell--none\@lg, .grid__cell--auto\@lg {
       min-height: 1px;
       flex-shrink: 0;
       -webkit-box-flex: 0;
@@ -2530,8 +2530,8 @@
       margin-right: -0.5rem;
     }
     .grid--double-gutters\@lg {
-      margin-left: -1rem;
-      margin-right: -1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     /* @lg Responsive flex direction classes */
     .grid--column\@lg {
@@ -2667,56 +2667,56 @@
       margin-right: -0.5rem;
     }
     /* @xl Reponsive Equal Column Classes*/
-    .grid--equal-1\@xl > [class*=grid__cell], .grid--equal-1\@xl.grid--auto\@xl > * {
+    .grid--equal-1\@xl > * {
       flex-basis: calc(100% - 1rem);
       max-width: calc(100% - 1rem);
     }
-    .grid--equal-2\@xl > [class*=grid__cell], .grid--equal-2\@xl.grid--auto\@xl > * {
+    .grid--equal-2\@xl > * {
       flex-basis: calc(50% - 1rem);
       max-width: calc(50% - 1rem);
     }
-    .grid--equal-3\@xl > [class*=grid__cell], .grid--equal-3\@xl.grid--auto\@xl > * {
+    .grid--equal-3\@xl > * {
       flex-basis: calc(33.3333333333% - 1rem);
       max-width: calc(33.3333333333% - 1rem);
     }
-    .grid--equal-4\@xl > [class*=grid__cell], .grid--equal-4\@xl.grid--auto\@xl > * {
+    .grid--equal-4\@xl > * {
       flex-basis: calc(25% - 1rem);
       max-width: calc(25% - 1rem);
     }
-    .grid--equal-5\@xl > [class*=grid__cell], .grid--equal-5\@xl.grid--auto\@xl > * {
+    .grid--equal-5\@xl > * {
       flex-basis: calc(20% - 1rem);
       max-width: calc(20% - 1rem);
     }
-    .grid--equal-6\@xl > [class*=grid__cell], .grid--equal-6\@xl.grid--auto\@xl > * {
+    .grid--equal-6\@xl > * {
       flex-basis: calc(16.6666666667% - 1rem);
       max-width: calc(16.6666666667% - 1rem);
     }
-    .grid--equal-7\@xl > [class*=grid__cell], .grid--equal-7\@xl.grid--auto\@xl > * {
+    .grid--equal-7\@xl > * {
       flex-basis: calc(14.2857142857% - 1rem);
       max-width: calc(14.2857142857% - 1rem);
     }
-    .grid--equal-8\@xl > [class*=grid__cell], .grid--equal-8\@xl.grid--auto\@xl > * {
+    .grid--equal-8\@xl > * {
       flex-basis: calc(12.5% - 1rem);
       max-width: calc(12.5% - 1rem);
     }
-    .grid--equal-9\@xl > [class*=grid__cell], .grid--equal-9\@xl.grid--auto\@xl > * {
+    .grid--equal-9\@xl > * {
       flex-basis: calc(11.1111111111% - 1rem);
       max-width: calc(11.1111111111% - 1rem);
     }
-    .grid--equal-10\@xl > [class*=grid__cell], .grid--equal-10\@xl.grid--auto\@xl > * {
+    .grid--equal-10\@xl > * {
       flex-basis: calc(10% - 1rem);
       max-width: calc(10% - 1rem);
     }
-    .grid--equal-11\@xl > [class*=grid__cell], .grid--equal-11\@xl.grid--auto\@xl > * {
+    .grid--equal-11\@xl > * {
       flex-basis: calc(9.0909090909% - 1rem);
       max-width: calc(9.0909090909% - 1rem);
     }
-    .grid--equal-12\@xl > [class*=grid__cell], .grid--equal-12\@xl.grid--auto\@xl > * {
+    .grid--equal-12\@xl > * {
       flex-basis: calc(8.3333333333% - 1rem);
       max-width: calc(8.3333333333% - 1rem);
     }
     /* @xl Responsive Columns Classes */
-    .grid--equal-1\@xl > [class*=grid__cell], .grid--equal-1\@xl.grid--auto\@xl > *, .grid--equal-2\@xl > [class*=grid__cell], .grid--equal-2\@xl.grid--auto\@xl > *, .grid--equal-3\@xl > [class*=grid__cell], .grid--equal-3\@xl.grid--auto\@xl > *, .grid--equal-4\@xl > [class*=grid__cell], .grid--equal-4\@xl.grid--auto\@xl > *, .grid--equal-5\@xl > [class*=grid__cell], .grid--equal-5\@xl.grid--auto\@xl > *, .grid--equal-6\@xl > [class*=grid__cell], .grid--equal-6\@xl.grid--auto\@xl > *, .grid--equal-7\@xl > [class*=grid__cell], .grid--equal-7\@xl.grid--auto\@xl > *, .grid--equal-8\@xl > [class*=grid__cell], .grid--equal-8\@xl.grid--auto\@xl > *, .grid--equal-9\@xl > [class*=grid__cell], .grid--equal-9\@xl.grid--auto\@xl > *, .grid--equal-10\@xl > [class*=grid__cell], .grid--equal-10\@xl.grid--auto\@xl > *, .grid--equal-11\@xl > [class*=grid__cell], .grid--equal-11\@xl.grid--auto\@xl > *, .grid--equal-12\@xl > [class*=grid__cell], .grid--equal-12\@xl.grid--auto\@xl > *, .grid__cell--1\@xl, .grid__cell--2\@xl, .grid__cell--3\@xl, .grid__cell--4\@xl, .grid__cell--5\@xl, .grid__cell--6\@xl, .grid__cell--7\@xl, .grid__cell--8\@xl, .grid__cell--9\@xl, .grid__cell--10\@xl, .grid__cell--11\@xl, .grid__cell--12\@xl, .grid__cell--none\@xl, .grid__cell--auto\@xl {
+    .grid--equal-1\@xl > *, .grid--equal-2\@xl > *, .grid--equal-3\@xl > *, .grid--equal-4\@xl > *, .grid--equal-5\@xl > *, .grid--equal-6\@xl > *, .grid--equal-7\@xl > *, .grid--equal-8\@xl > *, .grid--equal-9\@xl > *, .grid--equal-10\@xl > *, .grid--equal-11\@xl > *, .grid--equal-12\@xl > *, .grid__cell--1\@xl, .grid__cell--2\@xl, .grid__cell--3\@xl, .grid__cell--4\@xl, .grid__cell--5\@xl, .grid__cell--6\@xl, .grid__cell--7\@xl, .grid__cell--8\@xl, .grid__cell--9\@xl, .grid__cell--10\@xl, .grid__cell--11\@xl, .grid__cell--12\@xl, .grid__cell--none\@xl, .grid__cell--auto\@xl {
       min-height: 1px;
       flex-shrink: 0;
       -webkit-box-flex: 0;
@@ -2967,8 +2967,8 @@
       margin-right: -0.5rem;
     }
     .grid--double-gutters\@xl {
-      margin-left: -1rem;
-      margin-right: -1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     /* @xl Responsive flex direction classes */
     .grid--column\@xl {
@@ -3104,56 +3104,56 @@
       margin-right: -0.5rem;
     }
     /* @xxl Reponsive Equal Column Classes*/
-    .grid--equal-1\@xxl > [class*=grid__cell], .grid--equal-1\@xxl.grid--auto\@xxl > * {
+    .grid--equal-1\@xxl > * {
       flex-basis: calc(100% - 1rem);
       max-width: calc(100% - 1rem);
     }
-    .grid--equal-2\@xxl > [class*=grid__cell], .grid--equal-2\@xxl.grid--auto\@xxl > * {
+    .grid--equal-2\@xxl > * {
       flex-basis: calc(50% - 1rem);
       max-width: calc(50% - 1rem);
     }
-    .grid--equal-3\@xxl > [class*=grid__cell], .grid--equal-3\@xxl.grid--auto\@xxl > * {
+    .grid--equal-3\@xxl > * {
       flex-basis: calc(33.3333333333% - 1rem);
       max-width: calc(33.3333333333% - 1rem);
     }
-    .grid--equal-4\@xxl > [class*=grid__cell], .grid--equal-4\@xxl.grid--auto\@xxl > * {
+    .grid--equal-4\@xxl > * {
       flex-basis: calc(25% - 1rem);
       max-width: calc(25% - 1rem);
     }
-    .grid--equal-5\@xxl > [class*=grid__cell], .grid--equal-5\@xxl.grid--auto\@xxl > * {
+    .grid--equal-5\@xxl > * {
       flex-basis: calc(20% - 1rem);
       max-width: calc(20% - 1rem);
     }
-    .grid--equal-6\@xxl > [class*=grid__cell], .grid--equal-6\@xxl.grid--auto\@xxl > * {
+    .grid--equal-6\@xxl > * {
       flex-basis: calc(16.6666666667% - 1rem);
       max-width: calc(16.6666666667% - 1rem);
     }
-    .grid--equal-7\@xxl > [class*=grid__cell], .grid--equal-7\@xxl.grid--auto\@xxl > * {
+    .grid--equal-7\@xxl > * {
       flex-basis: calc(14.2857142857% - 1rem);
       max-width: calc(14.2857142857% - 1rem);
     }
-    .grid--equal-8\@xxl > [class*=grid__cell], .grid--equal-8\@xxl.grid--auto\@xxl > * {
+    .grid--equal-8\@xxl > * {
       flex-basis: calc(12.5% - 1rem);
       max-width: calc(12.5% - 1rem);
     }
-    .grid--equal-9\@xxl > [class*=grid__cell], .grid--equal-9\@xxl.grid--auto\@xxl > * {
+    .grid--equal-9\@xxl > * {
       flex-basis: calc(11.1111111111% - 1rem);
       max-width: calc(11.1111111111% - 1rem);
     }
-    .grid--equal-10\@xxl > [class*=grid__cell], .grid--equal-10\@xxl.grid--auto\@xxl > * {
+    .grid--equal-10\@xxl > * {
       flex-basis: calc(10% - 1rem);
       max-width: calc(10% - 1rem);
     }
-    .grid--equal-11\@xxl > [class*=grid__cell], .grid--equal-11\@xxl.grid--auto\@xxl > * {
+    .grid--equal-11\@xxl > * {
       flex-basis: calc(9.0909090909% - 1rem);
       max-width: calc(9.0909090909% - 1rem);
     }
-    .grid--equal-12\@xxl > [class*=grid__cell], .grid--equal-12\@xxl.grid--auto\@xxl > * {
+    .grid--equal-12\@xxl > * {
       flex-basis: calc(8.3333333333% - 1rem);
       max-width: calc(8.3333333333% - 1rem);
     }
     /* @xxl Responsive Columns Classes */
-    .grid--equal-1\@xxl > [class*=grid__cell], .grid--equal-1\@xxl.grid--auto\@xxl > *, .grid--equal-2\@xxl > [class*=grid__cell], .grid--equal-2\@xxl.grid--auto\@xxl > *, .grid--equal-3\@xxl > [class*=grid__cell], .grid--equal-3\@xxl.grid--auto\@xxl > *, .grid--equal-4\@xxl > [class*=grid__cell], .grid--equal-4\@xxl.grid--auto\@xxl > *, .grid--equal-5\@xxl > [class*=grid__cell], .grid--equal-5\@xxl.grid--auto\@xxl > *, .grid--equal-6\@xxl > [class*=grid__cell], .grid--equal-6\@xxl.grid--auto\@xxl > *, .grid--equal-7\@xxl > [class*=grid__cell], .grid--equal-7\@xxl.grid--auto\@xxl > *, .grid--equal-8\@xxl > [class*=grid__cell], .grid--equal-8\@xxl.grid--auto\@xxl > *, .grid--equal-9\@xxl > [class*=grid__cell], .grid--equal-9\@xxl.grid--auto\@xxl > *, .grid--equal-10\@xxl > [class*=grid__cell], .grid--equal-10\@xxl.grid--auto\@xxl > *, .grid--equal-11\@xxl > [class*=grid__cell], .grid--equal-11\@xxl.grid--auto\@xxl > *, .grid--equal-12\@xxl > [class*=grid__cell], .grid--equal-12\@xxl.grid--auto\@xxl > *, .grid__cell--1\@xxl, .grid__cell--2\@xxl, .grid__cell--3\@xxl, .grid__cell--4\@xxl, .grid__cell--5\@xxl, .grid__cell--6\@xxl, .grid__cell--7\@xxl, .grid__cell--8\@xxl, .grid__cell--9\@xxl, .grid__cell--10\@xxl, .grid__cell--11\@xxl, .grid__cell--12\@xxl, .grid__cell--none\@xxl, .grid__cell--auto\@xxl {
+    .grid--equal-1\@xxl > *, .grid--equal-2\@xxl > *, .grid--equal-3\@xxl > *, .grid--equal-4\@xxl > *, .grid--equal-5\@xxl > *, .grid--equal-6\@xxl > *, .grid--equal-7\@xxl > *, .grid--equal-8\@xxl > *, .grid--equal-9\@xxl > *, .grid--equal-10\@xxl > *, .grid--equal-11\@xxl > *, .grid--equal-12\@xxl > *, .grid__cell--1\@xxl, .grid__cell--2\@xxl, .grid__cell--3\@xxl, .grid__cell--4\@xxl, .grid__cell--5\@xxl, .grid__cell--6\@xxl, .grid__cell--7\@xxl, .grid__cell--8\@xxl, .grid__cell--9\@xxl, .grid__cell--10\@xxl, .grid__cell--11\@xxl, .grid__cell--12\@xxl, .grid__cell--none\@xxl, .grid__cell--auto\@xxl {
       min-height: 1px;
       flex-shrink: 0;
       -webkit-box-flex: 0;
@@ -3404,8 +3404,8 @@
       margin-right: -0.5rem;
     }
     .grid--double-gutters\@xxl {
-      margin-left: -1rem;
-      margin-right: -1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     /* @xxl Responsive flex direction classes */
     .grid--column\@xxl {
@@ -3541,56 +3541,56 @@
       margin-right: -0.5rem;
     }
     /* @max Reponsive Equal Column Classes*/
-    .grid--equal-1\@max > [class*=grid__cell], .grid--equal-1\@max.grid--auto\@max > * {
+    .grid--equal-1\@max > * {
       flex-basis: calc(100% - 1rem);
       max-width: calc(100% - 1rem);
     }
-    .grid--equal-2\@max > [class*=grid__cell], .grid--equal-2\@max.grid--auto\@max > * {
+    .grid--equal-2\@max > * {
       flex-basis: calc(50% - 1rem);
       max-width: calc(50% - 1rem);
     }
-    .grid--equal-3\@max > [class*=grid__cell], .grid--equal-3\@max.grid--auto\@max > * {
+    .grid--equal-3\@max > * {
       flex-basis: calc(33.3333333333% - 1rem);
       max-width: calc(33.3333333333% - 1rem);
     }
-    .grid--equal-4\@max > [class*=grid__cell], .grid--equal-4\@max.grid--auto\@max > * {
+    .grid--equal-4\@max > * {
       flex-basis: calc(25% - 1rem);
       max-width: calc(25% - 1rem);
     }
-    .grid--equal-5\@max > [class*=grid__cell], .grid--equal-5\@max.grid--auto\@max > * {
+    .grid--equal-5\@max > * {
       flex-basis: calc(20% - 1rem);
       max-width: calc(20% - 1rem);
     }
-    .grid--equal-6\@max > [class*=grid__cell], .grid--equal-6\@max.grid--auto\@max > * {
+    .grid--equal-6\@max > * {
       flex-basis: calc(16.6666666667% - 1rem);
       max-width: calc(16.6666666667% - 1rem);
     }
-    .grid--equal-7\@max > [class*=grid__cell], .grid--equal-7\@max.grid--auto\@max > * {
+    .grid--equal-7\@max > * {
       flex-basis: calc(14.2857142857% - 1rem);
       max-width: calc(14.2857142857% - 1rem);
     }
-    .grid--equal-8\@max > [class*=grid__cell], .grid--equal-8\@max.grid--auto\@max > * {
+    .grid--equal-8\@max > * {
       flex-basis: calc(12.5% - 1rem);
       max-width: calc(12.5% - 1rem);
     }
-    .grid--equal-9\@max > [class*=grid__cell], .grid--equal-9\@max.grid--auto\@max > * {
+    .grid--equal-9\@max > * {
       flex-basis: calc(11.1111111111% - 1rem);
       max-width: calc(11.1111111111% - 1rem);
     }
-    .grid--equal-10\@max > [class*=grid__cell], .grid--equal-10\@max.grid--auto\@max > * {
+    .grid--equal-10\@max > * {
       flex-basis: calc(10% - 1rem);
       max-width: calc(10% - 1rem);
     }
-    .grid--equal-11\@max > [class*=grid__cell], .grid--equal-11\@max.grid--auto\@max > * {
+    .grid--equal-11\@max > * {
       flex-basis: calc(9.0909090909% - 1rem);
       max-width: calc(9.0909090909% - 1rem);
     }
-    .grid--equal-12\@max > [class*=grid__cell], .grid--equal-12\@max.grid--auto\@max > * {
+    .grid--equal-12\@max > * {
       flex-basis: calc(8.3333333333% - 1rem);
       max-width: calc(8.3333333333% - 1rem);
     }
     /* @max Responsive Columns Classes */
-    .grid--equal-1\@max > [class*=grid__cell], .grid--equal-1\@max.grid--auto\@max > *, .grid--equal-2\@max > [class*=grid__cell], .grid--equal-2\@max.grid--auto\@max > *, .grid--equal-3\@max > [class*=grid__cell], .grid--equal-3\@max.grid--auto\@max > *, .grid--equal-4\@max > [class*=grid__cell], .grid--equal-4\@max.grid--auto\@max > *, .grid--equal-5\@max > [class*=grid__cell], .grid--equal-5\@max.grid--auto\@max > *, .grid--equal-6\@max > [class*=grid__cell], .grid--equal-6\@max.grid--auto\@max > *, .grid--equal-7\@max > [class*=grid__cell], .grid--equal-7\@max.grid--auto\@max > *, .grid--equal-8\@max > [class*=grid__cell], .grid--equal-8\@max.grid--auto\@max > *, .grid--equal-9\@max > [class*=grid__cell], .grid--equal-9\@max.grid--auto\@max > *, .grid--equal-10\@max > [class*=grid__cell], .grid--equal-10\@max.grid--auto\@max > *, .grid--equal-11\@max > [class*=grid__cell], .grid--equal-11\@max.grid--auto\@max > *, .grid--equal-12\@max > [class*=grid__cell], .grid--equal-12\@max.grid--auto\@max > *, .grid__cell--1\@max, .grid__cell--2\@max, .grid__cell--3\@max, .grid__cell--4\@max, .grid__cell--5\@max, .grid__cell--6\@max, .grid__cell--7\@max, .grid__cell--8\@max, .grid__cell--9\@max, .grid__cell--10\@max, .grid__cell--11\@max, .grid__cell--12\@max, .grid__cell--none\@max, .grid__cell--auto\@max {
+    .grid--equal-1\@max > *, .grid--equal-2\@max > *, .grid--equal-3\@max > *, .grid--equal-4\@max > *, .grid--equal-5\@max > *, .grid--equal-6\@max > *, .grid--equal-7\@max > *, .grid--equal-8\@max > *, .grid--equal-9\@max > *, .grid--equal-10\@max > *, .grid--equal-11\@max > *, .grid--equal-12\@max > *, .grid__cell--1\@max, .grid__cell--2\@max, .grid__cell--3\@max, .grid__cell--4\@max, .grid__cell--5\@max, .grid__cell--6\@max, .grid__cell--7\@max, .grid__cell--8\@max, .grid__cell--9\@max, .grid__cell--10\@max, .grid__cell--11\@max, .grid__cell--12\@max, .grid__cell--none\@max, .grid__cell--auto\@max {
       min-height: 1px;
       flex-shrink: 0;
       -webkit-box-flex: 0;
@@ -3841,8 +3841,8 @@
       margin-right: -0.5rem;
     }
     .grid--double-gutters\@max {
-      margin-left: -1rem;
-      margin-right: -1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     /* @max Responsive flex direction classes */
     .grid--column\@max {

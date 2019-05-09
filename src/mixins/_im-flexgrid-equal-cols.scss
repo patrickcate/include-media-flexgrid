@@ -1,26 +1,31 @@
 /* stylelint-disable max-nesting-depth */
 
 @mixin im-flexgrid-equal-col-classes($i) {
-  
+
   /* Basic Equal Column Classes */
-  
+
   @for $n from 1 through $i {
 
     %grid-equal-class-#{$n} {
-      @include im-flexgrid-responsive-col-calc($n, $i);
+      @include im-flexgrid-responsive-col-calc($n, $i, true);
+    }
+
+     %grid-equal-class-#{$n}-no-gutter {
+      @include im-flexgrid-responsive-col-calc($n, $i, false);
+      margin-left: 0;
+      margin-right: 0;
     }
 
     .#{im-setting('grid-class')}#{im-setting('grid-separator')}equal-#{$n} {
 
-      > [class*=#{im-setting('cell-class')}] {
+      > * {
         @extend %base-col;
         @extend %grid-equal-class-#{$n};
       }
 
-      &.#{im-setting('grid-class')}#{im-setting('grid-separator')}auto {
+      &.#{im-setting('grid-class')}#{im-setting('grid-separator')}no-gutters {
         > * {
-          @extend %base-col;
-          @extend %grid-equal-class-#{$n};
+          @extend %grid-equal-class-#{$n}-no-gutter;
         }
       }
     }
@@ -28,27 +33,31 @@
 }
 
 @mixin im-flexgrid-responsive-equal-col-classes($i, $breakpoint-name) {
-  
+
   /* @#{$breakpoint-name} Reponsive Equal Column Classes*/
-  
+
   @for $n from 1 through $i {
 
     %grid-equal-class-#{$n}-#{$breakpoint-name} {
-      @include im-flexgrid-responsive-col-calc($n, $i);
+      @include im-flexgrid-responsive-col-calc($n, $i, true);
+    }
+
+    %grid-equal-class-#{$n}-#{$breakpoint-name}-no-gutters {
+      @include im-flexgrid-responsive-col-calc($n, $i, false);
+      margin-left: 0;
+      margin-right: 0;
     }
 
     .#{im-setting('grid-class')}#{im-setting('grid-separator')}equal-#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
 
-      > [class*=#{im-setting('cell-class')}] {
+      > * {
         @extend %base-col-#{$breakpoint-name};
         @extend %grid-equal-class-#{$n}-#{$breakpoint-name};
       }
 
-      &.#{im-setting('grid-class')}#{im-setting('grid-separator')}auto#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
-
+      &.#{im-setting('grid-class')}#{im-setting('grid-separator')}no-gutters {
         > * {
-          @extend %base-col-#{$breakpoint-name};
-          @extend %grid-equal-class-#{$n}-#{$breakpoint-name};
+          @extend %grid-equal-class-#{$n}-#{$breakpoint-name}-no-gutters;
         }
       }
     }

@@ -1,12 +1,12 @@
 /* stylelint-disable max-nesting-depth */
 
 @mixin im-flexgrid-row-classes {
-  
+
   /* Basic Row Classes */
-  
+
   .#{im-setting('grid-class')} {
     @include im-flexgrid-row-base;
-    
+
     @if im-setting('default-gutters') {
       margin-left: #{(im-setting('gutter-size')) / 2 * -1};
       margin-right: #{(im-setting('gutter-size')) / 2 * -1};
@@ -25,23 +25,23 @@
         }
       }
     }
-    
+
     %push-pull-relative {
       position: relative;
     }
-    
+
     @if im-setting('include-push') {
       [class*=#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('push-class')}] {
         @extend %push-pull-relative;
       }
     }
-    
+
     @if im-setting('include-pull') {
       [class*=#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('pull-class')}] {
         @extend %push-pull-relative;
       }
     }
-    
+
     @if im-setting('include-squish') {
       [class*=#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('squish-class')}] {
         @extend %push-pull-relative;
@@ -52,17 +52,22 @@
 
 @mixin im-flexgrid-responsive-row-classes($breakpoint-name) {
   /* @#{$breakpoint-name} Responsive Row Classes */
-  
+
   %grid-row-#{$breakpoint-name} {
     @include im-flexgrid-row-base;
-    
+
     @if im-setting('default-gutters') {
       margin-left: #{(im-setting('gutter-size')) / 2 * -1};
       margin-right: #{(im-setting('gutter-size')) / 2 * -1};
     }
+
+    &.#{im-setting('grid-class')}--no-gutters {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
-  
-  .#{im-setting('grid-class')}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
+
+  .#{im-setting('grid-class')}-#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
     @extend %grid-row-#{$breakpoint-name};
   }
 }

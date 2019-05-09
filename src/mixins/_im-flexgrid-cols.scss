@@ -35,7 +35,13 @@
   @for $n from 1 through $i {
 
     %grid-col-#{$n} {
-      @include im-flexgrid-col-calc($n);
+      @include im-flexgrid-col-calc($n, true);
+    }
+
+    %grid-col-#{$n}--no-gutters {
+      @include im-flexgrid-col-calc($n, false);
+      margin-left: 0;
+      margin-right: 0;
     }
 
     @if $n == im-setting('total-columns') {
@@ -43,12 +49,20 @@
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}full {
         @extend %base-col;
         @extend %grid-col-#{$n};
+
+        &.#{im-setting('cell-class')}#{im-setting('grid-separator')}no-gutters {
+          @extend %grid-col-#{$n}#{im-setting('grid-separator')}no-gutters;
+        }
       }
     }
     @else {
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{$n} {
         @extend %base-col;
         @extend %grid-col-#{$n};
+
+        &.#{im-setting('cell-class')}#{im-setting('grid-separator')}no-gutters {
+          @extend %grid-col-#{$n}#{im-setting('grid-separator')}no-gutters;
+        }
       }
     }
   }
@@ -67,11 +81,10 @@
 }
 
 @mixin im-flexgrid-responsive-col-classes($i, $breakpoint-name) {
-  
+
   /* @#{$breakpoint-name} Responsive Columns Classes */
-  
+
   %base-col-#{$breakpoint-name} {
-    // width: 100%;
     min-height: 1px;
     flex-shrink: 0;
     flex-grow: 0;
@@ -89,12 +102,20 @@
   @for $n from 1 through $i {
 
     %grid-col-#{$n}-#{$breakpoint-name} {
-      @include im-flexgrid-col-calc($n);
+      @include im-flexgrid-col-calc($n, true);
+    }
+
+    %grid-col-#{$n}-#{$breakpoint-name}-no-gutters {
+      @include im-flexgrid-col-calc($n, false);
     }
 
     .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
       @extend %base-col-#{$breakpoint-name};
       @extend %grid-col-#{$n}-#{$breakpoint-name};
+    }
+
+    .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name}-no-gutters {
+      @extend %grid-col-#{$n}-#{$breakpoint-name}-no-gutters;
     }
   }
 

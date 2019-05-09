@@ -1,26 +1,26 @@
 
 @mixin im-flexgrid-gutter-classes {
-  
+
   /* Basic Gutter Classes */
 
   .#{im-setting('grid-class')}--no-gutters {
     margin-left: 0;
     margin-right: 0;
   }
-  
+
   .#{im-setting('grid-class')}--half-gutters {
     margin-left: #{im-setting('gutter-size') / 4 * -1};
     margin-right: #{im-setting('gutter-size') / 4 * -1};
   }
-  
+
   .#{im-setting('grid-class')}--gutters {
     margin-left: #{im-setting('gutter-size') / 2 * -1};
     margin-right: #{im-setting('gutter-size') / 2 * -1};
   }
-  
+
   .#{im-setting('grid-class')}--double-gutters {
-    margin-left: #{im-setting('gutter-size') * -1};
-    margin-right: #{im-setting('gutter-size') * -1};
+    margin-left: #{im-setting('gutter-size')};
+    margin-right: #{im-setting('gutter-size')};
   }
 }
 
@@ -43,8 +43,8 @@
   }
 
   %grid--double-gutters#{$breakpoint-name} {
-    margin-left: #{im-setting('gutter-size') * -1};
-    margin-right: #{im-setting('gutter-size') * -1};
+    margin-left: #{im-setting('gutter-size')};
+    margin-right: #{im-setting('gutter-size')};
   }
 
 

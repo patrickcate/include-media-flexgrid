@@ -1,7 +1,7 @@
 @mixin im-flexgrid-order-classes {
-  
+
   /* Basic Order Classes */
-  
+
   @if im-setting('include-order') {
     @for $n from 1 through im-setting('total-columns') {
 
@@ -35,7 +35,7 @@
 
 @mixin im-flexgrid-responsive-order-classes($breakpoint-name) {
   /* @#{$breakpoint-name} Responsive Order Classes */
-  
+
   @if im-setting('include-order') {
     @for $n from 1 through im-setting('total-columns') {
 

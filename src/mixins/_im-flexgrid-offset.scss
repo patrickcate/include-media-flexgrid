@@ -1,8 +1,8 @@
 @mixin im-flexgrid-offset-classes($i) {
-  
+
   /* Basic Offset Classes */
-  
-  @if im-setting('include-offset') && $i == 1 {
+
+  @if im-setting('include-offset') and $i == 1 {
 
     .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('offset-class')}-none {
       margin-left: 0;
@@ -26,8 +26,8 @@
 
 @mixin im-flexgrid-responsive-offset-classes($i, $breakpoint-name) {
   /* @#{$breakpoint-name} Responsive Offset Classes */
-  
-  @if im-setting('include-offset') && $i == 1 {
+
+  @if im-setting('include-offset') and $i == 1 {
 
     .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('offset-class')}-auto#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
       margin-left: 0;

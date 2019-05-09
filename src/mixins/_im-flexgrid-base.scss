@@ -1,9 +1,8 @@
 /* stylelint-disable max-nesting-depth */
 
 @mixin im-flexgrid-row-base {
-  
+
   /* Base Row CSS */
-  
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -18,19 +17,37 @@
   flex-grow: 1;
 }
 
-@mixin im-flexgrid-col-calc($columns) {
-  flex-basis: calc(#{($columns / im-setting('total-columns')) * 100%} - #{im-setting('gutter-size')});
+@mixin im-flexgrid-col-calc($columns, $include-gutters) {
 
-  @if im-setting('include-max-width') {
+  @if $include-gutters == true {
+    flex-basis: calc(#{($columns / im-setting('total-columns')) * 100%} - #{im-setting('gutter-size')});
+  }
+  @else {
+    flex-basis: $columns / im-setting('total-columns') * 100%;
+  }
+
+  @if im-setting('include-max-width') == true and $include-gutters == true {
     max-width: calc(#{($columns / im-setting('total-columns')) * 100%} - #{im-setting('gutter-size')});
+  }
+  @else if im-setting('include-max-width') == true and $include-gutters == false {
+    max-width: $columns / im-setting('total-columns') * 100%;
   }
 }
 
-@mixin im-flexgrid-responsive-col-calc($columns, $divider) {
-  flex-basis: calc(#{im-setting('total-columns') / $columns / $divider * 100%} - #{im-setting('gutter-size')});
+@mixin im-flexgrid-responsive-col-calc($columns, $divider, $include-gutters: true) {
 
-  @if im-setting('include-max-width') {
+  @if $include-gutters == true {
+    flex-basis: calc(#{im-setting('total-columns') / $columns / $divider * 100%} - #{im-setting('gutter-size')});
+  }
+  @else {
+    flex-basis: im-setting('total-columns') / $columns / $divider * 100%;
+  }
+
+  @if im-setting('include-max-width') == true and $include-gutters == true {
     max-width: calc(#{im-setting('total-columns') / $columns / $divider * 100%} - #{im-setting('gutter-size')});
+  }
+  @else if im-setting('include-max-width') == true and $include-gutters == false {
+    max-width: im-setting('total-columns') / $columns / $divider * 100%;
   }
 }
 

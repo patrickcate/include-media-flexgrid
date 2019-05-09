@@ -6,9 +6,11 @@
 
 $im-flexgrid-settings: (
   'support-check': true,
-  'support-type': '@supports', // otherwise 'modernizr'
-  'total-columns': 12, // Total columns
-  'container-class': 'container',
+  'support-type': '@supports',
+  // otherwise support-type: 'modernizr'
+    'total-columns': 12,
+  // Total columns
+    'container-class': 'container',
   'grid-class': 'grid',
   'cell-class': 'grid__cell',
   'grid-separator': '--',
@@ -32,19 +34,20 @@ $im-flexgrid-settings: (
   'include-self-alignment': true,
   'gutter-size': 1rem,
   'default-gutters': true,
+  'include-gutterless': true,
   // 'use-flex-longhand': false, // @todo
-  'include-max-width': true,
+    'include-max-width': true,
   'include-trailer': true,
   'trailer-size': 1rem,
   // 'include-visibility-helpers': true, // @todo
-  // 'visible-class': 'visible', // @todo
-  // 'hidden-class': 'hidden', // @todo
+    // 'visible-class': 'visible', // @todo
+    // 'hidden-class': 'hidden', // @todo
 ) !default;
 
 $im-flexgrid-wrap-align-settings: (
   'wrap': wrap,
   'no-wrap': no-wrap,
-  'wrap-reverse': wrap-reverse,
+  'wrap-reverse': wrap-reverse
 ) !default;
 
 $im-flexgrid-direction-align-settings: (
@@ -52,7 +55,7 @@ $im-flexgrid-direction-align-settings: (
   'column-reverse': column-reverse,
   'row': row,
   'row-reverse': row-reverse,
-  'unset': unset,
+  'unset': unset
 ) !default;
 
 $im-flexgrid-justify-align-settings: (
@@ -61,14 +64,15 @@ $im-flexgrid-justify-align-settings: (
   'justify-center': center,
   'justify-between': space-between,
   'justify-around': space-around,
+  'justify-evenly': space-evenly
 ) !default;
 
 $im-flexgrid-item-align-settings: (
   'item-start': flex-start,
   'item-end': flex-end,
   'item-center': center,
-  'item-between': baseline,
-  'item-around': stretch,
+  'item-baseline': baseline,
+  'item-stretch': stretch
 ) !default;
 
 $im-flexgrid-content-align-settings: (
@@ -77,22 +81,22 @@ $im-flexgrid-content-align-settings: (
   'content-center': center,
   'content-between': space-between,
   'content-around': space-around,
-  'content-stretch': stretch,
+  'content-stretch': stretch
 ) !default;
 
 $im-flexgrid-self-align-settings: (
   'self-start': flex-start,
   'self-end': flex-end,
   'self-center': center,
-  'self-between': baseline,
-  'self-around': stretch,
+  'self-baseline': baseline,
+  'self-stretch': stretch
 ) !default;
 
 $im-flexgrid-gutter-settings: (
   'no-gutters': 0,
   'half-gutters': im-setting('gutter-size') / 2,
   'gutters': im-setting('gutter-size'),
-  'double-gutters': im-setting('gutter-size') * 2,
+  'double-gutters': im-setting('gutter-size') * 2
 ) !default;
 
 $im-flexgrid-breakpoints: length($breakpoints);

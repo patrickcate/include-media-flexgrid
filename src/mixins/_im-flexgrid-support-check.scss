@@ -1,6 +1,6 @@
 @mixin im-flexgrid-support-check {
   @if im-setting('support-check') {
-    
+
     @if im-setting('support-type') == '@supports' {
       @supports (display: flex) {
         @content;
