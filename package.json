@@ -1,0 +1,21 @@
+{
+  "name": "include-media-flexgrid",
+  "version": "1.0.0-alpha1",
+  "description": "An include-media plugin flexbox based grid system.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickcate/include-media-flexgrid.git"
+  },
+  "keywords": [
+    "include-media",
+    "sass",
+    "flexbox",
+    "grid"
+  ],
+  "author": "Patrick Cate",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrickcate/include-media-flexgrid/issues"
+  },
+  "homepage": "https://github.com/patrickcate/include-media-flexgrid#readme"
+}
