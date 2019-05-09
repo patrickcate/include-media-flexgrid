@@ -1,38 +1,67 @@
 /* stylelint-disable max-nesting-depth */
 
 @mixin im-flexgrid-row-classes {
-
+  
+  /* Basic Row Classes */
+  
   .#{im-setting('grid-class')} {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
+    @include im-flexgrid-row-base;
+    
     @if im-setting('default-gutters') {
-      margin-left: #{(im-setting('gutter-size')) * -1};
-      margin-right: #{(im-setting('gutter-size')) * -1};
+      margin-left: #{(im-setting('gutter-size')) / 2 * -1};
+      margin-right: #{(im-setting('gutter-size')) / 2 * -1};
+    }
+
+    @if im-setting('include-trailer') {
+      &.#{im-setting('grid-class')}--no-trailer {
+        [class*=#{im-setting('cell-class')}] {
+          margin-bottom: 0;
+        }
+
+        &.#{im-setting('grid-class')}--auto {
+          > * {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    
+    %push-pull-relative {
+      position: relative;
+    }
+    
+    @if im-setting('include-push') {
+      [class*=#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('push-class')}] {
+        @extend %push-pull-relative;
+      }
+    }
+    
+    @if im-setting('include-pull') {
+      [class*=#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('pull-class')}] {
+        @extend %push-pull-relative;
+      }
+    }
+    
+    @if im-setting('include-squish') {
+      [class*=#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('squish-class')}] {
+        @extend %push-pull-relative;
+      }
     }
   }
 }
 
 @mixin im-flexgrid-responsive-row-classes($breakpoint-name) {
-
+  /* @#{$breakpoint-name} Responsive Row Classes */
+  
   %grid-row-#{$breakpoint-name} {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
+    @include im-flexgrid-row-base;
+    
     @if im-setting('default-gutters') {
-      margin-left: #{(im-setting('gutter-size')) * -1};
-      margin-right: #{(im-setting('gutter-size')) * -1};
+      margin-left: #{(im-setting('gutter-size')) / 2 * -1};
+      margin-right: #{(im-setting('gutter-size')) / 2 * -1};
     }
   }
-
+  
   .#{im-setting('grid-class')}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
     @extend %grid-row-#{$breakpoint-name};
   }

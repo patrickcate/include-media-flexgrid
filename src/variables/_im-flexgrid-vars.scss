@@ -1,11 +1,11 @@
 /* stylelint-disable max-nesting-depth */
 
 @if variable-exists('$breakpoints') == null or mixin-exists('media') == false {
-  @warn 'Make sure you have imported and setup Include Media first.';
+  @warn 'Make sure you have imported and setup @include-media first.';
 }
 
 $im-flexgrid-settings: (
-  'support-check': false,
+  'support-check': true,
   'support-type': '@supports', // otherwise 'modernizr'
   'total-columns': 12, // Total columns
   'container-class': 'container',
@@ -24,23 +24,35 @@ $im-flexgrid-settings: (
   'squish-class': 'squish',
   'include-order': true,
   'order-class': 'order',
+  'include-wrap-alignment': true,
+  'include-direction-alignment': true,
+  'include-justify-alignment': true,
+  'include-item-alignment': true,
+  'include-content-alignment': true,
+  'include-self-alignment': true,
   'gutter-size': 1rem,
   'default-gutters': true,
-  'use-flex-longhand': false,
+  // 'use-flex-longhand': false, // @todo
   'include-max-width': true,
   'include-trailer': true,
   'trailer-size': 1rem,
-  'include-visibility-helpers': true,
-  'visible-class': 'visible',
-  'hidden-class': 'hidden',
-  'include-width-helpers': true,
-  'width-class': 'width',
+  // 'include-visibility-helpers': true, // @todo
+  // 'visible-class': 'visible', // @todo
+  // 'hidden-class': 'hidden', // @todo
 ) !default;
 
-$im-flexgrid-wrap-settings: (
-  'wrap': 'wrap',
-  'no-wrap': 'no-wrap',
-  'wrap-reverse': 'wrap-reverse',
+$im-flexgrid-wrap-align-settings: (
+  'wrap': wrap,
+  'no-wrap': no-wrap,
+  'wrap-reverse': wrap-reverse,
+) !default;
+
+$im-flexgrid-direction-align-settings: (
+  'column': column,
+  'column-reverse': column-reverse,
+  'row': row,
+  'row-reverse': row-reverse,
+  'unset': unset,
 ) !default;
 
 $im-flexgrid-justify-align-settings: (
@@ -74,6 +86,13 @@ $im-flexgrid-self-align-settings: (
   'self-center': center,
   'self-between': baseline,
   'self-around': stretch,
+) !default;
+
+$im-flexgrid-gutter-settings: (
+  'no-gutters': 0,
+  'half-gutters': im-setting('gutter-size') / 2,
+  'gutters': im-setting('gutter-size'),
+  'double-gutters': im-setting('gutter-size') * 2,
 ) !default;
 
 $im-flexgrid-breakpoints: length($breakpoints);

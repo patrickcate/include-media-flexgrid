@@ -1,0 +1,43 @@
+/* stylelint-disable max-nesting-depth */
+
+@mixin im-flexgrid-row-base {
+  
+  /* Base Row CSS */
+  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin im-flexgrid-column-base {
+  min-height: 1px;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+@mixin im-flexgrid-col-calc($columns) {
+  flex-basis: calc(#{($columns / im-setting('total-columns')) * 100%} - #{im-setting('gutter-size')});
+
+  @if im-setting('include-max-width') {
+    max-width: calc(#{($columns / im-setting('total-columns')) * 100%} - #{im-setting('gutter-size')});
+  }
+}
+
+@mixin im-flexgrid-responsive-col-calc($columns, $divider) {
+  flex-basis: calc(#{im-setting('total-columns') / $columns / $divider * 100%} - #{im-setting('gutter-size')});
+
+  @if im-setting('include-max-width') {
+    max-width: calc(#{im-setting('total-columns') / $columns / $divider * 100%} - #{im-setting('gutter-size')});
+  }
+}
+
+@mixin im-flexgrid-push-calc($columns) {
+  left: #{($columns / im-setting('total-columns')) * 100%};
+}
+
+@mixin im-flexgrid-pull-calc($columns) {
+  right: #{($columns / im-setting('total-columns')) * 100%};
+}

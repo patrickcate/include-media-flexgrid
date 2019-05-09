@@ -1,31 +1,31 @@
 /* stylelint-disable max-nesting-depth */
 
-/* Pull */
-
 @mixin im-flexgrid-pull-classes($i) {
-
+  
+  /* Basic Pull Classes */
+  
   @if im-setting('include-pull') && $i == 1 {
-
+    
     .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('pull-class')}-auto {
       right: auto;
     }
   }
-
+  
   @for $n from 1 through $i {
-
+    
     %grid-pull-#{$n} {
-      right: $n / $i * 100%;
+      @include im-flexgrid-pull-calc($n);
     }
-
+    
     @if im-setting('include-pull') {
-
+      
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('pull-class')}-#{$n} {
         @extend %grid-pull-#{$n};
       }
     }
-
+    
     @if im-setting('include-squish') {
-
+      
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('squish-class')}-#{$n} {
         @extend %grid-pull-#{$n};
       }
@@ -34,29 +34,31 @@
 }
 
 @mixin im-flexgrid-responsive-pull-classes($i, $breakpoint-name) {
-
+  
+  /* @#{$breakpoint-name} Responsive Pull Classes */
+  
   @if im-setting('include-pull') && $i == 1 {
-
+    
     .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('pull-class')}-auto#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
       right: auto;
     }
   }
-
+  
   @for $n from 1 through $i {
-
+    
     %grid-pull-#{$n}-#{$breakpoint-name} {
-      right: $n / $i * 100%;
+      @include im-flexgrid-pull-calc($n);
     }
-
+    
     @if im-setting('include-pull') {
-
+      
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('pull-class')}-#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
         @extend %grid-pull-#{$n}-#{$breakpoint-name};
       }
     }
-
+    
     @if im-setting('include-squish') {
-
+      
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('squish-class')}-#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
         @extend %grid-pull-#{$n}-#{$breakpoint-name};
       }

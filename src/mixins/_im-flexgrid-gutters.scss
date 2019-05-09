@@ -1,49 +1,31 @@
-/* Gutters */
 
 @mixin im-flexgrid-gutter-classes {
+  
+  /* Basic Gutter Classes */
 
   .#{im-setting('grid-class')}--no-gutters {
     margin-left: 0;
     margin-right: 0;
   }
-
+  
   .#{im-setting('grid-class')}--half-gutters {
     margin-left: #{im-setting('gutter-size') / 4 * -1};
     margin-right: #{im-setting('gutter-size') / 4 * -1};
   }
-
+  
   .#{im-setting('grid-class')}--gutters {
     margin-left: #{im-setting('gutter-size') / 2 * -1};
     margin-right: #{im-setting('gutter-size') / 2 * -1};
   }
-
+  
   .#{im-setting('grid-class')}--double-gutters {
     margin-left: #{im-setting('gutter-size') * -1};
     margin-right: #{im-setting('gutter-size') * -1};
   }
-
-  .#{im-setting('cell-class')}--no-gutters {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .#{im-setting('cell-class')}--half-gutters {
-    padding-left: #{im-setting('gutter-size') / 4};
-    padding-right: #{im-setting('gutter-size') / 4};
-  }
-
-  .#{im-setting('cell-class')}--gutters {
-    padding-left: #{im-setting('gutter-size') / 2};
-    padding-right: #{im-setting('gutter-size') / 2};
-  }
-
-  .#{im-setting('cell-class')}--double-gutters {
-    padding-left: #{im-setting('gutter-size')};
-    padding-right: #{im-setting('gutter-size')};
-  }
 }
 
 @mixin im-flexgrid-responsive-gutter-classes($breakpoint-name) {
+  /* @#{$breakpoint-name} Responsive Gutter Classes */
 
   %grid--no-gutters#{$breakpoint-name} {
     margin-left: 0;
@@ -65,26 +47,6 @@
     margin-right: #{im-setting('gutter-size') * -1};
   }
 
-  %grid-cell--no-gutters#{$breakpoint-name} {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  %grid-cell--half-gutters#{$breakpoint-name} {
-    padding-left: #{im-setting('gutter-size') / 4};
-    padding-right: #{im-setting('gutter-size') / 4};
-  }
-
-  %grid-cell--gutters#{$breakpoint-name} {
-    padding-left: #{im-setting('gutter-size') / 2};
-    padding-right: #{im-setting('gutter-size') / 2};
-  }
-
-  %grid-cell--double-gutters#{$breakpoint-name} {
-    padding-left: #{im-setting('gutter-size')};
-    padding-right: #{im-setting('gutter-size')};
-  }
-
 
   .#{im-setting('grid-class')}#{im-setting('grid-separator')}no-gutters#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
     @extend %grid--no-gutters#{$breakpoint-name};
@@ -102,19 +64,4 @@
     @extend %grid--double-gutters#{$breakpoint-name};
   }
 
-  .#{im-setting('cell-class')}#{im-setting('grid-separator')}no-gutters#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
-    @extend %grid-cell--no-gutters#{$breakpoint-name};
-  }
-
-  .#{im-setting('cell-class')}#{im-setting('grid-separator')}half-gutters#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
-    @extend %grid-cell--half-gutters#{$breakpoint-name};
-  }
-
-  .#{im-setting('cell-class')}#{im-setting('grid-separator')}gutters#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
-    @extend %grid-cell--gutters#{$breakpoint-name};
-  }
-
-  .#{im-setting('cell-class')}#{im-setting('grid-separator')}double-gutters#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
-    @extend %grid-cell--double-gutters#{$breakpoint-name};
-  }
 }

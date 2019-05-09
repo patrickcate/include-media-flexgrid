@@ -1,23 +1,30 @@
 /* stylelint-disable max-nesting-depth */
 
-/* Cols */
-
 @mixin im-flexgrid-col-classes($i) {
 
+  /* Basic Column Classes */
+
   %base-col {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    flex-shrink: 0;
-    flex-grow: 1;
+    @include im-flexgrid-column-base;
 
     @if im-setting('default-gutters') {
-      padding-left: #{im-setting('gutter-size') / 2};
-      padding-right: #{im-setting('gutter-size') / 2};
+      margin-left: #{im-setting('gutter-size') / 2};
+      margin-right: #{im-setting('gutter-size') / 2};
     }
 
     @if im-setting('include-trailer') {
       margin-bottom: im-setting('trailer-size');
+    }
+
+    @if im-setting('include-trailer') {
+      &.#{im-setting('cell-class')}--no-trailer {
+        margin-bottom: 0;
+      }
+    }
+
+    &.#{im-setting('cell-class')}--no-gutters {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -28,14 +35,10 @@
   @for $n from 1 through $i {
 
     %grid-col-#{$n} {
-      flex-basis: $n / $i * 100%;
-
-      @if im-setting('include-max-width') {
-        max-width: $n / $i * 100%;
-      }
+      @include im-flexgrid-col-calc($n);
     }
 
-    @if $i == im-setting('total-columns') {
+    @if $n == im-setting('total-columns') {
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{$n},
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}full {
         @extend %base-col;
@@ -64,17 +67,18 @@
 }
 
 @mixin im-flexgrid-responsive-col-classes($i, $breakpoint-name) {
-
+  
+  /* @#{$breakpoint-name} Responsive Columns Classes */
+  
   %base-col-#{$breakpoint-name} {
-    position: relative;
-    width: 100%;
+    // width: 100%;
     min-height: 1px;
     flex-shrink: 0;
     flex-grow: 0;
 
     @if im-setting('default-gutters') {
-      padding-left: #{im-setting('gutter-size') / 2};
-      padding-right: #{im-setting('gutter-size') / 2};
+      margin-left: #{im-setting('gutter-size') / 2};
+      margin-right: #{im-setting('gutter-size') / 2};
     }
 
     @if im-setting('include-trailer') {
@@ -85,11 +89,7 @@
   @for $n from 1 through $i {
 
     %grid-col-#{$n}-#{$breakpoint-name} {
-      flex-basis: $n / $i * 100%;
-
-      @if im-setting('include-max-width') {
-        max-width: $n / $i * 100%;
-      }
+      @include im-flexgrid-col-calc($n);
     }
 
     .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
