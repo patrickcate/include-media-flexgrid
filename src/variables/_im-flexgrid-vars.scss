@@ -1,6 +1,11 @@
 @use 'sass:list';
+@use 'sass:meta';
 
-@if not variable-exists('$breakpoints') or mixin-exists('media') == false {
+@if meta.global-variable-exists('breakpoints') ==
+  false or
+  meta.mixin-exists('media') ==
+  false
+{
   @warn 'Make sure you have imported and setup @include-media first.';
 }
 
