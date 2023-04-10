@@ -1,0 +1,11 @@
+{
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss"],
+  "stylelint.reportDescriptionlessDisables": true,
+  "stylelint.reportNeedlessDisables": true,
+  "stylelint.reportInvalidScopeDisables": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  }
+}

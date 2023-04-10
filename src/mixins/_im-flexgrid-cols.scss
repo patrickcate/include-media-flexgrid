@@ -1,15 +1,12 @@
-/* stylelint-disable max-nesting-depth */
-
 @mixin im-flexgrid-col-classes($i) {
-
   /* Basic Column Classes */
 
   %base-col {
     @include im-flexgrid-column-base;
 
     @if im-setting('default-gutters') {
-      margin-left: #{im-setting('gutter-size') / 2};
-      margin-right: #{im-setting('gutter-size') / 2};
+      margin-right: #{calc(im-setting('gutter-size') / 2)};
+      margin-left: #{calc(im-setting('gutter-size') / 2)};
     }
 
     @if im-setting('include-trailer') {
@@ -23,8 +20,8 @@
     }
 
     &.#{im-setting('cell-class')}--no-gutters {
-      margin-left: 0;
       margin-right: 0;
+      margin-left: 0;
     }
   }
 
@@ -33,15 +30,15 @@
   }
 
   @for $n from 1 through $i {
-
     %grid-col-#{$n} {
       @include im-flexgrid-col-calc($n, true);
     }
 
     %grid-col-#{$n}--no-gutters {
       @include im-flexgrid-col-calc($n, false);
-      margin-left: 0;
+
       margin-right: 0;
+      margin-left: 0;
     }
 
     @if $n == im-setting('total-columns') {
@@ -54,8 +51,7 @@
           @extend %grid-col-#{$n}#{im-setting('grid-separator')}no-gutters;
         }
       }
-    }
-    @else {
+    } @else {
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{$n} {
         @extend %base-col;
         @extend %grid-col-#{$n};
@@ -73,25 +69,23 @@
 
   .#{im-setting('cell-class')}#{im-setting('grid-separator')}auto {
     @extend %base-col;
-    flex-shrink: 0;
-    flex-grow: 0;
-    flex-basis: auto;
+
+    flex: 0 0 auto;
     width: auto;
   }
 }
 
 @mixin im-flexgrid-responsive-col-classes($i, $breakpoint-name) {
-
   /* @#{$breakpoint-name} Responsive Columns Classes */
 
   %base-col-#{$breakpoint-name} {
-    min-height: 1px;
-    flex-shrink: 0;
     flex-grow: 0;
+    flex-shrink: 0;
+    min-height: 1px;
 
     @if im-setting('default-gutters') {
-      margin-left: #{im-setting('gutter-size') / 2};
-      margin-right: #{im-setting('gutter-size') / 2};
+      margin-right: #{calc(im-setting('gutter-size') / 2)};
+      margin-left: #{calc(im-setting('gutter-size') / 2)};
     }
 
     @if im-setting('include-trailer') {
@@ -100,7 +94,6 @@
   }
 
   @for $n from 1 through $i {
-
     %grid-col-#{$n}-#{$breakpoint-name} {
       @include im-flexgrid-col-calc($n, true);
     }
@@ -121,14 +114,14 @@
 
   .#{im-setting('cell-class')}#{im-setting('grid-separator')}none#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
     @extend %base-col-#{$breakpoint-name};
+
     flex: none;
   }
 
   .#{im-setting('cell-class')}#{im-setting('grid-separator')}auto#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
     @extend %base-col-#{$breakpoint-name};
-    flex-shrink: 0;
-    flex-grow: 0;
-    flex-basis: auto;
+
+    flex: 0 0 auto;
     width: auto;
   }
 }

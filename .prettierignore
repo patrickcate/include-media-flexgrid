@@ -1,0 +1,5 @@
+node_modules
+dist
+.nvmrc
+CHANGELOG.md
+package-lock.json

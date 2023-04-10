@@ -1,13 +1,15 @@
-/* stylelint-disable max-nesting-depth */
+@use 'sass:list';
 
-@if variable-exists('$breakpoints') == null or mixin-exists('media') == false {
+@if not variable-exists('$breakpoints') or mixin-exists('media') == false {
   @warn 'Make sure you have imported and setup @include-media first.';
 }
 
 $im-flexgrid-settings: (
   'support-check': false,
-  'support-type': '@supports', // otherwise support-type: 'modernizr'
-  'total-columns': 12, // Total columns
+  'support-type': '@supports',
+  // otherwise support-type: 'modernizr'
+  'total-columns': 12,
+  // Total columns
   'container-class': 'container',
   'grid-class': 'grid',
   'cell-class': 'grid__cell',
@@ -38,60 +40,52 @@ $im-flexgrid-settings: (
   'include-trailer': true,
   'trailer-size': 1rem,
 ) !default;
-
 $im-flexgrid-wrap-align-settings: (
   'wrap': wrap,
   'nowrap': nowrap,
-  'wrap-reverse': wrap-reverse
+  'wrap-reverse': wrap-reverse,
 ) !default;
-
 $im-flexgrid-direction-align-settings: (
   'column': column,
   'column-reverse': column-reverse,
   'row': row,
   'row-reverse': row-reverse,
-  'unset': unset
+  'unset': unset,
 ) !default;
-
 $im-flexgrid-justify-align-settings: (
   'justify-start': flex-start,
   'justify-end': flex-end,
   'justify-center': center,
   'justify-between': space-between,
   'justify-around': space-around,
-  'justify-evenly': space-evenly
+  'justify-evenly': space-evenly,
 ) !default;
-
 $im-flexgrid-item-align-settings: (
   'item-start': flex-start,
   'item-end': flex-end,
   'item-center': center,
   'item-baseline': baseline,
-  'item-stretch': stretch
+  'item-stretch': stretch,
 ) !default;
-
 $im-flexgrid-content-align-settings: (
   'content-start': flex-start,
   'content-end': flex-end,
   'content-center': center,
   'content-between': space-between,
   'content-around': space-around,
-  'content-stretch': stretch
+  'content-stretch': stretch,
 ) !default;
-
 $im-flexgrid-self-align-settings: (
   'self-start': flex-start,
   'self-end': flex-end,
   'self-center': center,
   'self-baseline': baseline,
-  'self-stretch': stretch
+  'self-stretch': stretch,
 ) !default;
-
 $im-flexgrid-gutter-settings: (
   'no-gutters': 0,
-  'half-gutters': im-setting('gutter-size') / 2,
+  'half-gutters': calc(im-setting('gutter-size') / 2),
   'gutters': im-setting('gutter-size'),
-  'double-gutters': im-setting('gutter-size') * 2
+  'double-gutters': im-setting('gutter-size') * 2,
 ) !default;
-
-$im-flexgrid-breakpoints: length($breakpoints);
+$im-flexgrid-breakpoints: list.length($breakpoints);

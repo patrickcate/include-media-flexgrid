@@ -1,22 +1,18 @@
 @mixin im-flexgrid-offset-classes($i) {
-
   /* Basic Offset Classes */
 
   @if im-setting('include-offset') and $i == 1 {
-
     .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('offset-class')}-none {
       margin-left: 0;
     }
   }
 
   @for $n from 1 through $i {
-
     %grid-offset-#{$n} {
-      margin-left: $n / $i * 100%;
+      margin-left: calc($n / $i) * 100%;
     }
 
     @if im-setting('include-offset') {
-
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('offset-class')}-#{$n} {
         @extend %grid-offset-#{$n};
       }
@@ -28,20 +24,17 @@
   /* @#{$breakpoint-name} Responsive Offset Classes */
 
   @if im-setting('include-offset') and $i == 1 {
-
     .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('offset-class')}-auto#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
       margin-left: 0;
     }
   }
 
   @for $n from 1 through $i {
-
     %grid-offset-#{$n}-#{$breakpoint-name} {
-      margin-left: $n / $i * 100%;
+      margin-left: calc($n / $i) * 100%;
     }
 
     @if im-setting('include-offset') {
-
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('offset-class')}-#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
         @extend %grid-offset-#{$n}-#{$breakpoint-name};
       }

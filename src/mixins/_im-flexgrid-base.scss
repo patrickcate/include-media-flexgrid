@@ -1,60 +1,80 @@
-/* stylelint-disable max-nesting-depth */
-
 @mixin im-flexgrid-row-base {
-
   /* Base Row CSS */
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin: 0;
+  flex-flow: row wrap;
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
 @mixin im-flexgrid-column-base {
-  min-height: 1px;
-  flex-shrink: 0;
   flex-grow: 1;
+  flex-shrink: 0;
+  min-height: 1px;
 }
 
 @mixin im-flexgrid-col-calc($columns, $include-gutters) {
-
   @if $include-gutters == true {
-    flex-basis: calc(#{($columns / im-setting('total-columns')) * 100%} - #{im-setting('gutter-size')});
-  }
-  @else {
-    flex-basis: $columns / im-setting('total-columns') * 100%;
+    flex-basis: calc(
+      #{calc($columns / im-setting('total-columns')) *
+        100%} -
+        #{im-setting('gutter-size')}
+    );
+  } @else {
+    flex-basis: calc($columns / im-setting('total-columns')) * 100%;
   }
 
   @if im-setting('include-max-width') == true and $include-gutters == true {
-    max-width: calc(#{($columns / im-setting('total-columns')) * 100%} - #{im-setting('gutter-size')});
-  }
-  @else if im-setting('include-max-width') == true and $include-gutters == false {
-    max-width: $columns / im-setting('total-columns') * 100%;
+    max-width: calc(
+      #{calc($columns / im-setting('total-columns')) *
+        100%} -
+        #{im-setting('gutter-size')}
+    );
+  } @else if
+    im-setting('include-max-width') ==
+    true and
+    $include-gutters ==
+    false
+  {
+    max-width: calc($columns / im-setting('total-columns')) * 100%;
   }
 }
 
-@mixin im-flexgrid-responsive-col-calc($columns, $divider, $include-gutters: true) {
-
+@mixin im-flexgrid-responsive-col-calc(
+  $columns,
+  $divider,
+  $include-gutters: true
+) {
   @if $include-gutters == true {
-    flex-basis: calc(#{im-setting('total-columns') / $columns / $divider * 100%} - #{im-setting('gutter-size')});
-  }
-  @else {
-    flex-basis: im-setting('total-columns') / $columns / $divider * 100%;
+    flex-basis: calc(
+      #{calc(im-setting('total-columns') / $columns / $divider) *
+        100%} -
+        #{im-setting('gutter-size')}
+    );
+  } @else {
+    flex-basis: calc(im-setting('total-columns') / $columns / $divider) * 100%;
   }
 
   @if im-setting('include-max-width') == true and $include-gutters == true {
-    max-width: calc(#{im-setting('total-columns') / $columns / $divider * 100%} - #{im-setting('gutter-size')});
-  }
-  @else if im-setting('include-max-width') == true and $include-gutters == false {
-    max-width: im-setting('total-columns') / $columns / $divider * 100%;
+    max-width: calc(
+      #{calc(im-setting('total-columns') / $columns / $divider) *
+        100%} -
+        #{im-setting('gutter-size')}
+    );
+  } @else if
+    im-setting('include-max-width') ==
+    true and
+    $include-gutters ==
+    false
+  {
+    max-width: calc(im-setting('total-columns') / $columns / $divider) * 100%;
   }
 }
 
 @mixin im-flexgrid-push-calc($columns) {
-  left: #{($columns / im-setting('total-columns')) * 100%};
+  left: #{calc($columns / im-setting('total-columns')) * 100%};
 }
 
 @mixin im-flexgrid-pull-calc($columns) {
-  right: #{($columns / im-setting('total-columns')) * 100%};
+  right: #{calc($columns / im-setting('total-columns')) * 100%};
 }

@@ -62,3 +62,5 @@ node_modules
 
 ## Ignore the Bower Components folder ##
 bower_components
+
+dist

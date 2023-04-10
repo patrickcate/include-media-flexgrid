@@ -6,7 +6,9 @@ An [include-media plugin](https://github.com/eduardoboucas/include-media) flexbo
 
 1. Override the `$im-flexgrid-settings` Sass variable map to match features needed.
 
-1. Import the `_include-media-flexgrid.scss` Sass partial.
+2. Import the `include-media` Sass library.
+
+3. Import the `_include-media-flexgrid.scss` Sass partial.
 
 ## Configuration
 
