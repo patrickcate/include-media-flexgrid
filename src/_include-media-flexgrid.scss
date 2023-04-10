@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 @import 'functions/im-flexgrid-setting';
 @import 'variables/im-flexgrid-vars';
 @import 'mixins/im-flexgrid-support-check';
@@ -14,12 +16,10 @@
 @import 'mixins/im-flexgrid-alignment';
 
 @include im-flexgrid-support-check {
-
   @include im-flexgrid-container-classes;
   @include im-flexgrid-row-classes;
 
   @each $i in im-setting('total-columns') {
-
     @include im-flexgrid-equal-col-classes($i);
     @include im-flexgrid-col-classes($i);
     @include im-flexgrid-push-classes($i);
@@ -33,17 +33,14 @@
 
   // Loop through all the breakpoints.
   @each $breakpoint in $breakpoints {
-
     // Get the breakpoint name.
-    $breakpoint-name: nth($breakpoint, 1);
+    $breakpoint-name: list.nth($breakpoint, 1);
 
     @include media(unquote("#{'>=' + $breakpoint-name}")) {
-
       @include im-flexgrid-responsive-container-classes($breakpoint-name);
       @include im-flexgrid-responsive-row-classes($breakpoint-name);
 
       @each $i in im-setting('total-columns') {
-
         @include im-flexgrid-responsive-equal-col-classes($i, $breakpoint-name);
         @include im-flexgrid-responsive-col-classes($i, $breakpoint-name);
         @include im-flexgrid-responsive-push-classes($i, $breakpoint-name);

@@ -1,0 +1,10 @@
+{
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "strict",
+  "printWidth": 80,
+  "proseWrap": "never",
+  "singleQuote": true,
+  "tabWidth": 2,
+  "useTabs": false
+}

@@ -1,6 +1,6 @@
 {
   "name": "include-media-flexgrid",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "An include-media plugin flexbox based grid system.",
   "repository": {
     "type": "git",
@@ -20,5 +20,23 @@
   "homepage": "https://github.com/patrickcate/include-media-flexgrid#readme",
   "files": [
     "src"
-  ]
+  ],
+  "scripts": {
+    "lint": "stylelint 'src/**/*.scss' --fix",
+    "compile": "sass --load-path=node_modules/ src/_include-media-flexgrid.scss dist/index.css"
+  },
+  "devDependencies": {
+    "postcss-scss": "^4.0.6",
+    "prettier": "^2.8.7",
+    "sass": "^1.61.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recess-order": "^3.1.0",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "stylelint-prettier": "^3.0.0"
+  },
+  "peerDependencies": {
+    "include-media": "^2.0.0"
+  }
 }

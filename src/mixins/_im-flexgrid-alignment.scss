@@ -2,7 +2,6 @@
   @if im-setting('include-direction-alignment') {
     /* Basic flex direction classes */
     @each $align-class, $direction in $im-flexgrid-direction-align-settings {
-
       .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class} {
         flex-direction: $direction;
       }
@@ -12,8 +11,8 @@
   @if im-setting('include-justify-alignment') {
     /* Basic Justified alignment classes */
     @each $align-class,
-      $justify-alignment in $im-flexgrid-justify-align-settings {
-
+      $justify-alignment in $im-flexgrid-justify-align-settings
+    {
       .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class} {
         justify-content: $justify-alignment;
       }
@@ -23,7 +22,6 @@
   @if im-setting('include-item-alignment') {
     /* Basic Item alignment classes */
     @each $align-class, $item-alignment in $im-flexgrid-item-align-settings {
-
       .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class} {
         align-items: $item-alignment;
       }
@@ -33,8 +31,8 @@
   @if im-setting('include-content-alignment') {
     /* Basic Content alignment classes */
     @each $align-class,
-      $content-alignment in $im-flexgrid-content-align-settings {
-
+      $content-alignment in $im-flexgrid-content-align-settings
+    {
       .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class} {
         align-content: $content-alignment;
       }
@@ -44,7 +42,6 @@
   @if im-setting('include-self-alignment') {
     /* Basic Self alignment classes */
     @each $align-class, $self-alignment in $im-flexgrid-self-align-settings {
-
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{$align-class} {
         align-self: $self-alignment;
       }
@@ -54,7 +51,6 @@
   @if im-setting('include-wrap-alignment') {
     /* Basic Wrap classes */
     @each $wrap-class, $wrap-direction in $im-flexgrid-wrap-align-settings {
-
       .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$wrap-class} {
         flex-wrap: $wrap-direction;
       }
@@ -66,7 +62,6 @@
   @if im-setting('include-direction-alignment') {
     /* @#{$breakpoint-name} Responsive flex direction classes */
     @each $align-class, $direction in $im-flexgrid-direction-align-settings {
-
       .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
         flex-direction: $direction;
       }
@@ -76,8 +71,8 @@
   @if im-setting('include-justify-alignment') {
     /* @#{$breakpoint-name} Responsive justified alignment classes */
     @each $align-class,
-      $justify-alignment in $im-flexgrid-justify-align-settings {
-
+      $justify-alignment in $im-flexgrid-justify-align-settings
+    {
       .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
         justify-content: $justify-alignment;
       }
@@ -87,7 +82,6 @@
   @if im-setting('include-item-alignment') {
     /* @#{$breakpoint-name} Responsive item alignment classes */
     @each $align-class, $item-alignment in $im-flexgrid-item-align-settings {
-
       .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
         align-items: $item-alignment;
       }
@@ -97,8 +91,8 @@
   @if im-setting('include-content-alignment') {
     /* @#{$breakpoint-name} Responsive content alignment classes */
     @each $align-class,
-      $content-alignment in $im-flexgrid-content-align-settings {
-
+      $content-alignment in $im-flexgrid-content-align-settings
+    {
       .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$align-class}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
         align-content: $content-alignment;
       }
@@ -108,7 +102,6 @@
   @if im-setting('include-self-alignment') {
     /* @#{$breakpoint-name} Responsive self alignment classes */
     @each $align-class, $self-alignment in $im-flexgrid-self-align-settings {
-
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{$align-class}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
         align-self: $self-alignment;
       }
@@ -118,7 +111,6 @@
   @if im-setting('include-wrap-alignment') {
     /* @#{$breakpoint-name} Responsive wrap classes */
     @each $wrap-class, $wrap-direction in $im-flexgrid-wrap-align-settings {
-
       .#{im-setting('grid-class')}#{im-setting('grid-separator')}#{$wrap-class}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
         flex-wrap: $wrap-direction;
       }

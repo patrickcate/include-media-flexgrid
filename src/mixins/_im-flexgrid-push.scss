@@ -1,31 +1,24 @@
-/* stylelint-disable max-nesting-depth */
-
 @mixin im-flexgrid-push-classes($i) {
-
   /* Basic Push Classes */
 
   @if im-setting('include-push') and $i == 1 {
-
     .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('push-class')}-auto {
       left: auto;
     }
   }
 
   @for $n from 1 through $i {
-
     %grid-push-#{$n} {
       @include im-flexgrid-push-calc($n);
     }
 
     @if im-setting('include-push') {
-
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('push-class')}-#{$n} {
         @extend %grid-push-#{$n};
       }
     }
 
     @if im-setting('include-squish') {
-
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('squish-class')}-#{$n} {
         @extend %grid-push-#{$n};
       }
@@ -34,31 +27,26 @@
 }
 
 @mixin im-flexgrid-responsive-push-classes($i, $breakpoint-name) {
-
   /* @#{$breakpoint-name} Responsive Push Classes */
 
   @if im-setting('include-push') and $i == 1 {
-
     .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('push-class')}-auto#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
       left: auto;
     }
   }
 
   @for $n from 1 through $i {
-
     %grid-push-#{$n}-#{$breakpoint-name} {
       @include im-flexgrid-push-calc($n);
     }
 
     @if im-setting('include-push') {
-
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('push-class')}-#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
         @extend %grid-push-#{$n}-#{$breakpoint-name};
       }
     }
 
     @if im-setting('include-squish') {
-
       .#{im-setting('cell-class')}#{im-setting('grid-separator')}#{im-setting('squish-class')}-#{$n}#{im-setting('breakpoint-separator')}#{$breakpoint-name} {
         @extend %grid-push-#{$n}-#{$breakpoint-name};
       }

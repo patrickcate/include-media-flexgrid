@@ -1,15 +1,12 @@
-/* stylelint-disable max-nesting-depth */
-
 @mixin im-flexgrid-row-classes {
-
   /* Basic Row Classes */
 
   .#{im-setting('grid-class')} {
     @include im-flexgrid-row-base;
 
     @if im-setting('default-gutters') {
-      margin-left: #{(im-setting('gutter-size')) / 2 * -1};
-      margin-right: #{(im-setting('gutter-size')) / 2 * -1};
+      margin-right: #{calc((im-setting('gutter-size')) / 2) * -1};
+      margin-left: #{calc((im-setting('gutter-size')) / 2) * -1};
     }
 
     @if im-setting('include-trailer') {
@@ -57,13 +54,13 @@
     @include im-flexgrid-row-base;
 
     @if im-setting('default-gutters') {
-      margin-left: #{(im-setting('gutter-size')) / 2 * -1};
-      margin-right: #{(im-setting('gutter-size')) / 2 * -1};
+      margin-right: #{calc(im-setting('gutter-size') / 2) * -1};
+      margin-left: #{calc(im-setting('gutter-size') / 2) * -1};
     }
 
     &.#{im-setting('grid-class')}--no-gutters {
-      margin-left: 0;
       margin-right: 0;
+      margin-left: 0;
     }
   }
 
